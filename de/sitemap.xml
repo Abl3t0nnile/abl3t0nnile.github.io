@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://abl3t0nnile.github.io/de/</loc>
+    <loc>https://abl3t0nnile.github.io/de/about/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://abl3t0nnile.github.io/"
+                href="https://abl3t0nnile.github.io/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
-                href="https://abl3t0nnile.github.io/de/"
+                href="https://abl3t0nnile.github.io/de/about/"
                 />
   </url><url>
     <loc>https://abl3t0nnile.github.io/de/categories/</loc>
@@ -24,6 +24,18 @@
                 rel="alternate"
                 hreflang="de"
                 href="https://abl3t0nnile.github.io/de/categories/"
+                />
+  </url><url>
+    <loc>https://abl3t0nnile.github.io/de/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://abl3t0nnile.github.io/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://abl3t0nnile.github.io/de/"
                 />
   </url><url>
     <loc>https://abl3t0nnile.github.io/de/tags/</loc>
