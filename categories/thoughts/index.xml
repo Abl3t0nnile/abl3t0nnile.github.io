@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>thoughts on a Coding Monkey</title>
-    <link>https://example.com/categories/thoughts/</link>
+    <link>https://abl3t0nnile.github.io/categories/thoughts/</link>
     <description>Recent content in thoughts on a Coding Monkey</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 21 Mar 2021 17:43:30 +0100</lastBuildDate><atom:link href="https://example.com/categories/thoughts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 Mar 2021 17:43:30 +0100</lastBuildDate><atom:link href="https://abl3t0nnile.github.io/categories/thoughts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hello Blog</title>
-      <link>https://example.com/posts/hello_blog/</link>
+      <link>https://abl3t0nnile.github.io/posts/hello_blog/</link>
       <pubDate>Sun, 21 Mar 2021 17:43:30 +0100</pubDate>
       
-      <guid>https://example.com/posts/hello_blog/</guid>
+      <guid>https://abl3t0nnile.github.io/posts/hello_blog/</guid>
       <description>Learning new things is fun! It&amp;rsquo;s energizing and if I really get into something I can&amp;rsquo;t let go of it. I get in over my head. I tend to choose a try-first-look-up-later style of learning. I love to tinker around and if I encounter a problem, I browse the web to find a solution. This often leads to chaos and surely minimizes my learning goals. Now and then I thought about starting a blog to keep track of my ideas and learnings, organize my efforts and saving me from re-learning a lot of things again and agin, because I didn&amp;rsquo;t took my time.</description>
     </item>
     
