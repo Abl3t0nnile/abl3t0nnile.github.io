@@ -7,11 +7,22 @@
     <generator>Hugo -- gohugo.io</generator><atom:link href="https://abl3t0nnile.github.io/docs/tutorials/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Host a GitHub Page with Hugo</title>
-      <link>https://abl3t0nnile.github.io/docs/tutorials/setup_blog/</link>
+      <link>https://abl3t0nnile.github.io/docs/tutorials/setup_website/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://abl3t0nnile.github.io/docs/tutorials/setup_blog/</guid>
-      <description>Host a GitHub Page with Hugo #  This article is a step-by-step guide to setup a blog page like this one. The tools used for this purpose are HUGO, GitHub with GitHub pages and the command line. At the end of this tutorial I will cover automated post creation and site updates using shell functions. Since I&amp;rsquo;m using ZSH as my shell - if you&amp;rsquo;re on BASH, these may not work exactly the same for you.</description>
+      <guid>https://abl3t0nnile.github.io/docs/tutorials/setup_website/</guid>
+      <description>Host a GitHub Page with Hugo #  This is a brief tutorial on how to set up a GitHub page with Hugo as a static content generator. It&amp;rsquo;s a simple and easy solution to maintain a personal website and blog. Especially if your a coder and used to working with git and the command line.
+Prerequisites The following topics are mandatory and won&amp;rsquo;t be covered in this tutorial:
+ A working installation of Hugo Basic git knowledge A GitHub account Markdown syntax     1 Hugo #  Hugo is one of the key components for this project.</description>
+    </item>
+    
+    <item>
+      <title>Automate GitHub Hosting with Shell Scripts</title>
+      <link>https://abl3t0nnile.github.io/docs/tutorials/shell_auto_blog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://abl3t0nnile.github.io/docs/tutorials/shell_auto_blog/</guid>
+      <description>Introduction #  This article will show how to simplify a lot of typing in the command line, when maintaining a GitHub page. It explores basic shell scripting, to automate post creation, staging and commit repository changes and pushing the updated site to the production repo of the project.</description>
     </item>
     
   </channel>

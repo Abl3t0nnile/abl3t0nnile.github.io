@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="generator" content="Hugo 0.81.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Host a GitHub Page with Hugo #  This is a brief tutorial on how to set up a GitHub page with Hugo as a static content generator. It&rsquo;s a simple and easy solution to maintain a personal website and blog. Especially if your a coder and used to working with git and the command line.
+Prerequisites The following topics are mandatory and won&rsquo;t be covered in this tutorial:
+ A working installation of Hugo Basic git knowledge A GitHub account Markdown syntax     1 Hugo #  Hugo is one of the key components for this project.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Host a GitHub Page with Hugo" />
+<meta property="og:description" content="Host a GitHub Page with Hugo #  This is a brief tutorial on how to set up a GitHub page with Hugo as a static content generator. It&rsquo;s a simple and easy solution to maintain a personal website and blog. Especially if your a coder and used to working with git and the command line.
+Prerequisites The following topics are mandatory and won&rsquo;t be covered in this tutorial:
+ A working installation of Hugo Basic git knowledge A GitHub account Markdown syntax     1 Hugo #  Hugo is one of the key components for this project." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://abl3t0nnile.github.io/docs/tutorials/setup_website/" /><meta property="article:section" content="docs" />
+
+
+
+<title>Host a GitHub Page with Hugo | a Coding Monkey</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.a6e33eff9fca295dda99115dabc387fd12b0e1282a347b6e4de6e73b19c96d91.css" integrity="sha256-puM&#43;/5/KKV3amRFdq8OH/RKw4SgqNHtuTebnOxnJbZE=">
+<script defer src="/en.search.min.4352f7bf25192422c1b52c4b0653eeb2735c1e279bbc20aca83a33f6406cbe36.js" integrity="sha256-Q1L3vyUZJCLBtSxLBlPusnNcHiebvCCsqDoz9kBsvjY="></script>
+
+<script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><img src="/logo.png" alt="Logo" /><span>a Coding Monkey</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a10852d1fdde39bc31d71cc7732aba3e" class="toggle"  />
+    <label for="section-a10852d1fdde39bc31d71cc7732aba3e" class="flex justify-between">
+      <a href="https://abl3t0nnile.github.io/docs/library/" class="">Coding Library</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-de7b5626592787a1b342d4a05abb7e5a" class="toggle"  />
+    <label for="section-de7b5626592787a1b342d4a05abb7e5a" class="flex justify-between">
+      <a href="https://abl3t0nnile.github.io/docs/library/swift/" class="">Swift</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://abl3t0nnile.github.io/docs/library/swift/primer/" class="">A Swift language Primer</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-14997c6da72a24bf4181544a9ebe23b9" class="toggle"  />
+    <label for="section-14997c6da72a24bf4181544a9ebe23b9" class="flex justify-between">
+      <a href="https://abl3t0nnile.github.io/docs/library/python/" class="">Python</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-fd1e8ea2a13097ad74c8c0314102e850" class="toggle"  />
+    <label for="section-fd1e8ea2a13097ad74c8c0314102e850" class="flex justify-between">
+      <a href="https://abl3t0nnile.github.io/docs/library/markdown/" class="">Markdown</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://abl3t0nnile.github.io/docs/library/markdown/syntax_guide/" class="">Markdown Syntax Guide</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7dd85575c84e6825eb9419e748eb5977" class="toggle" checked />
+    <label for="section-7dd85575c84e6825eb9419e748eb5977" class="flex justify-between">
+      <a href="https://abl3t0nnile.github.io/docs/tutorials/" class="">Tutorials</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://abl3t0nnile.github.io/docs/tutorials/setup_website/" class=" active">Host a GitHub Page with Hugo</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://abl3t0nnile.github.io/docs/tutorials/shell_auto_blog/" class="">Automate GitHub Hosting with Shell Scripts</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        Blog
+      </a>
+  </li>
+  
+  <li>
+    <a href="/about/" >
+        About
+      </a>
+  </li>
+  
+  <li>
+    <a href="mailto:minnemann.g@gmail.com" target="_blank" rel="noopener">
+        Contact
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://github.com/Abl3t0nnile" target="_blank" rel="noopener">
+        Github
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Host a GitHub Page with Hugo</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#host-a-github-page-with-hugo">Host a GitHub Page with Hugo</a>
+      <ul>
+        <li><a href="#1-hugo">1 Hugo</a></li>
+        <li><a href="#2-project-creation">2 Project creation</a>
+          <ul>
+            <li><a href="#21-github-setup">2.1 Github setup</a></li>
+            <li><a href="#22-create-hugo-project">2.2 Create Hugo project</a></li>
+            <li><a href="#23-establish-repository-connection">2.3 Establish repository connection</a></li>
+          </ul>
+        </li>
+        <li><a href="#3-configure-hugo">3 Configure Hugo</a>
+          <ul>
+            <li><a href="#31-choosing-a-theme">3.1 Choosing a theme</a></li>
+            <li><a href="#32-configuration">3.2 Configuration</a></li>
+          </ul>
+        </li>
+        <li><a href="#4-content-management">4 Content management</a></li>
+        <li><a href="#5-publication">5 Publication</a></li>
+        <li><a href="#6-automation">6 Automation</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="host-a-github-page-with-hugo">
+  Host a GitHub Page with Hugo
+  <a class="anchor" href="#host-a-github-page-with-hugo">#</a>
+</h1>
+<p>This is a brief tutorial on how to set up a 
+  <a href="https://pages.github.com">GitHub page</a> with Hugo as a static content generator. It&rsquo;s a simple and easy solution to maintain a personal website and blog. Especially if your a coder and used to working with git and the command line.</p>
+<details open>
+  <summary>Prerequisites</summary>
+  <div class="markdown-inner">
+    <blockquote class="book-hint warning">
+  <p>The following topics are mandatory and won&rsquo;t be covered in this tutorial:</p>
+<ul>
+<li>A working installation of Hugo</li>
+<li>Basic git knowledge</li>
+<li>A GitHub account</li>
+<li>Markdown syntax</li>
+</ul>
+</blockquote>
+
+  </div>
+</details>
+
+<h2 id="1-hugo">
+  1 Hugo
+  <a class="anchor" href="#1-hugo">#</a>
+</h2>
+<p>Hugo is one of the key components for this project. 
+  <a href="https://gohugo.io">Hugo</a> is a open-source static site generator. Once installed it can be used inside the command line to build static websites from markdown files. The tool comes with a powerful theme engine and is customizable using templates. Hugo builds the mandatory file system during project creation and is later configured using a <code>config.toml</code> file. Hugo lets you create your content as pure markdown files, extend them with a file header and publish them directly to your website, only from the command line. In combination with the right theme this is all you need, if you know your way around git and the terminal, to run your website. I find it a lot easier to deal with, then with wordpress and co.</p>
+<p>Hugo has a lot more to offer, than this tutorial covers. For further reading, check the projects homepage.</p>
+<h2 id="2-project-creation">
+  2 Project creation
+  <a class="anchor" href="#2-project-creation">#</a>
+</h2>
+<p>Before we can start configuring, styling and filling our page with content, we need to build a new Hugo project and set up the connection with github pages.</p>
+<h3 id="21-github-setup">
+  2.1 Github setup
+  <a class="anchor" href="#21-github-setup">#</a>
+</h3>
+<p>A project like this consists of two github repositories. One so called <em>production repo</em>, which contains the static files, github pages will then host our site of, and one repository, I will call the <code>blog</code> repo from now on, cause mine is named this way. If you&rsquo;re building a portfolio or some other kind of page feel free to use another name. The second repository will contain the actual code and configuration for the site. The <code>blog</code> repo will later be linked by a submodule to the production repo, to push changes to the site directly to the live version. Go ahead an create two public repositories with no initial content:</p>
+<ul>
+<li>create code repo and name it as you like</li>
+<li>create production repo and name it <code>&lt;username&gt;.github.io</code></li>
+</ul>
+<p>Since we are using a personal github page for our project, the name of the production repo has to be <code>&lt;github_username&gt;.github.io</code>. Each account is limited to a single personal page, but each repo to a project can have its own site (the setup process is a little bit different).</p>
+<p>Create a project folder for your local files. I put mine directly into my home directory, since I will have to access it a lot in the future and named it <code>webpage</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">~ $ mkdir webpage
+~ $ cd webpage
+</code></pre></div><p>This folder will contain the local versions of both repositories and will act as the root directory of the project. Here you can create folders for other files, that are project related, but not part or content of the actual site. Im keeping the photoshop files for feature image templates here for instance. Data outside the two cloned repository folders, is not part of any git repository. Let&rsquo;s continue by actually cloning the two repos:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">~/webpage $ git clone https://github.com/&lt;username&gt;/blog.git
+~/webpage $ git clone https://github.com/&lt;username&gt;/&lt;username&gt;.github.io.git
+</code></pre></div><p>After cloning the repos we will checkout the <code>main</code> branch, add <code>README.md</code> and <code>.gitignore</code> to both of them and push the changes to origin.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">~/webpage $ cd blog
+<span style="color:#75715e"># Create main branch an switch to it</span>
+~//blog $ git checkout -b main
+<span style="color:#75715e"># Create files</span>
+~//blog $ touch README.md
+~//blog $ touch .gitignore
+<span style="color:#75715e"># Stage and commit changes</span>
+~//blog $ git add .
+~//blog $ git commit -m <span style="color:#e6db74">&#39;initial commit&#39;</span>
+<span style="color:#75715e"># Push changes to origin/main</span>
+~//blog $ git push origin main
+</code></pre></div><p>Repeat these steps for the production repo and you&rsquo;re good to go for the next step.</p>
+<h3 id="22-create-hugo-project">
+  2.2 Create Hugo project
+  <a class="anchor" href="#22-create-hugo-project">#</a>
+</h3>
+<p>Let&rsquo;s start building our Hugo project, by changing to the <code>blog</code> folder and create a new Hugo project there:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">~/webpage $ cd blog
+<span style="color:#75715e"># Hugo command to build a new project</span>
+hugo new site &lt;website-name&gt;
+</code></pre></div><p>The <code>hugo new site</code> command did all the heavy lifting for us, by creating a lot of boiler plate code, and the mandatory file structure, in order for hugo to work properly. The project structure should look something like this right now:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">.
+└── /webpage
+    └── /blog (git repository)
+    |   ├── /project
+    |   |   ├── /content
+    |   |   └── lots of other Hugo files ...
+    |   └── .git_files
+    ├── /production (git repository) &lt;-- named &lt;username&gt;.github.io
+    |   └── .git_files
+    └── /resources
+</code></pre></div><p>The names for these folders will be used consistently in this tutorial from now on, since they are the naming conventions my live version follows.</p>
+<h3 id="23-establish-repository-connection">
+  2.3 Establish repository connection
+  <a class="anchor" href="#23-establish-repository-connection">#</a>
+</h3>
+<p>The final setup step is to connect the <code>blog</code> repository to the <code>production</code> repo. In order to do so, we have to create a submodule of <code>production</code> inside <code>blog</code> and store it inside a folder called <code>public</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">~/webpage $ cd blog
+<span style="color:#75715e"># Switch to the directory of the hugo project</span>
+~//blog $ cd project
+<span style="color:#75715e"># Create submodule from main branch of repo and clone it to the public folder</span>
+~///project $ git submodule add -b main &lt;username&gt;.github.io public
+</code></pre></div><p>Since Hugo will later save the generated static files into the public folder, we now have created a direct link to our live version of the page. Whenever we add or change files in our <code>blog</code> repo and update the page with Hugo, we only have to push the changes, made to <code>webpage/blog/project/public</code>, to origin, to update the live web-site. We can now continue by establishing our local file system and setting up Hugo.</p>
+<h2 id="3-configure-hugo">
+  3 Configure Hugo
+  <a class="anchor" href="#3-configure-hugo">#</a>
+</h2>
+<p>We now have everything set up correctly and can start building the actual page and filling it with content.</p>
+<h3 id="31-choosing-a-theme">
+  3.1 Choosing a theme
+  <a class="anchor" href="#31-choosing-a-theme">#</a>
+</h3>
+<p>Choosing a theme is a key part of the creation process. I wanted a site, where I can easily manage my content and sort it by categories. My goal is to build a resource page for myself, where I can look up things I already learned. By creating these posts I will settle my new knowledge. I found that 
+  <a href="https://ublogger.netlify.app">uBlogger</a> fits the needs I have the most, but there are tons of other themes on the 
+  <a href="https://themes.gohugo.io">Hugo Themes</a> page. If you want to follow along, go with uBlogger, otherwise choose a different theme, but the configuration and content management principles may vary from theme to theme.</p>
+<p>For most themes navigate to the themes github repo and copy its link to clone it into your project. It seems to be best practice to submodule the theme rather than simply cloning it. Some themes may have different installing instructions specified in their documentation.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">~//blog $ cd project
+~//blog $ git submodule add https://github.com/upagge/uBlogger.git themes/uBlogger
+</code></pre></div><p>This creates a submodule of the desired theme inside our blog repo. If the theme is later updated, we can simply pull changes from the original repository of the theme. In order to apply the theme to the page, change its name and further personalize it, we need to dive into the configuration process.</p>
+<h3 id="32-configuration">
+  3.2 Configuration
+  <a class="anchor" href="#32-configuration">#</a>
+</h3>
+<p>The configuration process is a big part of the page setup and personalization process. I will add further details about the different parts of the config, as I tweak this page. For now a complete example with comments should do it.</p>
+<details >
+  <summary>Example configuration</summary>
+  <div class="markdown-inner">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#75715e"># -----------------------</span>
+<span style="color:#75715e"># PAGE CONFIGURATION FILE</span>
+<span style="color:#75715e"># -----------------------</span>
+<span style="color:#75715e">#</span>
+<span style="color:#75715e"># --------------------</span>
+<span style="color:#75715e"># Global configuration</span>
+<span style="color:#75715e"># --------------------</span>
+<span style="color:#75715e">#</span>
+<span style="color:#75715e"># website title</span>
+<span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#34;a coding monkey&#34;</span>
+<span style="color:#75715e"># site description</span>
+<span style="color:#a6e22e">description</span> = <span style="color:#e6db74">&#34;A personal blog about coding and learning to do so.&#34;</span>
+<span style="color:#75715e"># site keywords</span>
+<span style="color:#a6e22e">keywords</span> = [<span style="color:#e6db74">&#34;personal&#34;</span>, <span style="color:#e6db74">&#34;blog&#34;</span>, <span style="color:#e6db74">&#34;coding&#34;</span>, <span style="color:#e6db74">&#34;swift&#34;</span>, <span style="color:#e6db74">&#34;python&#34;</span>, <span style="color:#e6db74">&#34;abl3t0nnile&#34;</span>]
+<span style="color:#75715e"># [en, zh-cn, fr, pl, ...] determines default content language</span>
+<span style="color:#a6e22e">defaultContentLanguage</span> = <span style="color:#e6db74">&#34;en&#34;</span>
+<span style="color:#75715e"># Base URL of the final site</span>
+<span style="color:#a6e22e">baseURL</span> = <span style="color:#e6db74">&#34;http://abl3t0nnile.github.io&#34;</span>
+<span style="color:#75715e"># theme</span>
+<span style="color:#a6e22e">theme</span> = <span style="color:#e6db74">&#34;uBlogger&#34;</span>
+<span style="color:#75715e"># whether to use robots.txt</span>
+<span style="color:#a6e22e">enableRobotsTXT</span> = <span style="color:#66d9ef">true</span>
+<span style="color:#75715e"># whether to use git commit log</span>
+<span style="color:#75715e"># This helps to update the last modified data on posts based on the commit history</span>
+<span style="color:#a6e22e">enableGitInfo</span> = <span style="color:#66d9ef">true</span>
+<span style="color:#75715e"># Sets how many posts are shown on a single page</span>
+<span style="color:#a6e22e">paginate</span> = <span style="color:#ae81ff">10</span>
+<span style="color:#75715e">#</span>
+<span style="color:#75715e"># Author config</span>
+<span style="color:#75715e"># This pulls informatio abou the aouther from data/authors/filename</span>
+[<span style="color:#a6e22e">author</span>]
+  <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;codemonkey&#34;</span>
+<span style="color:#75715e"># Menu config</span>
+[<span style="color:#a6e22e">menu</span>]
+  [[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+    <span style="color:#a6e22e">identifier</span> = <span style="color:#e6db74">&#34;posts&#34;</span>
+    <span style="color:#75715e"># you can add extra information before the name </span>
+    <span style="color:#75715e"># (HTML format is supported), such as icons</span>
+    <span style="color:#a6e22e">pre</span> = <span style="color:#e6db74">&#34;&#34;</span>
+    <span style="color:#75715e"># you can add extra information after the name </span>
+    <span style="color:#75715e"># (HTML format is supported), such as icons</span>
+    <span style="color:#a6e22e">post</span> = <span style="color:#e6db74">&#34;&#34;</span>
+    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Posts&#34;</span>
+    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/posts/&#34;</span>
+    <span style="color:#75715e"># title will be shown when you hover on this menu link.</span>
+    <span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#34;&#34;</span>
+    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">1</span>
+  [[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+    <span style="color:#a6e22e">identifier</span> = <span style="color:#e6db74">&#34;tags&#34;</span>
+    <span style="color:#a6e22e">pre</span> = <span style="color:#e6db74">&#34;&#34;</span>
+    <span style="color:#a6e22e">post</span> = <span style="color:#e6db74">&#34;&#34;</span>
+    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Tags&#34;</span>
+    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/tags/&#34;</span>
+    <span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#34;&#34;</span>
+    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">2</span>
+  [[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+    <span style="color:#a6e22e">identifier</span> = <span style="color:#e6db74">&#34;categories&#34;</span>
+    <span style="color:#a6e22e">pre</span> = <span style="color:#e6db74">&#34;&#34;</span>
+    <span style="color:#a6e22e">post</span> = <span style="color:#e6db74">&#34;&#34;</span>
+    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Categories&#34;</span>
+    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/categories/&#34;</span>
+    <span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#34;&#34;</span>
+    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">3</span>
+  [[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+    <span style="color:#a6e22e">identifier</span> = <span style="color:#e6db74">&#34;about&#34;</span>
+    <span style="color:#a6e22e">pre</span> = <span style="color:#e6db74">&#34;&#34;</span>
+    <span style="color:#a6e22e">post</span> = <span style="color:#e6db74">&#34;&#34;</span>
+    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;About&#34;</span>
+    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/about/&#34;</span>
+    <span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#34;&#34;</span>
+    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">4</span>
+<span style="color:#75715e"># Taxonomies</span>
+[<span style="color:#a6e22e">taxonomies</span>]
+  <span style="color:#a6e22e">tag</span> = <span style="color:#e6db74">&#34;tags&#34;</span>
+  <span style="color:#a6e22e">category</span> = <span style="color:#e6db74">&#34;categories&#34;</span>
+<span style="color:#75715e"># Markup related configuration in Hugo</span>
+[<span style="color:#a6e22e">markup</span>]
+  <span style="color:#75715e"># Syntax Highlighting </span>
+  <span style="color:#75715e"># (https://gohugo.io/content-management/syntax-highlighting)</span>
+  [<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">highlight</span>]
+    <span style="color:#a6e22e">codeFences</span> = <span style="color:#66d9ef">true</span>
+    <span style="color:#a6e22e">guessSyntax</span> = <span style="color:#66d9ef">true</span>
+    <span style="color:#a6e22e">lineNos</span> = <span style="color:#66d9ef">true</span>
+    <span style="color:#a6e22e">lineNumbersInTable</span> = <span style="color:#66d9ef">true</span>
+    <span style="color:#a6e22e">noClasses</span> = <span style="color:#66d9ef">false</span>
+  <span style="color:#75715e"># Goldmark is from Hugo 0.60 the default library used for Markdown</span>
+  [<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>]
+    [<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>.<span style="color:#a6e22e">extensions</span>]
+      <span style="color:#a6e22e">definitionList</span> = <span style="color:#66d9ef">true</span>
+      <span style="color:#a6e22e">footnote</span> = <span style="color:#66d9ef">true</span>
+      <span style="color:#a6e22e">linkify</span> = <span style="color:#66d9ef">true</span>
+      <span style="color:#a6e22e">strikethrough</span> = <span style="color:#66d9ef">true</span>
+      <span style="color:#a6e22e">table</span> = <span style="color:#66d9ef">true</span>
+      <span style="color:#a6e22e">taskList</span> = <span style="color:#66d9ef">true</span>
+      <span style="color:#a6e22e">typographer</span> = <span style="color:#66d9ef">true</span>
+    [<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>.<span style="color:#a6e22e">renderer</span>]
+      <span style="color:#75715e"># whether to use HTML tags directly in the document</span>
+      <span style="color:#a6e22e">unsafe</span> = <span style="color:#66d9ef">true</span>
+  <span style="color:#75715e"># Table Of Contents settings</span>
+  [<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">tableOfContents</span>]
+    <span style="color:#a6e22e">startLevel</span> = <span style="color:#ae81ff">2</span>
+    <span style="color:#a6e22e">endLevel</span> = <span style="color:#ae81ff">6</span>
+<span style="color:#75715e"># Sitemap config</span>
+[<span style="color:#a6e22e">sitemap</span>]
+  <span style="color:#a6e22e">changefreq</span> = <span style="color:#e6db74">&#34;weekly&#34;</span>
+  <span style="color:#a6e22e">filename</span> = <span style="color:#e6db74">&#34;sitemap.xml&#34;</span>
+  <span style="color:#a6e22e">priority</span> = <span style="color:#ae81ff">0.5</span>
+
+<span style="color:#75715e"># Permalinks config </span>
+<span style="color:#75715e"># (https://gohugo.io/content-management/urls/#permalinks)</span>
+[<span style="color:#a6e22e">Permalinks</span>]
+  <span style="color:#75715e"># posts = &#34;:year/:month/:filename&#34;</span>
+  <span style="color:#a6e22e">posts</span> = <span style="color:#e6db74">&#34;:filename&#34;</span>
+<span style="color:#75715e"># Options to make output .md files</span>
+[<span style="color:#a6e22e">mediaTypes</span>]
+  [<span style="color:#a6e22e">mediaTypes</span>.<span style="color:#e6db74">&#34;text/plain&#34;</span>]
+    <span style="color:#a6e22e">suffixes</span> = [<span style="color:#e6db74">&#34;md&#34;</span>]
+<span style="color:#75715e"># Options to make output .md files</span>
+[<span style="color:#a6e22e">outputFormats</span>.<span style="color:#a6e22e">MarkDown</span>]
+  <span style="color:#a6e22e">mediaType</span> = <span style="color:#e6db74">&#34;text/plain&#34;</span>
+  <span style="color:#a6e22e">isPlainText</span> = <span style="color:#66d9ef">true</span>
+  <span style="color:#a6e22e">isHTML</span> = <span style="color:#66d9ef">false</span>
+<span style="color:#75715e"># Options to make hugo output files</span>
+[<span style="color:#a6e22e">outputs</span>]
+  <span style="color:#a6e22e">home</span> = [<span style="color:#e6db74">&#34;HTML&#34;</span>, <span style="color:#e6db74">&#34;RSS&#34;</span>, <span style="color:#e6db74">&#34;JSON&#34;</span>]
+  <span style="color:#a6e22e">page</span> = [<span style="color:#e6db74">&#34;HTML&#34;</span>, <span style="color:#e6db74">&#34;MarkDown&#34;</span>]
+  <span style="color:#a6e22e">section</span> = [<span style="color:#e6db74">&#34;HTML&#34;</span>, <span style="color:#e6db74">&#34;RSS&#34;</span>]
+  <span style="color:#a6e22e">taxonomy</span> = [<span style="color:#e6db74">&#34;HTML&#34;</span>, <span style="color:#e6db74">&#34;RSS&#34;</span>]
+  <span style="color:#a6e22e">taxonomyTerm</span> = [<span style="color:#e6db74">&#34;HTML&#34;</span>]
+<span style="color:#75715e">#</span>
+<span style="color:#75715e"># ----------------------------</span>
+<span style="color:#75715e"># Theme specific configuration</span>
+<span style="color:#75715e"># ----------------------------</span>
+<span style="color:#75715e">#</span>
+[<span style="color:#a6e22e">params</span>]
+  <span style="color:#75715e"># uBlogger theme version</span>
+  <span style="color:#a6e22e">version</span> = <span style="color:#e6db74">&#34;2.0.X&#34;</span>
+  <span style="color:#75715e"># site default theme (&#34;light&#34;, &#34;dark&#34;, &#34;auto&#34;)</span>
+  <span style="color:#a6e22e">defaultTheme</span> = <span style="color:#e6db74">&#34;auto&#34;</span>
+  <span style="color:#75715e"># public git repo url only then enableGitInfo is true</span>
+  <span style="color:#a6e22e">gitRepo</span> = <span style="color:#e6db74">&#34;https://github.com/abl3t0nnile/blog&#34;</span>
+  <span style="color:#75715e"># date format</span>
+  <span style="color:#a6e22e">dateFormat</span> = <span style="color:#e6db74">&#34;2006-01-02&#34;</span>
+  <span style="color:#75715e"># Header config</span>
+  [<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">header</span>]
+    <span style="color:#75715e"># desktop header mode (&#34;fixed&#34;, &#34;normal&#34;, &#34;auto&#34;)</span>
+    <span style="color:#a6e22e">desktopMode</span> = <span style="color:#e6db74">&#34;fixed&#34;</span>
+    <span style="color:#75715e"># mobile header mode (&#34;fixed&#34;, &#34;normal&#34;, &#34;auto&#34;)</span>
+    <span style="color:#a6e22e">mobileMode</span> = <span style="color:#e6db74">&#34;auto&#34;</span>
+    <span style="color:#75715e"># Header title config</span>
+    [<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">header</span>.<span style="color:#a6e22e">title</span>]
+      <span style="color:#75715e"># URL of the LOGO</span>
+      <span style="color:#a6e22e">logo</span> = <span style="color:#e6db74">&#34;&#34;</span>
+      <span style="color:#75715e"># title name</span>
+      <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;a Coding Monkey&#34;</span>
+      <span style="color:#75715e"># you can add extra information before the name </span>
+      <span style="color:#75715e"># (HTML format is supported), such as icons</span>
+      <span style="color:#a6e22e">pre</span> = <span style="color:#e6db74">&#34;&#34;</span>
+      <span style="color:#75715e"># you can add extra information after the name </span>
+      <span style="color:#75715e"># (HTML format is supported), such as icons</span>
+      <span style="color:#a6e22e">post</span> = <span style="color:#e6db74">&#34;&#34;</span>
+  <span style="color:#75715e"># Footer config</span>
+  [<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">footer</span>]
+    <span style="color:#a6e22e">enable</span> = <span style="color:#66d9ef">true</span>
+    <span style="color:#75715e"># Custom content (HTML format is supported)</span>
+    <span style="color:#a6e22e">custom</span> = <span style="color:#e6db74">&#39;&#39;</span>
+    <span style="color:#75715e"># whether to show Hugo and theme info</span>
+    <span style="color:#a6e22e">hugo</span> = <span style="color:#66d9ef">true</span>
+    <span style="color:#75715e"># whether to show copyright info</span>
+    <span style="color:#a6e22e">copyright</span> = <span style="color:#66d9ef">true</span>
+    <span style="color:#75715e"># whether to show the author</span>
+    <span style="color:#a6e22e">author</span> = <span style="color:#66d9ef">true</span>
+    <span style="color:#75715e"># site creation time</span>
+    <span style="color:#a6e22e">since</span> = <span style="color:#ae81ff">2021</span>
+    <span style="color:#75715e"># license info (HTML format is supported)</span>
+    <span style="color:#a6e22e">license</span>= <span style="color:#e6db74">&#39;&lt;a rel=&#34;license external nofollow noopener noreffer&#34; 
+</span><span style="color:#e6db74">              href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; 
+</span><span style="color:#e6db74">              target=&#34;_blank&#34;&gt;CC BY-NC 4.0&lt;/a&gt;&#39;</span>
+  <span style="color:#75715e"># Home page config</span>
+  [<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">home</span>]
+    <span style="color:#75715e"># amount of RSS pages</span>
+    <span style="color:#a6e22e">rss</span> = <span style="color:#ae81ff">10</span>
+    <span style="color:#75715e"># Home page profile</span>
+    [<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">home</span>.<span style="color:#a6e22e">profile</span>]
+      <span style="color:#a6e22e">enable</span> = <span style="color:#66d9ef">true</span>
+      <span style="color:#75715e"># Gravatar Email for preferred avatar in home page</span>
+      <span style="color:#a6e22e">gravatarEmail</span> = <span style="color:#e6db74">&#34;&#34;</span>
+      <span style="color:#75715e"># URL of avatar shown in home page</span>
+      <span style="color:#a6e22e">avatarURL</span> = <span style="color:#e6db74">&#34;/img/avatar.png&#34;</span>
+      <span style="color:#75715e"># title shown in home page (HTML format is supported)</span>
+      <span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#34;a Coding Monkey&#34;</span>
+      <span style="color:#75715e"># subtitle shown in home page (HTML format is supported)</span>
+      <span style="color:#a6e22e">subtitle</span> = <span style="color:#e6db74">&#34;A personal blog about coding and learning to do so.&#34;</span>
+      <span style="color:#75715e"># whether to show social links</span>
+      <span style="color:#a6e22e">social</span> = <span style="color:#66d9ef">true</span>
+      <span style="color:#75715e"># disclaimer (HTML format is supported)</span>
+      <span style="color:#a6e22e">disclaimer</span> = <span style="color:#e6db74">&#34;Written by a monkey in front of a computer ...&#34;</span>
+    <span style="color:#75715e"># Home page posts</span>
+    [<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">home</span>.<span style="color:#a6e22e">posts</span>]
+      <span style="color:#a6e22e">enable</span> = <span style="color:#66d9ef">true</span>
+      <span style="color:#75715e"># special amount of posts in each home posts page</span>
+      <span style="color:#a6e22e">paginate</span> = <span style="color:#ae81ff">4</span>
+    <span style="color:#75715e"># Social config in home page</span>
+  [<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">social</span>]
+    <span style="color:#a6e22e">GitHub</span> = <span style="color:#e6db74">&#34;Abl3t0nnile&#34;</span>
+    <span style="color:#a6e22e">Email</span> = <span style="color:#e6db74">&#34;minnemann.g@gmail.com&#34;</span>
+    <span style="color:#a6e22e">RSS</span> = <span style="color:#66d9ef">false</span>
+  
+  
+  <span style="color:#75715e"># Section (all posts) page config</span>
+  [<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">section</span>]
+    <span style="color:#75715e"># special amount of posts in each section page</span>
+    <span style="color:#a6e22e">paginate</span> = <span style="color:#ae81ff">20</span>
+    <span style="color:#75715e"># date format (month and day)</span>
+    <span style="color:#a6e22e">dateFormat</span> = <span style="color:#e6db74">&#34;01-02&#34;</span>
+    <span style="color:#75715e"># amount of RSS pages</span>
+    <span style="color:#a6e22e">rss</span> = <span style="color:#ae81ff">10</span>
+  <span style="color:#75715e"># List (category or tag) page config</span>
+  [<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">list</span>]
+    <span style="color:#75715e"># special amount of posts in each list page</span>
+    <span style="color:#a6e22e">paginate</span> = <span style="color:#ae81ff">20</span>
+    <span style="color:#75715e"># date format (month and day)</span>
+    <span style="color:#a6e22e">dateFormat</span> = <span style="color:#e6db74">&#34;01-02&#34;</span>
+    <span style="color:#75715e"># amount of RSS pages</span>
+    <span style="color:#a6e22e">rss</span> = <span style="color:#ae81ff">10</span>
+  <span style="color:#75715e"># Comment config</span>
+  [<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">comment</span>]
+    <span style="color:#a6e22e">enable</span> = <span style="color:#66d9ef">false</span>
+  <span style="color:#75715e"># Page config</span>
+  [<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">page</span>]
+    <span style="color:#a6e22e">theme</span> = <span style="color:#e6db74">&#34;full&#34;</span>
+    <span style="color:#75715e"># whether to hide a page from home page</span>
+    <span style="color:#a6e22e">hiddenFromHomePage</span> = <span style="color:#66d9ef">false</span>
+    <span style="color:#75715e"># whether to hide a page from search results</span>
+    <span style="color:#a6e22e">hiddenFromSearch</span> = <span style="color:#66d9ef">false</span>
+    <span style="color:#75715e"># whether to enable twemoji</span>
+    <span style="color:#a6e22e">twemoji</span> = <span style="color:#66d9ef">false</span>
+    <span style="color:#75715e"># whether to enable the ruby extended syntax</span>
+    <span style="color:#a6e22e">ruby</span> = <span style="color:#66d9ef">true</span>
+    <span style="color:#75715e"># whether to enable the fraction extended syntax</span>
+    <span style="color:#a6e22e">fraction</span> = <span style="color:#66d9ef">true</span>
+    <span style="color:#75715e"># whether to enable the fontawesome extended syntax</span>
+    <span style="color:#a6e22e">fontawesome</span> = <span style="color:#66d9ef">true</span>
+    <span style="color:#75715e"># whether to show link to Raw Markdown content of the content</span>
+    <span style="color:#a6e22e">linkToMarkdown</span> = <span style="color:#66d9ef">true</span>
+    <span style="color:#75715e"># whether to show the full text content in RSS</span>
+    <span style="color:#a6e22e">rssFullText</span> = <span style="color:#66d9ef">false</span>
+    <span style="color:#75715e"># Table of the contents config</span>
+    [<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">toc</span>]
+      <span style="color:#75715e"># whether to enable the table of the contents</span>
+      <span style="color:#a6e22e">enable</span> = <span style="color:#66d9ef">true</span>
+      <span style="color:#75715e"># whether to keep the static table of the contents in front of the post</span>
+      <span style="color:#a6e22e">keepStatic</span> = <span style="color:#66d9ef">false</span>
+      <span style="color:#75715e"># whether to make the table of the contents in the sidebar</span>
+      <span style="color:#75715e"># automatically collapsed</span>
+      <span style="color:#a6e22e">auto</span> = <span style="color:#66d9ef">true</span>
+    <span style="color:#75715e"># Code config</span>
+    [<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">code</span>]
+      <span style="color:#75715e"># whether to show the copy button of the code block</span>
+      <span style="color:#a6e22e">copy</span> = <span style="color:#66d9ef">true</span>
+      <span style="color:#75715e"># the maximum number of lines of displayed code by default</span>
+      <span style="color:#a6e22e">maxShownLines</span> = <span style="color:#ae81ff">10</span>
+    <span style="color:#75715e"># Social share links in post page</span>
+    [<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">share</span>]
+      <span style="color:#a6e22e">enable</span> = <span style="color:#66d9ef">false</span>
+  <span style="color:#75715e">#Search config</span>
+  [<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">search</span>]
+    <span style="color:#a6e22e">enable</span> = <span style="color:#66d9ef">true</span>
+    <span style="color:#75715e"># type of search engine (&#34;lunr&#34;, &#34;algolia&#34;)</span>
+    <span style="color:#a6e22e">type</span> = <span style="color:#e6db74">&#34;lunr&#34;</span>
+    <span style="color:#75715e"># max index length of the chunked content</span>
+    <span style="color:#a6e22e">contentLength</span> = <span style="color:#ae81ff">4000</span>
+    <span style="color:#75715e"># placeholder of the search bar</span>
+    <span style="color:#a6e22e">placeholder</span> = <span style="color:#e6db74">&#34;&#34;</span>
+    <span style="color:#75715e"># uBlogger NEW | 0.2.1 max number of results length</span>
+    <span style="color:#a6e22e">maxResultLength</span> = <span style="color:#ae81ff">10</span>
+    <span style="color:#75715e"># uBlogger NEW | 0.2.3 snippet length of the result</span>
+    <span style="color:#a6e22e">snippetLength</span> = <span style="color:#ae81ff">30</span>
+    <span style="color:#75715e"># uBlogger NEW | 0.2.1 HTML tag name of the highlight part in results</span>
+    <span style="color:#a6e22e">highlightTag</span> = <span style="color:#e6db74">&#34;em&#34;</span>
+    <span style="color:#75715e"># uBlogger NEW | 0.2.4 whether to use the absolute URL based on the</span>
+    <span style="color:#75715e"># baseURL in search index</span>
+    <span style="color:#a6e22e">absoluteURL</span> = <span style="color:#66d9ef">false</span>
+</code></pre></div>
+  </div>
+</details>
+
+<p>We can now take a first look on our new page. To test a page in Hugo, simply type <code>hugo server</code> into the command line, while in the project directory. Hugo now creates the website and runs it on a local host. The address will be shown in the command line. As long as you keep the server running, hugo will update the site on every change we make to the code. Now we can finally start with personalizing our page.</p>
+<p>Although it&rsquo;s empty our page is now complete. All we have to do, is create some content and push the changes to our production repo.</p>
+<hr>
+<h2 id="4-content-management">
+  4 Content management
+  <a class="anchor" href="#4-content-management">#</a>
+</h2>
+<p>To be continued &hellip;</p>
+<h2 id="5-publication">
+  5 Publication
+  <a class="anchor" href="#5-publication">#</a>
+</h2>
+<p>To be continued &hellip;</p>
+<h2 id="6-automation">
+  6 Automation
+  <a class="anchor" href="#6-automation">#</a>
+</h2>
+<p>To be continued &hellip;</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+  
+
+
+
+  
+    
+  
+    
+  
+
+
+
+<div class="book-languages" tabindex="0" aria-haspopup="true">
+  <ul>
+    <li class="flex align-center">
+      <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+      English
+    </li> 
+  </ul>
+
+  <ul class="book-languages-list">
+    
+    <li class="active">
+      <a href="https://abl3t0nnile.github.io/" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        English
+      </a>
+    </li>
+    
+    <li class="">
+      <a href="https://abl3t0nnile.github.io/de/" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        German
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#host-a-github-page-with-hugo">Host a GitHub Page with Hugo</a>
+      <ul>
+        <li><a href="#1-hugo">1 Hugo</a></li>
+        <li><a href="#2-project-creation">2 Project creation</a>
+          <ul>
+            <li><a href="#21-github-setup">2.1 Github setup</a></li>
+            <li><a href="#22-create-hugo-project">2.2 Create Hugo project</a></li>
+            <li><a href="#23-establish-repository-connection">2.3 Establish repository connection</a></li>
+          </ul>
+        </li>
+        <li><a href="#3-configure-hugo">3 Configure Hugo</a>
+          <ul>
+            <li><a href="#31-choosing-a-theme">3.1 Choosing a theme</a></li>
+            <li><a href="#32-configuration">3.2 Configuration</a></li>
+          </ul>
+        </li>
+        <li><a href="#4-content-management">4 Content management</a></li>
+        <li><a href="#5-publication">5 Publication</a></li>
+        <li><a href="#6-automation">6 Automation</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -2,29 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://abl3t0nnile.github.io/docs/tutorials/setup_blog/</loc>
-    <lastmod>2021-03-21T20:12:40+01:00</lastmod>
+    <loc>https://abl3t0nnile.github.io/docs/library/</loc>
   </url><url>
-    <loc>https://abl3t0nnile.github.io/docs/languages/</loc>
-    <lastmod>2021-03-21T20:12:40+01:00</lastmod>
+    <loc>https://abl3t0nnile.github.io/docs/tutorials/setup_website/</loc>
+  </url><url>
+    <loc>https://abl3t0nnile.github.io/docs/library/markdown/syntax_guide/</loc>
+  </url><url>
+    <loc>https://abl3t0nnile.github.io/docs/tutorials/shell_auto_blog/</loc>
+  </url><url>
+    <loc>https://abl3t0nnile.github.io/docs/library/markdown/hugo_shortcodes/</loc>
   </url><url>
     <loc>https://abl3t0nnile.github.io/docs/tutorials/</loc>
     <lastmod>2021-03-21T20:24:04+01:00</lastmod>
   </url><url>
-    <loc>https://abl3t0nnile.github.io/docs/languages/swift/</loc>
-    <lastmod>2021-03-21T20:12:40+01:00</lastmod>
+    <loc>https://abl3t0nnile.github.io/docs/library/markdown/books_shortcodes/</loc>
   </url><url>
-    <loc>https://abl3t0nnile.github.io/docs/languages/swift/primer/</loc>
-    <lastmod>2021-03-21T20:12:40+01:00</lastmod>
+    <loc>https://abl3t0nnile.github.io/docs/library/swift/</loc>
   </url><url>
-    <loc>https://abl3t0nnile.github.io/docs/languages/python/</loc>
-    <lastmod>2021-03-21T20:12:40+01:00</lastmod>
+    <loc>https://abl3t0nnile.github.io/docs/library/swift/primer/</loc>
+  </url><url>
+    <loc>https://abl3t0nnile.github.io/docs/library/python/</loc>
+  </url><url>
+    <loc>https://abl3t0nnile.github.io/docs/library/markdown/</loc>
   </url><url>
     <loc>https://abl3t0nnile.github.io/tags/blog/</loc>
-    <lastmod>2021-03-21T20:12:40+01:00</lastmod>
+    <lastmod>2021-03-21T21:08:36+01:00</lastmod>
   </url><url>
     <loc>https://abl3t0nnile.github.io/categories/</loc>
-    <lastmod>2021-03-21T20:12:40+01:00</lastmod>
+    <lastmod>2021-03-21T21:08:36+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -37,13 +42,13 @@
                 />
   </url><url>
     <loc>https://abl3t0nnile.github.io/posts/hello_blog/</loc>
-    <lastmod>2021-03-21T20:12:40+01:00</lastmod>
+    <lastmod>2021-03-21T21:08:36+01:00</lastmod>
   </url><url>
     <loc>https://abl3t0nnile.github.io/tags/organization/</loc>
-    <lastmod>2021-03-21T20:12:40+01:00</lastmod>
+    <lastmod>2021-03-21T21:08:36+01:00</lastmod>
   </url><url>
     <loc>https://abl3t0nnile.github.io/tags/</loc>
-    <lastmod>2021-03-21T20:12:40+01:00</lastmod>
+    <lastmod>2021-03-21T21:08:36+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -56,13 +61,12 @@
                 />
   </url><url>
     <loc>https://abl3t0nnile.github.io/categories/thoughts/</loc>
-    <lastmod>2021-03-21T20:12:40+01:00</lastmod>
+    <lastmod>2021-03-21T21:08:36+01:00</lastmod>
   </url><url>
     <loc>https://abl3t0nnile.github.io/tags/workflow/</loc>
-    <lastmod>2021-03-21T20:12:40+01:00</lastmod>
+    <lastmod>2021-03-21T21:08:36+01:00</lastmod>
   </url><url>
-    <loc>https://abl3t0nnile.github.io/docs/languages/hidden/</loc>
-    <lastmod>2021-03-21T20:12:40+01:00</lastmod>
+    <loc>https://abl3t0nnile.github.io/docs/library/hidden/</loc>
   </url><url>
     <loc>https://abl3t0nnile.github.io/about/</loc>
     <lastmod>2021-03-21T20:12:40+01:00</lastmod>

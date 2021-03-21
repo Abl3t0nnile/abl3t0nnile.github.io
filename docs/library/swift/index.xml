@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Swift on a Coding Monkey</title>
+    <link>https://abl3t0nnile.github.io/docs/library/swift/</link>
+    <description>Recent content in Swift on a Coding Monkey</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://abl3t0nnile.github.io/docs/library/swift/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A Swift language Primer</title>
+      <link>https://abl3t0nnile.github.io/docs/library/swift/primer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://abl3t0nnile.github.io/docs/library/swift/primer/</guid>
+      <description>A Swift Language Primer #  This document serves as a basic overview of the most important features and paradigms behind the Swift programming language. It provides some explanation about how each part of the language works and what syntax to use.
+Variables and constants #  Swift differentiates two different types of variables using two different keywords when defining them. A variable or constant can be defined without initialising it, but if it is expected, that the variable will contain no value anytime during runtime, it has to be declared an optional using a special ?</description>
+    </item>
+    
+  </channel>
+</rss>

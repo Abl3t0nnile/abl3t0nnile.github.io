@@ -7,19 +7,60 @@
     <generator>Hugo -- gohugo.io</generator><atom:link href="https://abl3t0nnile.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Host a GitHub Page with Hugo</title>
-      <link>https://abl3t0nnile.github.io/docs/tutorials/setup_blog/</link>
+      <link>https://abl3t0nnile.github.io/docs/tutorials/setup_website/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://abl3t0nnile.github.io/docs/tutorials/setup_blog/</guid>
-      <description>Host a GitHub Page with Hugo #  This article is a step-by-step guide to setup a blog page like this one. The tools used for this purpose are HUGO, GitHub with GitHub pages and the command line. At the end of this tutorial I will cover automated post creation and site updates using shell functions. Since I&amp;rsquo;m using ZSH as my shell - if you&amp;rsquo;re on BASH, these may not work exactly the same for you.</description>
+      <guid>https://abl3t0nnile.github.io/docs/tutorials/setup_website/</guid>
+      <description>Host a GitHub Page with Hugo #  This is a brief tutorial on how to set up a GitHub page with Hugo as a static content generator. It&amp;rsquo;s a simple and easy solution to maintain a personal website and blog. Especially if your a coder and used to working with git and the command line.
+Prerequisites The following topics are mandatory and won&amp;rsquo;t be covered in this tutorial:
+ A working installation of Hugo Basic git knowledge A GitHub account Markdown syntax     1 Hugo #  Hugo is one of the key components for this project.</description>
+    </item>
+    
+    <item>
+      <title>Markdown Syntax Guide</title>
+      <link>https://abl3t0nnile.github.io/docs/library/markdown/syntax_guide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://abl3t0nnile.github.io/docs/library/markdown/syntax_guide/</guid>
+      <description>Markdown Syntax Guide #  This article offers a sample of basic Markdown syntax that can be used in Hugo content files.
+This article is a shameful copy of the great Grav original page.
+Further details on the extended Markdown syntax of Hugo and Books - Theme see the corresponding articles.
+ Let&amp;rsquo;s face it: Writing content for the Web is tiresome. WYSIWYG editors help alleviate this task, but they generally result in horrible code, or worse yet, ugly web pages.</description>
+    </item>
+    
+    <item>
+      <title>Automate GitHub Hosting with Shell Scripts</title>
+      <link>https://abl3t0nnile.github.io/docs/tutorials/shell_auto_blog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://abl3t0nnile.github.io/docs/tutorials/shell_auto_blog/</guid>
+      <description>Introduction #  This article will show how to simplify a lot of typing in the command line, when maintaining a GitHub page. It explores basic shell scripting, to automate post creation, staging and commit repository changes and pushing the updated site to the production repo of the project.</description>
+    </item>
+    
+    <item>
+      <title>Hugo Markdown Shortcodes</title>
+      <link>https://abl3t0nnile.github.io/docs/library/markdown/hugo_shortcodes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://abl3t0nnile.github.io/docs/library/markdown/hugo_shortcodes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Books specific Shortcodes</title>
+      <link>https://abl3t0nnile.github.io/docs/library/markdown/books_shortcodes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://abl3t0nnile.github.io/docs/library/markdown/books_shortcodes/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>A Swift language Primer</title>
-      <link>https://abl3t0nnile.github.io/docs/languages/swift/primer/</link>
+      <link>https://abl3t0nnile.github.io/docs/library/swift/primer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://abl3t0nnile.github.io/docs/languages/swift/primer/</guid>
+      <guid>https://abl3t0nnile.github.io/docs/library/swift/primer/</guid>
       <description>A Swift Language Primer #  This document serves as a basic overview of the most important features and paradigms behind the Swift programming language. It provides some explanation about how each part of the language works and what syntax to use.
 Variables and constants #  Swift differentiates two different types of variables using two different keywords when defining them. A variable or constant can be defined without initialising it, but if it is expected, that the variable will contain no value anytime during runtime, it has to be declared an optional using a special ?</description>
     </item>
@@ -35,10 +76,10 @@ Variables and constants #  Swift differentiates two different types of variables
     
     <item>
       <title></title>
-      <link>https://abl3t0nnile.github.io/docs/languages/hidden/</link>
+      <link>https://abl3t0nnile.github.io/docs/library/hidden/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://abl3t0nnile.github.io/docs/languages/hidden/</guid>
+      <guid>https://abl3t0nnile.github.io/docs/library/hidden/</guid>
       <description>This page is hidden in menu #  Quondam non pater est dignior ille Eurotas #  Latent te facies #  Lorem markdownum arma ignoscas vocavit quoque ille texit mandata mentis ultimus, frementes, qui in vel. Hippotades Peleus pennas conscia cuiquam Caeneus quas.
  Pater demittere evincitque reddunt Maxime adhuc pressit huc Danaas quid freta Soror ego Luctus linguam saxa ultroque prior Tatiumque inquit Saepe liquitur subita superata dederat Anius sudor  Cum honorum Latona #  O fallor in sustinui iussorum equidem.</description>
     </item>

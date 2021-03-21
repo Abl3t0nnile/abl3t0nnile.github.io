@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="generator" content="Hugo 0.81.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A Swift Language Primer #  This document serves as a basic overview of the most important features and paradigms behind the Swift programming language. It provides some explanation about how each part of the language works and what syntax to use.
+Variables and constants #  Swift differentiates two different types of variables using two different keywords when defining them. A variable or constant can be defined without initialising it, but if it is expected, that the variable will contain no value anytime during runtime, it has to be declared an optional using a special ?">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="A Swift language Primer" />
+<meta property="og:description" content="A Swift Language Primer #  This document serves as a basic overview of the most important features and paradigms behind the Swift programming language. It provides some explanation about how each part of the language works and what syntax to use.
+Variables and constants #  Swift differentiates two different types of variables using two different keywords when defining them. A variable or constant can be defined without initialising it, but if it is expected, that the variable will contain no value anytime during runtime, it has to be declared an optional using a special ?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://abl3t0nnile.github.io/docs/library/swift/primer/" /><meta property="article:section" content="docs" />
+
+
+
+<title>A Swift language Primer | a Coding Monkey</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.a6e33eff9fca295dda99115dabc387fd12b0e1282a347b6e4de6e73b19c96d91.css" integrity="sha256-puM&#43;/5/KKV3amRFdq8OH/RKw4SgqNHtuTebnOxnJbZE=">
+<script defer src="/en.search.min.4352f7bf25192422c1b52c4b0653eeb2735c1e279bbc20aca83a33f6406cbe36.js" integrity="sha256-Q1L3vyUZJCLBtSxLBlPusnNcHiebvCCsqDoz9kBsvjY="></script>
+
+<script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><img src="/logo.png" alt="Logo" /><span>a Coding Monkey</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a10852d1fdde39bc31d71cc7732aba3e" class="toggle" checked />
+    <label for="section-a10852d1fdde39bc31d71cc7732aba3e" class="flex justify-between">
+      <a href="https://abl3t0nnile.github.io/docs/library/" class="">Coding Library</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-de7b5626592787a1b342d4a05abb7e5a" class="toggle" checked />
+    <label for="section-de7b5626592787a1b342d4a05abb7e5a" class="flex justify-between">
+      <a href="https://abl3t0nnile.github.io/docs/library/swift/" class="">Swift</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://abl3t0nnile.github.io/docs/library/swift/primer/" class=" active">A Swift language Primer</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-14997c6da72a24bf4181544a9ebe23b9" class="toggle"  />
+    <label for="section-14997c6da72a24bf4181544a9ebe23b9" class="flex justify-between">
+      <a href="https://abl3t0nnile.github.io/docs/library/python/" class="">Python</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-fd1e8ea2a13097ad74c8c0314102e850" class="toggle"  />
+    <label for="section-fd1e8ea2a13097ad74c8c0314102e850" class="flex justify-between">
+      <a href="https://abl3t0nnile.github.io/docs/library/markdown/" class="">Markdown</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://abl3t0nnile.github.io/docs/library/markdown/syntax_guide/" class="">Markdown Syntax Guide</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7dd85575c84e6825eb9419e748eb5977" class="toggle"  />
+    <label for="section-7dd85575c84e6825eb9419e748eb5977" class="flex justify-between">
+      <a href="https://abl3t0nnile.github.io/docs/tutorials/" class="">Tutorials</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://abl3t0nnile.github.io/docs/tutorials/setup_website/" class="">Host a GitHub Page with Hugo</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://abl3t0nnile.github.io/docs/tutorials/shell_auto_blog/" class="">Automate GitHub Hosting with Shell Scripts</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        Blog
+      </a>
+  </li>
+  
+  <li>
+    <a href="/about/" >
+        About
+      </a>
+  </li>
+  
+  <li>
+    <a href="mailto:minnemann.g@gmail.com" target="_blank" rel="noopener">
+        Contact
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://github.com/Abl3t0nnile" target="_blank" rel="noopener">
+        Github
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>A Swift language Primer</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#a-swift-language-primer">A Swift Language Primer</a>
+      <ul>
+        <li><a href="#variables-and-constants">Variables and constants</a></li>
+        <li><a href="#operators">Operators</a>
+          <ul>
+            <li><a href="#assignment-operator">Assignment operator</a></li>
+            <li><a href="#arithmetic-operators">Arithmetic operators</a></li>
+            <li><a href="#compound-assignment-operators">Compound assignment operators</a></li>
+            <li><a href="#remainder-operator">Remainder operator</a></li>
+            <li><a href="#comparison-operators">Comparison operators</a></li>
+            <li><a href="#ternary-conditional-operator">Ternary conditional operator</a></li>
+            <li><a href="#logical-operators">Logical operators</a></li>
+            <li><a href="#ranged-operators">Ranged operators</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="a-swift-language-primer">
+  A Swift Language Primer
+  <a class="anchor" href="#a-swift-language-primer">#</a>
+</h1>
+<p>This document serves as a basic overview of the most important features and paradigms behind the Swift programming language. It provides some explanation about how each part of the language works and what syntax to use.</p>
+<h2 id="variables-and-constants">
+  Variables and constants
+  <a class="anchor" href="#variables-and-constants">#</a>
+</h2>
+<p>Swift differentiates two different types of variables using two different keywords when defining them. A variable or constant can be defined without initialising it, but if it is expected, that the variable will contain no value anytime during runtime, it has to be declared an <code>optional</code> using a special <code>?</code> syntax. Swift is a strong-typed, type-safe language, which means that each variable or constant has to be given a specific type, which it never can change during runtime. Types can either be inferred by defining the variable with an initial value, or given during definition.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#75715e">// Definition of a constant with inferred type of String</span>
+<span style="color:#66d9ef">let</span> const = <span style="color:#e6db74">&#34;This is a constant&#34;</span>
+<span style="color:#75715e">// Definition of a variable with inferred type of Int</span>
+<span style="color:#66d9ef">var</span> variable = <span style="color:#ae81ff">100</span>
+<span style="color:#75715e">// Definition of an uninitialized variable with explicit type of Double</span>
+<span style="color:#66d9ef">var</span> inferred: Double
+<span style="color:#75715e">// Definition of an optional variable with given type of String</span>
+<span style="color:#66d9ef">var</span> optional: String?
+</code></pre></div><p>Swift doesn’t implement special mutable or immutable collections. They are determined by initialising them as either a variable or constant.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> immutableArray = [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>]
+<span style="color:#66d9ef">var</span> mutableArray = [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>]
+</code></pre></div><h2 id="operators">
+  Operators
+  <a class="anchor" href="#operators">#</a>
+</h2>
+<p>Swift comes with all sorts of operators already build in. A lot of these standard operators can be applied to different kinds of types. This part only covers the basic syntax of each operator. Their special appliances on different types will be covered during the description of the specific type in the next chapter.</p>
+<h3 id="assignment-operator">
+  Assignment operator
+  <a class="anchor" href="#assignment-operator">#</a>
+</h3>
+<p>This operator is used to assign values to variables, constants or properties.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">var</span> myString = <span style="color:#960050;background-color:#1e0010">„</span>This <span style="color:#66d9ef">is</span> a string<span style="color:#960050;background-color:#1e0010">“</span>
+</code></pre></div><h3 id="arithmetic-operators">
+  Arithmetic operators
+  <a class="anchor" href="#arithmetic-operators">#</a>
+</h3>
+<p>These operators are mostly used to perform arithmetic calculations, but could be applied to non numeric types.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">a <span style="color:#f92672">+</span> b		<span style="color:#75715e">// Addition</span>
+a <span style="color:#f92672">-</span> b		<span style="color:#75715e">// Subtraction</span>
+a <span style="color:#f92672">*</span> b		<span style="color:#75715e">// Multiplication</span>
+a <span style="color:#f92672">/</span> b		<span style="color:#75715e">// Division</span>
+</code></pre></div><h3 id="compound-assignment-operators">
+  Compound assignment operators
+  <a class="anchor" href="#compound-assignment-operators">#</a>
+</h3>
+<p>Just like in other languages, Swift supports compound assignments. These take the value of a variable, perform an arithmetic operation on it and reassign the variable with the result. Compound assignments work with all four arithmetic operators.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">var</span> a = <span style="color:#ae81ff">1</span>
+a = a <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>		<span style="color:#75715e">// Is equivalent to</span>
+a <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</code></pre></div><h3 id="remainder-operator">
+  Remainder operator
+  <a class="anchor" href="#remainder-operator">#</a>
+</h3>
+<p>This operator returns the remainder of a division. It’s better known as the <code>modulo</code> operator.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#ae81ff">10</span> <span style="color:#f92672">%</span> <span style="color:#ae81ff">3</span>	<span style="color:#75715e">// Evaluates to 1</span>
+</code></pre></div><h3 id="comparison-operators">
+  Comparison operators
+  <a class="anchor" href="#comparison-operators">#</a>
+</h3>
+<p>These operators perform a logical comparison between two objects and return a boolean value.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">a == b	<span style="color:#75715e">// a equals b</span>
+a <span style="color:#f92672">!=</span> b	<span style="color:#75715e">// a unequals b</span>
+a <span style="color:#f92672">&lt;</span> b		<span style="color:#75715e">// a is smaller then b</span>
+a <span style="color:#f92672">&lt;=</span> b	<span style="color:#75715e">// a is smaller or equal to b</span>
+a <span style="color:#f92672">&gt;</span> b		<span style="color:#75715e">// a is greater then b</span>
+a <span style="color:#f92672">&gt;=</span> b	<span style="color:#75715e">// a is greater or equal to b</span>
+</code></pre></div><h3 id="ternary-conditional-operator">
+  Ternary conditional operator
+  <a class="anchor" href="#ternary-conditional-operator">#</a>
+</h3>
+<p>This operator evaluates a boolean value or expression and assigns either a value A or a value B to a variable, based on the boolean	value.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">var</span> numberA = <span style="color:#ae81ff">10</span>
+<span style="color:#66d9ef">var</span> numberB = <span style="color:#ae81ff">3</span>
+<span style="color:#66d9ef">var</span> comparison = ((numberA <span style="color:#f92672">&gt;</span> numberB) ? <span style="color:#e6db74">&#34;A greater then B&#34;</span> : <span style="color:#e6db74">&#34;B greater then A&#34;</span>)
+</code></pre></div><h3 id="logical-operators">
+  Logical operators
+  <a class="anchor" href="#logical-operators">#</a>
+</h3>
+<p>Swift uses logical operators over keywords. These operators can be used to form any logical expression, following the rules of basic Boolean algebra. Unlike Python, boolean operations can only be performed on type boolean values, not on the integers 0 and 1.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">var</span> t = <span style="color:#66d9ef">true</span>
+<span style="color:#66d9ef">var</span> f = <span style="color:#f92672">!</span>t		<span style="color:#75715e">// The NOT operator (Expression evalueates to false)</span>
+<span style="color:#66d9ef">var</span> a = t <span style="color:#f92672">&amp;&amp;</span> f	<span style="color:#75715e">// The AND operator (Expression evalueates to false)</span>
+<span style="color:#66d9ef">var</span> o = t <span style="color:#f92672">||</span> f	<span style="color:#75715e">// The OR operator (Expression evalueates to true)</span>
+</code></pre></div><h3 id="ranged-operators">
+  Ranged operators
+  <a class="anchor" href="#ranged-operators">#</a>
+</h3>
+<p>Ranged operators provide a way of dealing with ranges between multiple objects as they are typically used in iterations or loops. We will deal with these concepts in a later chapter and only look at the basic syntax of different ranges. Ranges in Swift come in one of two kinds. Either a <code>closed</code> or a <code>half-open</code> range, which determines wether the end point of the range is included or not.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#ae81ff">1.</span>..<span style="color:#ae81ff">5</span>		<span style="color:#75715e">// Closed range operator returning the values 1, 2, 3, 4, 5</span>
+<span style="color:#ae81ff">1.</span>.&lt;<span style="color:#ae81ff">5</span>		<span style="color:#75715e">// Half-open range operator returning the values 1, 2, 3, 4</span>
+</code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+  
+
+
+
+  
+    
+  
+    
+  
+
+
+
+<div class="book-languages" tabindex="0" aria-haspopup="true">
+  <ul>
+    <li class="flex align-center">
+      <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+      English
+    </li> 
+  </ul>
+
+  <ul class="book-languages-list">
+    
+    <li class="active">
+      <a href="https://abl3t0nnile.github.io/" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        English
+      </a>
+    </li>
+    
+    <li class="">
+      <a href="https://abl3t0nnile.github.io/de/" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        German
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#a-swift-language-primer">A Swift Language Primer</a>
+      <ul>
+        <li><a href="#variables-and-constants">Variables and constants</a></li>
+        <li><a href="#operators">Operators</a>
+          <ul>
+            <li><a href="#assignment-operator">Assignment operator</a></li>
+            <li><a href="#arithmetic-operators">Arithmetic operators</a></li>
+            <li><a href="#compound-assignment-operators">Compound assignment operators</a></li>
+            <li><a href="#remainder-operator">Remainder operator</a></li>
+            <li><a href="#comparison-operators">Comparison operators</a></li>
+            <li><a href="#ternary-conditional-operator">Ternary conditional operator</a></li>
+            <li><a href="#logical-operators">Logical operators</a></li>
+            <li><a href="#ranged-operators">Ranged operators</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
