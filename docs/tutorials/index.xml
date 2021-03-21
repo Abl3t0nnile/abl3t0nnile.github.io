@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tutorials on a Coding Monkey</title>
+    <link>https://example.com/docs/tutorials/</link>
+    <description>Recent content in Tutorials on a Coding Monkey</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://example.com/docs/tutorials/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Host a GitHub Page with Hugo</title>
+      <link>https://example.com/docs/tutorials/setup_blog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/docs/tutorials/setup_blog/</guid>
+      <description>Host a GitHub Page with Hugo #  This article is a step-by-step guide to setup a blog page like this one. The tools used for this purpose are HUGO, GitHub with GitHub pages and the command line. At the end of this tutorial I will cover automated post creation and site updates using shell functions. Since I&amp;rsquo;m using ZSH as my shell - if you&amp;rsquo;re on BASH, these may not work exactly the same for you.</description>
+    </item>
+    
+  </channel>
+</rss>
