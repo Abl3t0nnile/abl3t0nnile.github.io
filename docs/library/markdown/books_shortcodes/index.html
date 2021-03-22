@@ -6,20 +6,20 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Books - Theme Shortcodes #  This article gives a brief overview about special shortcodes, implemented by the Books - Theme for Hugo. The examples in this article are taken from the projects website. Since I don&rsquo;t need all of the available options, I will only list those, being used on this page.
-1 Columns #  Left Content Lorem markdownum insigne&hellip;  Mid Content Lorem markdownum insigne&hellip;  Right Content Lorem markdownum insigne&hellip;   2 Details #  Title Markdown content Lorem markdownum insigne&hellip;   3 Hints #  Markdown content">
+1 Columns #  Columns are the perfect tool for additional page styling. They provide a handy method to combine pictures and text.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Books - Theme Shortcodes" />
 <meta property="og:description" content="Books - Theme Shortcodes #  This article gives a brief overview about special shortcodes, implemented by the Books - Theme for Hugo. The examples in this article are taken from the projects website. Since I don&rsquo;t need all of the available options, I will only list those, being used on this page.
-1 Columns #  Left Content Lorem markdownum insigne&hellip;  Mid Content Lorem markdownum insigne&hellip;  Right Content Lorem markdownum insigne&hellip;   2 Details #  Title Markdown content Lorem markdownum insigne&hellip;   3 Hints #  Markdown content" />
+1 Columns #  Columns are the perfect tool for additional page styling. They provide a handy method to combine pictures and text." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://abl3t0nnile.github.io/docs/library/markdown/books_shortcodes/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2021-03-21T22:37:59&#43;01:00" />
+<meta property="article:modified_time" content="2021-03-22T03:28:51&#43;01:00" />
 
 <title>Books - Theme Shortcodes | a Coding Monkey</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.a6e33eff9fca295dda99115dabc387fd12b0e1282a347b6e4de6e73b19c96d91.css" integrity="sha256-puM&#43;/5/KKV3amRFdq8OH/RKw4SgqNHtuTebnOxnJbZE=">
-<script defer src="/en.search.min.72294837b3c94b5c5dfd0c9781810c48ea2392681d462f64d75df152f22150c6.js" integrity="sha256-cilIN7PJS1xd/QyXgYEMSOojkmgdRi9k113xUvIhUMY="></script>
+<script defer src="/en.search.min.404867611dd78325f188619dfb3d2e056dc50e7d6c0d3473ebab4be000415e98.js" integrity="sha256-QEhnYR3XgyXxiGGd&#43;z0uBW3FDn1sDTRz66tL4ABBXpg="></script>
 
 <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk="></script>
 <!--
@@ -367,24 +367,93 @@ https://github.com/alex-shpak/hugo-book
   1 Columns
   <a class="anchor" href="#1-columns">#</a>
 </h2>
+<p>Columns are the perfect tool for additional page styling. They provide a handy method to combine pictures and text. A good example for this is the homepage of this project. The syntax for this shortcode looks like this:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span>{{&lt; <span style="color:#6ab825;font-weight:bold">columns</span> &gt;}} <span style="color:#999;font-style:italic">&lt;!-- begin columns block --&gt;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2</span>// Content goes here ...
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">3</span>&lt;<span style="color:#6ab825;font-weight:bold">---</span>&gt; <span style="color:#999;font-style:italic">&lt;!-- magic separator, between columns --&gt;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">4</span>// Content goes here ...
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">5</span>&lt;<span style="color:#6ab825;font-weight:bold">---</span>&gt; <span style="color:#999;font-style:italic">&lt;!-- magic separator, between columns --&gt;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">6</span>// Content goes here ...
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">7</span>{{&lt; /<span style="color:#6ab825;font-weight:bold">columns</span> &gt;}}
+</code></pre></div><div class="book-columns flex flex-wrap">
+  
+  <div class="flex-even markdown-inner">
+    <h2 id="left-block">Left Block</h2>
+<p>Here is some text inside the left column.
+  </div>
+  
+  <div class="flex-even markdown-inner">
+    <h2 id="middle-block">Middle Block</h2>
+<figure>
+    <img src="/img/question.png" width="100px"/> 
+</figure>
+
+  </div>
+  
+  <div class="flex-even markdown-inner">
+    <h2 id="right-block">Right Block</h2>
+<p>Here is some text inside the right column.
+  </div>
+  
+</div>
+
+<p>There is no specific limitation to the number of columns used. Like shown in the next example,columns can even be used to realize something like a grid layout.</p>
 <div class="book-columns flex flex-wrap">
   
   <div class="flex-even markdown-inner">
-    <!-- begin columns block -->
-<h1 id="left-content">Left Content</h1>
-<p>Lorem markdownum insigne&hellip;
+    <figure>
+    <img src="/img/video.png" width="250px"/> 
+</figure>
+
   </div>
   
   <div class="flex-even markdown-inner">
-    <!-- magic separator, between columns -->
-<h1 id="mid-content">Mid Content</h1>
-<p>Lorem markdownum insigne&hellip;
+    <figure>
+    <img src="/img/terminal.png" width="250px"/> 
+</figure>
+
   </div>
   
   <div class="flex-even markdown-inner">
-    <!-- magic separator, between columns -->
-<h1 id="right-content">Right Content</h1>
-<p>Lorem markdownum insigne&hellip;
+    <figure>
+    <img src="/img/doc.png" width="250px"/> 
+</figure>
+
+  </div>
+  
+  <div class="flex-even markdown-inner">
+    <figure>
+    <img src="/img/banana.png" width="250px"/> 
+</figure>
+
+  </div>
+  
+  <div class="flex-even markdown-inner">
+    <figure>
+    <img src="/img/git.png" width="250px"/> 
+</figure>
+
+  </div>
+  
+  <div class="flex-even markdown-inner">
+    <figure>
+    <img src="/img/guide.png" width="250px"/> 
+</figure>
+
+  </div>
+  
+  <div class="flex-even markdown-inner">
+    <figure>
+    <img src="/img/info.png" width="250px"/> 
+</figure>
+
+  </div>
+  
+  <div class="flex-even markdown-inner">
+    <figure>
+    <img src="/img/check.png" width="250px"/> 
+</figure>
+
   </div>
   
 </div>
@@ -393,11 +462,23 @@ https://github.com/alex-shpak/hugo-book
   2 Details
   <a class="anchor" href="#2-details">#</a>
 </h2>
+<p>The <code>details</code> shortcode is used to highlight content. It provides a caption to the block and makes the content expandable. The behavior can configured with arguments. The basic syntax is the following:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span>{{&lt; <span style="color:#6ab825;font-weight:bold">details</span> <span style="color:#bbb">title</span>=<span style="color:#ed9d13">&#34;Title&#34;</span> <span style="color:#bbb">open</span>=<span style="color:#ed9d13">true</span> &gt;}}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2</span>// Content goes here ...
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">3</span>{{&lt; /<span style="color:#6ab825;font-weight:bold">details</span> &gt;}}
+</code></pre></div><p>This a rendered example:</p>
 <details open>
-  <summary>Title</summary>
+  <summary>Expanded detail box</summary>
   <div class="markdown-inner">
-    <h2 id="markdown-content">Markdown content</h2>
-<p>Lorem markdownum insigne&hellip;
+    This is something I want to highlight!
+  </div>
+</details>
+
+<p>A closed one looks like this:</p>
+<details >
+  <summary>Folded detail box</summary>
+  <div class="markdown-inner">
+    This is something not so important you can look up.
   </div>
 </details>
 
@@ -405,40 +486,51 @@ https://github.com/alex-shpak/hugo-book
   3 Hints
   <a class="anchor" href="#3-hints">#</a>
 </h2>
+<p>Hints are a good way to highlight content as either a coloroed <code>warning</code>, <code>danger</code> or <code>info</code> box. The basic syntax is:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span>{{&lt; <span style="color:#6ab825;font-weight:bold">hint</span> <span style="color:#bbb">type</span> &gt;}}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2</span>// Content goes here ...
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">3</span>{{&lt; /<span style="color:#6ab825;font-weight:bold">hint</span> &gt;}}
+</code></pre></div><p>The rendered options look like this:</p>
 <blockquote class="book-hint info">
-  <strong>Markdown content</strong><br>
-Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
-stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
+  <strong>This is an Info</strong><br>
+This is some thing I want to point out.
 </blockquote>
 
 <blockquote class="book-hint warning">
-  <strong>Markdown content</strong><br>
-Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
-stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
+  <strong>This is a Warning!</strong><br>
+Be aware of the following &hellip; Spoilers ahead!
 </blockquote>
 
 <blockquote class="book-hint danger">
-  <strong>Markdown content</strong><br>
-Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
-stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
+  <strong>Danger!!!</strong><br>
+Don&rsquo;t do the following, or the application will crash!
 </blockquote>
 
 <h2 id="4-tabs">
   4 Tabs
   <a class="anchor" href="#4-tabs">#</a>
 </h2>
+<p>Sometimes content has to be ordered into different categories. A good example is different use cases in terms of operating systems. Create a tab box with the following syntax:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span>{{&lt; <span style="color:#6ab825;font-weight:bold">tabs</span> <span style="color:#bbb">uniqueid</span> &gt;}}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">3</span>{{&lt; <span style="color:#6ab825;font-weight:bold">tab</span> <span style="color:#bbb">name</span> &gt;*/}} 
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">4</span>// Tab Content ... 
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">5</span>{{<span style="color:#a61717;background-color:#e3d2d2">&lt;</span>/* /tab &gt;}}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">6</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">7</span>{{&lt; /<span style="color:#6ab825;font-weight:bold">tabs</span> &gt;}}
+</code></pre></div><p>A rendered example looks like this:</p>
 
 
 
 
-<div class="book-tabs"><input type="radio" class="toggle" name="tabs-uniqueid" id="tabs-uniqueid-0" checked="checked" />
-  <label for="tabs-uniqueid-0">MacOS</label>
+<div class="book-tabs"><input type="radio" class="toggle" name="tabs-operatinSystems" id="tabs-operatinSystems-0" checked="checked" />
+  <label for="tabs-operatinSystems-0">MacOS</label>
   <div class="book-tabs-content markdown-inner"><h3 id="macos-content">MacOS Content</h3>
-</div><input type="radio" class="toggle" name="tabs-uniqueid" id="tabs-uniqueid-1"  />
-  <label for="tabs-uniqueid-1">Linux</label>
+</div><input type="radio" class="toggle" name="tabs-operatinSystems" id="tabs-operatinSystems-1"  />
+  <label for="tabs-operatinSystems-1">Linux</label>
   <div class="book-tabs-content markdown-inner"><h3 id="linux-content">Linux Content</h3>
-</div><input type="radio" class="toggle" name="tabs-uniqueid" id="tabs-uniqueid-2"  />
-  <label for="tabs-uniqueid-2">Windows</label>
+</div><input type="radio" class="toggle" name="tabs-operatinSystems" id="tabs-operatinSystems-2"  />
+  <label for="tabs-operatinSystems-2">Windows</label>
   <div class="book-tabs-content markdown-inner"><h3 id="windows-content">Windows Content</h3>
 </div></div>
 
@@ -492,9 +584,9 @@ stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
 
 
 
-  <div><a class="flex align-center" href="https://github.com/Abl3t0nnile/abl3t0nnile.github.io.git/commit/774d21d95bc2426ad6eba9e98d786e01dce9be37" title='Last modified by Abl3t0nnile | March 21, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/Abl3t0nnile/abl3t0nnile.github.io.git/commit/d659bec9a877c704fb38948028488f28562143f4" title='Last modified by Abl3t0nnile | March 22, 2021' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>March 21, 2021</span>
+      <span>March 22, 2021</span>
     </a>
   </div>
 

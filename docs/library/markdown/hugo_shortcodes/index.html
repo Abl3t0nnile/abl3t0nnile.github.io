@@ -5,21 +5,23 @@
   <meta name="generator" content="Hugo 0.81.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Hugo Shortcodes #  This is a quick roundup on hugo shortcodes. These are snippets you can drop into your markdown, to further style a page. For further instructions read.
-1 Figure #  2 Highlight #  3 Ref and Relref #  4 Youtube #  ">
+<meta name="description" content="Hugo Shortcodes #  This is a quick roundup on hugo shortcodes. These are snippets you can drop into your markdown, to further style a page. This article only covers the ones I find usefull. For additional instructions read the official Documentation.
+1 Figure #  figure is an extension of the basic Markdown figure implementation. It provides a lot more options then the basic Markdown one.
+The following syntax is used to place a figure inside a document:">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Hugo Markdown Shortcodes" />
-<meta property="og:description" content="Hugo Shortcodes #  This is a quick roundup on hugo shortcodes. These are snippets you can drop into your markdown, to further style a page. For further instructions read.
-1 Figure #  2 Highlight #  3 Ref and Relref #  4 Youtube #  " />
+<meta property="og:description" content="Hugo Shortcodes #  This is a quick roundup on hugo shortcodes. These are snippets you can drop into your markdown, to further style a page. This article only covers the ones I find usefull. For additional instructions read the official Documentation.
+1 Figure #  figure is an extension of the basic Markdown figure implementation. It provides a lot more options then the basic Markdown one.
+The following syntax is used to place a figure inside a document:" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://abl3t0nnile.github.io/docs/library/markdown/hugo_shortcodes/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2021-03-21T22:37:59&#43;01:00" />
+<meta property="article:modified_time" content="2021-03-22T03:28:51&#43;01:00" />
 
 <title>Hugo Markdown Shortcodes | a Coding Monkey</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.a6e33eff9fca295dda99115dabc387fd12b0e1282a347b6e4de6e73b19c96d91.css" integrity="sha256-puM&#43;/5/KKV3amRFdq8OH/RKw4SgqNHtuTebnOxnJbZE=">
-<script defer src="/en.search.min.72294837b3c94b5c5dfd0c9781810c48ea2392681d462f64d75df152f22150c6.js" integrity="sha256-cilIN7PJS1xd/QyXgYEMSOojkmgdRi9k113xUvIhUMY="></script>
+<script defer src="/en.search.min.404867611dd78325f188619dfb3d2e056dc50e7d6c0d3473ebab4be000415e98.js" integrity="sha256-QEhnYR3XgyXxiGGd&#43;z0uBW3FDn1sDTRz66tL4ABBXpg="></script>
 
 <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk="></script>
 <!--
@@ -339,7 +341,11 @@ https://github.com/alex-shpak/hugo-book
   <ul>
     <li><a href="#hugo-shortcodes">Hugo Shortcodes</a>
       <ul>
-        <li><a href="#1-figure">1 Figure</a></li>
+        <li><a href="#1-figure">1 Figure</a>
+          <ul>
+            <li><a href="#styled-images">Styled images</a></li>
+          </ul>
+        </li>
         <li><a href="#2-highlight">2 Highlight</a></li>
         <li><a href="#3-ref-and-relref">3 Ref and Relref</a></li>
         <li><a href="#4-youtube">4 Youtube</a></li>
@@ -361,24 +367,107 @@ https://github.com/alex-shpak/hugo-book
   Hugo Shortcodes
   <a class="anchor" href="#hugo-shortcodes">#</a>
 </h1>
-<p>This is a quick roundup on hugo shortcodes. These are snippets you can drop into your markdown, to further style a page. For further instructions 
-  <a href="https://gohugo.io/content-management/shortcodes/">read</a>.</p>
+<p>This is a quick roundup on hugo shortcodes. These are snippets you can drop into your markdown, to further style a page. This article only covers the ones I find usefull. For additional instructions read the official 
+  <a href="https://gohugo.io/content-management/shortcodes/">Documentation</a>.</p>
 <h2 id="1-figure">
   1 Figure
   <a class="anchor" href="#1-figure">#</a>
 </h2>
+<p><code>figure</code> is an extension of the basic Markdown figure implementation. It provides a lot more options then the basic Markdown one.</p>
+<p>The following syntax is used to place a figure inside a document:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span>{{&lt; <span style="color:#6ab825;font-weight:bold">figure</span> <span style="color:#bbb">src</span>=<span style="color:#ed9d13">&#34;/images/computer.png&#34;</span> <span style="color:#bbb">title</span>=<span style="color:#ed9d13">&#34;Retro Machine&#34;</span> &gt;}}
+</code></pre></div><p>The root folder of the <code>src</code> parameter points to the <code>/static</code> folder inside the projects root folder, but it&rsquo;s possible to define a specific path, using a standard relative path notation <code>../../folder/folder/file.jpeg</code>.</p>
+<p>The rendered output looks like this:</p>
+<figure>
+    <img src="/img/computer.png"/> <figcaption>
+            <h4>Retro Machine</h4>
+        </figcaption>
+</figure>
+
+<p>The <code>figure</code> shortcode provides a variety of additional parameter, which can be set in the opening tag. These are:</p>
+<blockquote class="book-hint info">
+  <ul>
+<li><code>src</code> - URL of the image to be displayed.</li>
+<li><code>link</code> - If the image needs to be hyperlinked, URL of the destination.</li>
+<li><code>target</code> - Optional target attribute for the URL if link parameter is set.</li>
+<li><code>rel</code> - Optional rel attribute for the URL if link parameter is set.</li>
+<li><code>alt</code> - Alternate text for the image if the image cannot be displayed.</li>
+<li><code>title</code> - Image title.</li>
+<li><code>caption</code> - Image caption. Markdown within the value of caption will be rendered.</li>
+<li><code>class</code> - class attribute of the HTML figure tag.</li>
+<li><code>height</code> - height attribute of the image.</li>
+<li><code>width</code> - width attribute of the image.</li>
+<li><code>attr</code> - Image attribution text. Markdown within the value of attr will be rendered.</li>
+<li><code>attrlink</code> - If the attribution text needs to be hyperlinked, URL of the destination.</li>
+</ul>
+
+</blockquote>
+
+<h3 id="styled-images">
+  Styled images
+  <a class="anchor" href="#styled-images">#</a>
+</h3>
+<p>A <code>figure</code> can be styled using the <strong>height</strong> and <strong>width</strong> parameters in combination with in line HTML. Let&rsquo;s shrink the image above, center it on the screen and provide it with a better caption.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span>&lt;<span style="color:#6ab825;font-weight:bold">div</span> <span style="color:#bbb">align</span>=<span style="color:#ed9d13">&#34;center&#34;</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2</span>{{&lt; <span style="color:#6ab825;font-weight:bold">figure</span> <span style="color:#bbb">src</span>=<span style="color:#ed9d13">&#34;/images/computer.png&#34;</span> <span style="color:#bbb">caption</span>=<span style="color:#ed9d13">&#34;### Retro Machine&#34;</span> <span style="color:#bbb">width</span>=<span style="color:#ed9d13">&#34;250 px&#34;</span>&gt;}}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">3</span>&lt; /<span style="color:#6ab825;font-weight:bold">div</span> &gt;
+</code></pre></div><p>The rendered output looks like this:</p>
+<div align="center">
+<figure>
+    <img src="/img/computer.png"
+         alt="Retro Machine " width="250 px"/> <figcaption>
+            <p><h2 id="retro-machine"><em><strong>Retro Machine</strong></em></h2>
+</p>
+        </figcaption>
+</figure>
+
+<br>
+</div>
+<p>This looks much nicer now! Note how standard Markdown syntax worked on the styling of the caption inside the figure tag.</p>
 <h2 id="2-highlight">
   2 Highlight
   <a class="anchor" href="#2-highlight">#</a>
 </h2>
+<p>Similar to the figure shortcode, the standard Markdown capabilities on syntax highlighting are extended with Hugo&rsquo;s own <code>highlight</code> shortcode. This shortcode takes exactly one required parameter for the programming language to highlight. The following is an example of the basic syntax:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span>{{&lt; <span style="color:#6ab825;font-weight:bold">highlight</span> <span style="color:#bbb">language</span> &gt;}}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2</span>// ... code
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">3</span>{{&lt; / <span style="color:#6ab825;font-weight:bold">highlight</span> &gt;}}
+</code></pre></div><p>The output renders as follows:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span><span style="color:#6ab825;font-weight:bold">def</span> <span style="color:#447fcf">foo</span>() -&gt; string:
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2</span>    <span style="color:#6ab825;font-weight:bold">return</span> <span style="color:#ed9d13">&#39;bar&#39;</span></code></pre></div>
+<p>The <code>highlight</code> shortcode also has additional parameters, to further style it. These are given as a string of key, value pairs. The following options are available:</p>
+<blockquote class="book-hint info">
+  <ul>
+<li><code>linenos</code> - configure line numbers. Valid values are <code>true</code>, <code>false</code>, <code>table</code>, or <code>inline</code>. false will turn off line numbers if it’s configured to be on in site config. New in v0.60.0 table will give copy-and-paste friendly code blocks.</li>
+<li><code>hl_lines</code> - lists a set of line numbers or line number ranges to be highlighted.</li>
+<li><code>linenostart=int</code> - starts the line number count from the given number.</li>
+<li><code>anchorlinenos</code> - Configure anchors on line numbers. Valid values are true or false;</li>
+<li><code>lineanchors</code> - Configure a prefix for the anchors on line numbers. Will be suffixed with -, so linking to the line number 1 with the option</li>
+<li><code>lineanchors=prefix</code> - adds the anchor prefix-1 to the page.</li>
+</ul>
+
+</blockquote>
+
+<p>Details about <code>highlight</code> configuration inside <code>config.toml</code> can be found 
+  <a href="https://gohugo.io/getting-started/configuration-markup/#highlight">here</a>.</p>
 <h2 id="3-ref-and-relref">
   3 Ref and Relref
   <a class="anchor" href="#3-ref-and-relref">#</a>
 </h2>
+<p>Since I came across no restrictions on internal and external linking, with the standard 
+  <a href="/docs/library/markdown/syntax_guide/">Markdown syntax</a>, I see no use for this shortcode.</p>
 <h2 id="4-youtube">
   4 Youtube
   <a class="anchor" href="#4-youtube">#</a>
 </h2>
+<p>Hugo supports direct embedding of a Youtube player on the page, with its own shortcode. All it needs is the videos ID. Taken the following URL <code>https://www.youtube.com/watch?v=w7Ft2ymGmfc</code> for instance, the syntax would look like this:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span>{{&lt; <span style="color:#6ab825;font-weight:bold">youtube</span> <span style="color:#bbb">w7Ft2ymGmfc</span> &gt;}}
+</code></pre></div><p>and the corresponding output as follows:</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/w7Ft2ymGmfc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
 </article>
  
       
@@ -429,9 +518,9 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <div><a class="flex align-center" href="https://github.com/Abl3t0nnile/abl3t0nnile.github.io.git/commit/774d21d95bc2426ad6eba9e98d786e01dce9be37" title='Last modified by Abl3t0nnile | March 21, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/Abl3t0nnile/abl3t0nnile.github.io.git/commit/d659bec9a877c704fb38948028488f28562143f4" title='Last modified by Abl3t0nnile | March 22, 2021' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>March 21, 2021</span>
+      <span>March 22, 2021</span>
     </a>
   </div>
 
@@ -459,7 +548,11 @@ https://github.com/alex-shpak/hugo-book
   <ul>
     <li><a href="#hugo-shortcodes">Hugo Shortcodes</a>
       <ul>
-        <li><a href="#1-figure">1 Figure</a></li>
+        <li><a href="#1-figure">1 Figure</a>
+          <ul>
+            <li><a href="#styled-images">Styled images</a></li>
+          </ul>
+        </li>
         <li><a href="#2-highlight">2 Highlight</a></li>
         <li><a href="#3-ref-and-relref">3 Ref and Relref</a></li>
         <li><a href="#4-youtube">4 Youtube</a></li>

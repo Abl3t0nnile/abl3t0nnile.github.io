@@ -22,7 +22,7 @@ Prerequisites The following topics are mandatory and won&amp;rsquo;t be covered 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://abl3t0nnile.github.io/docs/library/markdown/syntax_guide/</guid>
-      <description>Markdown Syntax Guide #  This article offers a sample of basic Markdown syntax that can be used in Hugo content files.
+      <description>Markdown Syntax Guide #    This article offers a sample of basic Markdown syntax that can be used in Hugo content files.
 This article is a shortened adaption of the great Grav original page.
 For further details on the extended Markdown syntax of Hugo and Books - Theme see the corresponding articles.
  Let&amp;rsquo;s face it: Writing content for the Web is tiresome. WYSIWYG editors help alleviate this task, but they generally result in horrible code, or worse yet, ugly web pages.</description>
@@ -43,8 +43,9 @@ For further details on the extended Markdown syntax of Hugo and Books - Theme se
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://abl3t0nnile.github.io/docs/library/markdown/hugo_shortcodes/</guid>
-      <description>Hugo Shortcodes #  This is a quick roundup on hugo shortcodes. These are snippets you can drop into your markdown, to further style a page. For further instructions read.
-1 Figure #  2 Highlight #  3 Ref and Relref #  4 Youtube #  </description>
+      <description>Hugo Shortcodes #  This is a quick roundup on hugo shortcodes. These are snippets you can drop into your markdown, to further style a page. This article only covers the ones I find usefull. For additional instructions read the official Documentation.
+1 Figure #  figure is an extension of the basic Markdown figure implementation. It provides a lot more options then the basic Markdown one.
+The following syntax is used to place a figure inside a document:</description>
     </item>
     
     <item>
@@ -54,7 +55,7 @@ For further details on the extended Markdown syntax of Hugo and Books - Theme se
       
       <guid>https://abl3t0nnile.github.io/docs/library/markdown/books_shortcodes/</guid>
       <description>Books - Theme Shortcodes #  This article gives a brief overview about special shortcodes, implemented by the Books - Theme for Hugo. The examples in this article are taken from the projects website. Since I don&amp;rsquo;t need all of the available options, I will only list those, being used on this page.
-1 Columns #  Left Content Lorem markdownum insigne&amp;hellip;  Mid Content Lorem markdownum insigne&amp;hellip;  Right Content Lorem markdownum insigne&amp;hellip;   2 Details #  Title Markdown content Lorem markdownum insigne&amp;hellip;   3 Hints #  Markdown content</description>
+1 Columns #  Columns are the perfect tool for additional page styling. They provide a handy method to combine pictures and text.</description>
     </item>
     
     <item>
