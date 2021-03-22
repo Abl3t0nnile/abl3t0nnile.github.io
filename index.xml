@@ -12,8 +12,9 @@
       
       <guid>https://abl3t0nnile.github.io/docs/tutorials/setup_website/</guid>
       <description>Host a GitHub Page with Hugo #  This is a brief tutorial on how to set up a GitHub page with Hugo as a static content generator. It&amp;rsquo;s a simple and easy solution to maintain a personal website and blog. Especially if your a coder and used to working with git and the command line.
-Prerequisites The following topics are mandatory and won&amp;rsquo;t be covered in this tutorial:
- A working installation of Hugo Basic git knowledge A GitHub account Markdown syntax     1 Hugo #  Hugo is one of the key components for this project.</description>
+Prerequisites
+The following topics are mandatory and won&amp;rsquo;t be covered in this tutorial:
+ A working installation of Hugo Basic git knowledge A GitHub account Markdown syntax   1 Hugo #  Hugo is one of the key components for this project.</description>
     </item>
     
     <item>

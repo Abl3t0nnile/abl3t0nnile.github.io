@@ -6,12 +6,14 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Host a GitHub Page with Hugo #  This is a brief tutorial on how to set up a GitHub page with Hugo as a static content generator. It&rsquo;s a simple and easy solution to maintain a personal website and blog. Especially if your a coder and used to working with git and the command line.
-Prerequisites The following topics are mandatory and won&rsquo;t be covered in this tutorial:
- A working installation of Hugo Basic git knowledge A GitHub account Markdown syntax     1 Hugo #  Hugo is one of the key components for this project.">
+Prerequisites
+The following topics are mandatory and won&rsquo;t be covered in this tutorial:
+ A working installation of Hugo Basic git knowledge A GitHub account Markdown syntax   1 Hugo #  Hugo is one of the key components for this project.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Host a GitHub Page with Hugo" />
 <meta property="og:description" content="Host a GitHub Page with Hugo #  This is a brief tutorial on how to set up a GitHub page with Hugo as a static content generator. It&rsquo;s a simple and easy solution to maintain a personal website and blog. Especially if your a coder and used to working with git and the command line.
-Prerequisites The following topics are mandatory and won&rsquo;t be covered in this tutorial:
- A working installation of Hugo Basic git knowledge A GitHub account Markdown syntax     1 Hugo #  Hugo is one of the key components for this project." />
+Prerequisites
+The following topics are mandatory and won&rsquo;t be covered in this tutorial:
+ A working installation of Hugo Basic git knowledge A GitHub account Markdown syntax   1 Hugo #  Hugo is one of the key components for this project." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://abl3t0nnile.github.io/docs/tutorials/setup_website/" /><meta property="article:section" content="docs" />
 
@@ -21,7 +23,7 @@ Prerequisites The following topics are mandatory and won&rsquo;t be covered in t
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.a6e33eff9fca295dda99115dabc387fd12b0e1282a347b6e4de6e73b19c96d91.css" integrity="sha256-puM&#43;/5/KKV3amRFdq8OH/RKw4SgqNHtuTebnOxnJbZE=">
-<script defer src="/en.search.min.e580290643892714a5e2bd7e63ebd68123b665749817346e7cd8e5db6327f037.js" integrity="sha256-5YApBkOJJxSl4r1&#43;Y&#43;vWgSO2ZXSYFzRufNjl22Mn8Dc="></script>
+<script defer src="/en.search.min.13173f6caffadb16ade491dda2275431a1d7e16dd06add4243baebff35d8f80d.js" integrity="sha256-Exc/bK/62xat5JHdoidUMaHX4W3Qat1CQ7rr/zXY&#43;A0="></script>
 
 <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk="></script>
 <!--
@@ -357,7 +359,6 @@ https://github.com/alex-shpak/hugo-book
         </li>
         <li><a href="#4-content-management">4 Content management</a></li>
         <li><a href="#5-publication">5 Publication</a></li>
-        <li><a href="#6-automation">6 Automation</a></li>
       </ul>
     </li>
   </ul>
@@ -378,21 +379,17 @@ https://github.com/alex-shpak/hugo-book
 </h1>
 <p>This is a brief tutorial on how to set up a 
   <a href="https://pages.github.com">GitHub page</a> with Hugo as a static content generator. It&rsquo;s a simple and easy solution to maintain a personal website and blog. Especially if your a coder and used to working with git and the command line.</p>
-<details open>
-  <summary>Prerequisites</summary>
-  <div class="markdown-inner">
-    <blockquote class="book-hint warning">
-  <p>The following topics are mandatory and won&rsquo;t be covered in this tutorial:</p>
+<blockquote class="book-hint warning">
+  <p><strong>Prerequisites</strong></p>
+<p>The following topics are mandatory and won&rsquo;t be covered in this tutorial:</p>
 <ul>
 <li>A working installation of Hugo</li>
 <li>Basic git knowledge</li>
 <li>A GitHub account</li>
 <li>Markdown syntax</li>
 </ul>
-</blockquote>
 
-  </div>
-</details>
+</blockquote>
 
 <h2 id="1-hugo">
   1 Hugo
@@ -410,374 +407,230 @@ https://github.com/alex-shpak/hugo-book
   2.1 Github setup
   <a class="anchor" href="#21-github-setup">#</a>
 </h3>
-<p>A project like this consists of two github repositories. One so called <em>production repo</em>, which contains the static files, github pages will then host our site of, and one repository, I will call the <code>blog</code> repo from now on, cause mine is named this way. If you&rsquo;re building a portfolio or some other kind of page feel free to use another name. The second repository will contain the actual code and configuration for the site. The <code>blog</code> repo will later be linked by a submodule to the production repo, to push changes to the site directly to the live version. Go ahead an create two public repositories with no initial content:</p>
+<p>A project like this consists of two github repositories. One so called <code>production</code> repo, which contains the static files, github pages will then host our site of, and one repository, I will call the <code>working</code> repo from now on, cause mine is named this way. If you&rsquo;re building a portfolio or some other kind of page feel free to use another name. The second repository will contain the actual code and configuration for the site. The <code>working</code> repo will later be linked by a submodule to the production repo, to push changes to the site directly to the live version. Go ahead an create two public repositories with no initial content:</p>
 <ul>
-<li>create code repo and name it as you like</li>
-<li>create production repo and name it <code>&lt;username&gt;.github.io</code></li>
+<li>create <code>working</code> repo and name it as you like</li>
+<li>create <code>production</code> repo and name it <code>&lt;username&gt;.github.io</code></li>
 </ul>
-<p>Since we are using a personal github page for our project, the name of the production repo has to be <code>&lt;github_username&gt;.github.io</code>. Each account is limited to a single personal page, but each repo to a project can have its own site (the setup process is a little bit different).</p>
-<p>Create a project folder for your local files. I put mine directly into my home directory, since I will have to access it a lot in the future and named it <code>webpage</code>.</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span>~ $ mkdir webpage
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2</span>~ $ <span style="color:#24909d">cd</span> webpage
-</code></pre></div><p>This folder will contain the local versions of both repositories and will act as the root directory of the project. Here you can create folders for other files, that are project related, but not part or content of the actual site. Im keeping the photoshop files for feature image templates here for instance. Data outside the two cloned repository folders, is not part of any git repository. Let&rsquo;s continue by actually cloning the two repos:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span>~/webpage $ git clone https://github.com/&lt;username&gt;/blog.git
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2</span>~/webpage $ git clone https://github.com/&lt;username&gt;/&lt;username&gt;.github.io.git
-</code></pre></div><p>After cloning the repos we will checkout the <code>main</code> branch, add <code>README.md</code> and <code>.gitignore</code> to both of them and push the changes to origin.</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 1</span>~/webpage $ <span style="color:#24909d">cd</span> blog
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 2</span><span style="color:#999;font-style:italic"># Create main branch an switch to it</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 3</span>~//blog $ git checkout -b main
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 4</span><span style="color:#999;font-style:italic"># Create files</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 5</span>~//blog $ touch README.md
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 6</span>~//blog $ touch .gitignore
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 7</span><span style="color:#999;font-style:italic"># Stage and commit changes</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 8</span>~//blog $ git add .
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 9</span>~//blog $ git commit -m <span style="color:#ed9d13">&#39;initial commit&#39;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">10</span><span style="color:#999;font-style:italic"># Push changes to origin/main</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">11</span>~//blog $ git push origin main
-</code></pre></div><p>Repeat these steps for the production repo and you&rsquo;re good to go for the next step.</p>
+<p>Since we are using a personal github page for our project, the name of the <code>production</code> repo has to be <code>&lt;github_username&gt;.github.io</code>. Each account is limited to a single personal page, but each repo to a project can have its own site (the setup process is a little bit different though).</p>
+<p>Next we have to clone the remote repository to our local drive. Since the root folder of the repo contains everything we will need, we can directly put it into our home directory like I did, since I will have to access it a lot in the future. My repo is called <code>website</code> so I&rsquo;ll go along with this name for the purpose of this tutorial.</p>
+<p>Clone repository to local drive and cd into it:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span>~ $ git clone https://github.com/&lt;username&gt;/website.git
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2</span>~ $ <span style="color:#24909d">cd</span> website
+</code></pre></div><p>After cloning we will checkout <code>main</code> branch, add <code>README.md</code> and <code>.gitignore</code> and push the changes to origin:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 1</span><span style="color:#999;font-style:italic"># Create main branch an switch to it</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 2</span>~/website $ git checkout -b main
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 3</span><span style="color:#999;font-style:italic"># Create files - Edit them now if you like</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 4</span>~/website $ touch README.md
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 5</span>~/website $ touch .gitignore
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 6</span><span style="color:#999;font-style:italic"># Stage and commit changes</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 7</span>~/website $ git add .
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 8</span>~/website $ git commit -m <span style="color:#ed9d13">&#39;initial commit&#39;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 9</span><span style="color:#999;font-style:italic"># Push changes to origin/main</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">10</span>~/website $ git push origin main
+</code></pre></div><p>We now have established a local version of our project folder and can continue with building the Hugo project and files.</p>
 <h3 id="22-create-hugo-project">
   2.2 Create Hugo project
   <a class="anchor" href="#22-create-hugo-project">#</a>
 </h3>
-<p>Let&rsquo;s start building our Hugo project, by changing to the <code>blog</code> folder and create a new Hugo project there:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span>~/webpage $ <span style="color:#24909d">cd</span> blog
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2</span><span style="color:#999;font-style:italic"># Hugo command to build a new project</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">3</span>hugo new site &lt;website-name&gt;
+<p>Let&rsquo;s start by running <code>hugo new site</code> in our root folder:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span><span style="color:#999;font-style:italic"># Hugo command to build a new project</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2</span>hugo new site &lt;website-name&gt; // named code-monkey <span style="color:#6ab825;font-weight:bold">for</span> this tutorial
 </code></pre></div><p>The <code>hugo new site</code> command did all the heavy lifting for us, by creating a lot of boiler plate code, and the mandatory file structure, in order for hugo to work properly. The project structure should look something like this right now:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 1</span>.
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 2</span>└── /webpage
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 3</span>    └── /blog (git repository)
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 4</span>    |   ├── /project
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 5</span>    |   |   ├── /content
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 6</span>    |   |   └── lots of other Hugo files ...
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 7</span>    |   └── .git_files
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 8</span>    ├── /production (git repository) &lt;-- named &lt;username&gt;.github.io
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 9</span>    |   └── .git_files
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">10</span>    └── /resources
-</code></pre></div><p>The names for these folders will be used consistently in this tutorial from now on, since they are the naming conventions my live version follows.</p>
+<pre><code>.
+└── /website (git repository)
+    ├── /code-monkey
+    |   ├── /content
+    |   └── lots of other Hugo files ...
+    └── .git_files
+</code></pre>
 <h3 id="23-establish-repository-connection">
   2.3 Establish repository connection
   <a class="anchor" href="#23-establish-repository-connection">#</a>
 </h3>
-<p>The final setup step is to connect the <code>blog</code> repository to the <code>production</code> repo. In order to do so, we have to create a submodule of <code>production</code> inside <code>blog</code> and store it inside a folder called <code>public</code>.</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span>~/webpage $ <span style="color:#24909d">cd</span> blog
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2</span><span style="color:#999;font-style:italic"># Switch to the directory of the hugo project</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">3</span>~//blog $ <span style="color:#24909d">cd</span> project
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">4</span><span style="color:#999;font-style:italic"># Create submodule from main branch of repo and clone it to the public folder</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">5</span>~///project $ git submodule add -b main &lt;username&gt;.github.io public
-</code></pre></div><p>Since Hugo will later save the generated static files into the public folder, we now have created a direct link to our live version of the page. Whenever we add or change files in our <code>blog</code> repo and update the page with Hugo, we only have to push the changes, made to <code>webpage/blog/project/public</code>, to origin, to update the live web-site. We can now continue by establishing our local file system and setting up Hugo.</p>
+<p>When we&rsquo;re ready to build a version of our site into static HTML data, Hugo will put the resulting files into a folder called <code>public</code> inside our root directory. If we now add a submodule to our production repo inside this public folder, we will automatically update the live version of our site, when we commit changes to the submodule.</p>
+<p>To add the submodule to the public folder, go to the command line and type the following:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span><span style="color:#999;font-style:italic"># Create submodule from main branch of repo and clone it to the public folder</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2</span>~/website $ git submodule add -b main &lt;username&gt;.github.io public
+</code></pre></div><p>We now have a working connection between the two repositories, which enables us to update the site from our <code>working</code> repo.</p>
 <h2 id="3-configure-hugo">
   3 Configure Hugo
   <a class="anchor" href="#3-configure-hugo">#</a>
 </h2>
-<p>We now have everything set up correctly and can start building the actual page and filling it with content.</p>
+<p>The next step is to configure the pre build Hugo project, to make it our own. The first step of this process would be to choose a theme.</p>
 <h3 id="31-choosing-a-theme">
   3.1 Choosing a theme
   <a class="anchor" href="#31-choosing-a-theme">#</a>
 </h3>
-<p>Choosing a theme is a key part of the creation process. I wanted a site, where I can easily manage my content and sort it by categories. My goal is to build a resource page for myself, where I can look up things I already learned. By creating these posts I will settle my new knowledge. I found that 
-  <a href="https://ublogger.netlify.app">uBlogger</a> fits the needs I have the most, but there are tons of other themes on the 
-  <a href="https://themes.gohugo.io">Hugo Themes</a> page. If you want to follow along, go with uBlogger, otherwise choose a different theme, but the configuration and content management principles may vary from theme to theme.</p>
-<p>For most themes navigate to the themes github repo and copy its link to clone it into your project. It seems to be best practice to submodule the theme rather than simply cloning it. Some themes may have different installing instructions specified in their documentation.</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span>~//blog $ <span style="color:#24909d">cd</span> project
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2</span>~//blog $ git submodule add https://github.com/upagge/uBlogger.git themes/uBlogger
-</code></pre></div><p>This creates a submodule of the desired theme inside our blog repo. If the theme is later updated, we can simply pull changes from the original repository of the theme. In order to apply the theme to the page, change its name and further personalize it, we need to dive into the configuration process.</p>
+<p>Choosing a theme is a key part of the creation process. I wanted to build a wiki style page, where I could easily manage content on different topics, present it in a clean and structured way, as well as beeing able to search the site for specific content. A blog to accompany the more in depth articles was also mandatory. The 
+  <a href="https://themes.gohugo.io">Hugo Themes</a> page is a wonderful resource on all available themes. I went with 
+  <a href="https://github.com/alex-shpak/hugo-book">Hugo - Books</a>, cause it fits everything I need and I also liked the design a lot.</p>
+<p>To install a Hugo theme, navigate to the themes github repo and copy its link to clone it into your project. This approach works for most themes. Otherwise the themes documentation will point out how to install it. It seems to be best practice to submodule the theme rather than simply cloning it. Some themes may have different installing instructions specified in their documentation.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span>~ /website <span style="color:#24909d">cd</span> code-monkey
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2</span>~ //code-monkey $ git submodule add https://github.com/alex-shpak/hugo-book.git themes/book
+</code></pre></div><p>This creates a submodule of the desired theme inside our blog repo. If the theme is later updated, we can simply pull changes from the original repository of the theme.</p>
 <h3 id="32-configuration">
   3.2 Configuration
   <a class="anchor" href="#32-configuration">#</a>
 </h3>
-<p>The configuration process is a big part of the page setup and personalization process. I will add further details about the different parts of the config, as I tweak this page. For now a complete example with comments should do it.</p>
+<p>The configuration of Hugo heavily depends on the theme used. In this article I will cover the configuration of the <em>Books</em> theme. Please see the documentation of your chosen theme for further instructions.</p>
+<h4 id="321-basic-configuration">
+  3.2.1 Basic configuration
+  <a class="anchor" href="#321-basic-configuration">#</a>
+</h4>
+<p>Hugo is configured using a <code>config</code> file in the root directory. It is possible to divide the configuration over multiple files, by using a <code>config</code> folder, but this will not be covered in this tutorial. For a more comprehensive guide check the official 
+  <a href="https://gohugo.io/getting-started/configuration/">documentation</a>.</p>
+<p>The <code>config</code> file can be in either <code>.toml</code>, <code>.yaml</code> or <code>.json</code>. The example below shows the syntax of the first two options.</p>
+
+
+
+
+<div class="book-tabs"><input type="radio" class="toggle" name="tabs-config formats" id="tabs-config formats-0" checked="checked" />
+  <label for="tabs-config formats-0">.yaml</label>
+  <div class="book-tabs-content markdown-inner"><p>Hugo <code>config.yaml</code> syntax:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span><span style="color:#6ab825;font-weight:bold">baseURL</span>:<span style="color:#666"> </span>base URL of live version<span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2</span><span style="color:#666"></span><span style="color:#6ab825;font-weight:bold">title</span>:<span style="color:#666"> </span>Website Name<span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">3</span><span style="color:#666"></span><span style="color:#6ab825;font-weight:bold">author</span>:<span style="color:#666"> </span>Website Author<span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">4</span><span style="color:#666"></span><span style="color:#6ab825;font-weight:bold">keywords</span>:<span style="color:#666"> </span>[<span style="color:#ed9d13">&#34;keyA&#34;</span>,<span style="color:#666"> </span><span style="color:#ed9d13">&#34;keyB&#34;</span>,<span style="color:#666"> </span><span style="color:#ed9d13">&#34;etc.&#34;</span>]<span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">5</span><span style="color:#666"></span><span style="color:#6ab825;font-weight:bold">theme</span>:<span style="color:#666"> </span>theme-name<span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">6</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">7</span><span style="color:#666"></span><span style="color:#6ab825;font-weight:bold">params</span>:<span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">8</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">paramName</span>:<span style="color:#666"> </span>value<span style="color:#666">
+</span></code></pre></div></div><input type="radio" class="toggle" name="tabs-config formats" id="tabs-config formats-1"  />
+  <label for="tabs-config formats-1">.toml</label>
+  <div class="book-tabs-content markdown-inner"><p>Hugo <code>config.toml</code> syntax:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span>baseURL = base URL of live version
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2</span>title = Website Name
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">3</span>author = Website Author
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">4</span>keywords = [<span style="color:#ed9d13">&#34;keyA&#34;</span>, <span style="color:#ed9d13">&#34;keyB&#34;</span>, <span style="color:#ed9d13">&#34;etc.&#34;</span>]
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">5</span>theme = theme<span style="color:#a61717;background-color:#e3d2d2">-</span>name
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">6</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">7</span>[params]
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">8</span>  paramName<span style="color:#a61717;background-color:#e3d2d2">:</span> value
+</code></pre></div></div></div>
+
+<p>Some Hugo themes have extensive configuration options. Book on the other hand is luckily quite simple. The following example shows the complete configuration of this website and is annotated with comments for further details:</p>
 <details >
-  <summary>Example configuration</summary>
+  <summary>Book Theme Config</summary>
   <div class="markdown-inner">
-    <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">  1</span><span style="color:#999;font-style:italic"># -----------------------</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">  2</span><span style="color:#999;font-style:italic"># PAGE CONFIGURATION FILE</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">  3</span><span style="color:#999;font-style:italic"># -----------------------</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">  4</span><span style="color:#999;font-style:italic">#</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">  5</span><span style="color:#999;font-style:italic"># --------------------</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">  6</span><span style="color:#999;font-style:italic"># Global configuration</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">  7</span><span style="color:#999;font-style:italic"># --------------------</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">  8</span><span style="color:#999;font-style:italic">#</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">  9</span><span style="color:#999;font-style:italic"># website title</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 10</span>title = <span style="color:#ed9d13">&#34;a coding monkey&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 11</span><span style="color:#999;font-style:italic"># site description</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 12</span>description = <span style="color:#ed9d13">&#34;A personal blog about coding and learning to do so.&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 13</span><span style="color:#999;font-style:italic"># site keywords</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 14</span>keywords = [<span style="color:#ed9d13">&#34;personal&#34;</span>, <span style="color:#ed9d13">&#34;blog&#34;</span>, <span style="color:#ed9d13">&#34;coding&#34;</span>, <span style="color:#ed9d13">&#34;swift&#34;</span>, <span style="color:#ed9d13">&#34;python&#34;</span>, <span style="color:#ed9d13">&#34;abl3t0nnile&#34;</span>]
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 15</span><span style="color:#999;font-style:italic"># [en, zh-cn, fr, pl, ...] determines default content language</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 16</span>defaultContentLanguage = <span style="color:#ed9d13">&#34;en&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 17</span><span style="color:#999;font-style:italic"># Base URL of the final site</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 18</span>baseURL = <span style="color:#ed9d13">&#34;http://abl3t0nnile.github.io&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 19</span><span style="color:#999;font-style:italic"># theme</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 20</span>theme = <span style="color:#ed9d13">&#34;uBlogger&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 21</span><span style="color:#999;font-style:italic"># whether to use robots.txt</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 22</span>enableRobotsTXT = <span style="color:#6ab825;font-weight:bold">true</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 23</span><span style="color:#999;font-style:italic"># whether to use git commit log</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 24</span><span style="color:#999;font-style:italic"># This helps to update the last modified data on posts based on the commit history</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 25</span>enableGitInfo = <span style="color:#6ab825;font-weight:bold">true</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 26</span><span style="color:#999;font-style:italic"># Sets how many posts are shown on a single page</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 27</span>paginate = <span style="color:#3677a9">10</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 28</span><span style="color:#999;font-style:italic">#</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 29</span><span style="color:#999;font-style:italic"># Author config</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 30</span><span style="color:#999;font-style:italic"># This pulls informatio abou the aouther from data/authors/filename</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 31</span>[author]
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 32</span>  name = <span style="color:#ed9d13">&#34;codemonkey&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 33</span><span style="color:#999;font-style:italic"># Menu config</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 34</span>[menu]
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 35</span>  [[menu.main]]
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 36</span>    identifier = <span style="color:#ed9d13">&#34;posts&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 37</span>    <span style="color:#999;font-style:italic"># you can add extra information before the name </span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 38</span>    <span style="color:#999;font-style:italic"># (HTML format is supported), such as icons</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 39</span>    pre = <span style="color:#ed9d13">&#34;&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 40</span>    <span style="color:#999;font-style:italic"># you can add extra information after the name </span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 41</span>    <span style="color:#999;font-style:italic"># (HTML format is supported), such as icons</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 42</span>    post = <span style="color:#ed9d13">&#34;&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 43</span>    name = <span style="color:#ed9d13">&#34;Posts&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 44</span>    url = <span style="color:#ed9d13">&#34;/posts/&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 45</span>    <span style="color:#999;font-style:italic"># title will be shown when you hover on this menu link.</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 46</span>    title = <span style="color:#ed9d13">&#34;&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 47</span>    weight = <span style="color:#3677a9">1</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 48</span>  [[menu.main]]
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 49</span>    identifier = <span style="color:#ed9d13">&#34;tags&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 50</span>    pre = <span style="color:#ed9d13">&#34;&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 51</span>    post = <span style="color:#ed9d13">&#34;&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 52</span>    name = <span style="color:#ed9d13">&#34;Tags&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 53</span>    url = <span style="color:#ed9d13">&#34;/tags/&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 54</span>    title = <span style="color:#ed9d13">&#34;&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 55</span>    weight = <span style="color:#3677a9">2</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 56</span>  [[menu.main]]
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 57</span>    identifier = <span style="color:#ed9d13">&#34;categories&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 58</span>    pre = <span style="color:#ed9d13">&#34;&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 59</span>    post = <span style="color:#ed9d13">&#34;&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 60</span>    name = <span style="color:#ed9d13">&#34;Categories&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 61</span>    url = <span style="color:#ed9d13">&#34;/categories/&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 62</span>    title = <span style="color:#ed9d13">&#34;&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 63</span>    weight = <span style="color:#3677a9">3</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 64</span>  [[menu.main]]
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 65</span>    identifier = <span style="color:#ed9d13">&#34;about&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 66</span>    pre = <span style="color:#ed9d13">&#34;&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 67</span>    post = <span style="color:#ed9d13">&#34;&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 68</span>    name = <span style="color:#ed9d13">&#34;About&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 69</span>    url = <span style="color:#ed9d13">&#34;/about/&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 70</span>    title = <span style="color:#ed9d13">&#34;&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 71</span>    weight = <span style="color:#3677a9">4</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 72</span><span style="color:#999;font-style:italic"># Taxonomies</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 73</span>[taxonomies]
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 74</span>  tag = <span style="color:#ed9d13">&#34;tags&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 75</span>  category = <span style="color:#ed9d13">&#34;categories&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 76</span><span style="color:#999;font-style:italic"># Markup related configuration in Hugo</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 77</span>[markup]
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 78</span>  <span style="color:#999;font-style:italic"># Syntax Highlighting </span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 79</span>  <span style="color:#999;font-style:italic"># (https://gohugo.io/content-management/syntax-highlighting)</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 80</span>  [markup.highlight]
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 81</span>    codeFences = <span style="color:#6ab825;font-weight:bold">true</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 82</span>    guessSyntax = <span style="color:#6ab825;font-weight:bold">true</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 83</span>    lineNos = <span style="color:#6ab825;font-weight:bold">true</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 84</span>    lineNumbersInTable = <span style="color:#6ab825;font-weight:bold">true</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 85</span>    noClasses = <span style="color:#6ab825;font-weight:bold">false</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 86</span>  <span style="color:#999;font-style:italic"># Goldmark is from Hugo 0.60 the default library used for Markdown</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 87</span>  [markup.goldmark]
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 88</span>    [markup.goldmark.extensions]
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 89</span>      definitionList = <span style="color:#6ab825;font-weight:bold">true</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 90</span>      footnote = <span style="color:#6ab825;font-weight:bold">true</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 91</span>      linkify = <span style="color:#6ab825;font-weight:bold">true</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 92</span>      strikethrough = <span style="color:#6ab825;font-weight:bold">true</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 93</span>      table = <span style="color:#6ab825;font-weight:bold">true</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 94</span>      taskList = <span style="color:#6ab825;font-weight:bold">true</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 95</span>      typographer = <span style="color:#6ab825;font-weight:bold">true</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 96</span>    [markup.goldmark.renderer]
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 97</span>      <span style="color:#999;font-style:italic"># whether to use HTML tags directly in the document</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 98</span>      unsafe = <span style="color:#6ab825;font-weight:bold">true</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 99</span>  <span style="color:#999;font-style:italic"># Table Of Contents settings</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">100</span>  [markup.tableOfContents]
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">101</span>    startLevel = <span style="color:#3677a9">2</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">102</span>    endLevel = <span style="color:#3677a9">6</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">103</span><span style="color:#999;font-style:italic"># Sitemap config</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">104</span>[sitemap]
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">105</span>  changefreq = <span style="color:#ed9d13">&#34;weekly&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">106</span>  filename = <span style="color:#ed9d13">&#34;sitemap.xml&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">107</span>  priority = <span style="color:#3677a9">0.5</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">108</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">109</span><span style="color:#999;font-style:italic"># Permalinks config </span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">110</span><span style="color:#999;font-style:italic"># (https://gohugo.io/content-management/urls/#permalinks)</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">111</span>[Permalinks]
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">112</span>  <span style="color:#999;font-style:italic"># posts = &#34;:year/:month/:filename&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">113</span>  posts = <span style="color:#ed9d13">&#34;:filename&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">114</span><span style="color:#999;font-style:italic"># Options to make output .md files</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">115</span>[mediaTypes]
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">116</span>  [mediaTypes.<span style="color:#ed9d13">&#34;text/plain&#34;</span>]
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">117</span>    suffixes = [<span style="color:#ed9d13">&#34;md&#34;</span>]
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">118</span><span style="color:#999;font-style:italic"># Options to make output .md files</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">119</span>[outputFormats.MarkDown]
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">120</span>  mediaType = <span style="color:#ed9d13">&#34;text/plain&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">121</span>  isPlainText = <span style="color:#6ab825;font-weight:bold">true</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">122</span>  isHTML = <span style="color:#6ab825;font-weight:bold">false</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">123</span><span style="color:#999;font-style:italic"># Options to make hugo output files</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">124</span>[outputs]
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">125</span>  home = [<span style="color:#ed9d13">&#34;HTML&#34;</span>, <span style="color:#ed9d13">&#34;RSS&#34;</span>, <span style="color:#ed9d13">&#34;JSON&#34;</span>]
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">126</span>  page = [<span style="color:#ed9d13">&#34;HTML&#34;</span>, <span style="color:#ed9d13">&#34;MarkDown&#34;</span>]
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">127</span>  section = [<span style="color:#ed9d13">&#34;HTML&#34;</span>, <span style="color:#ed9d13">&#34;RSS&#34;</span>]
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">128</span>  taxonomy = [<span style="color:#ed9d13">&#34;HTML&#34;</span>, <span style="color:#ed9d13">&#34;RSS&#34;</span>]
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">129</span>  taxonomyTerm = [<span style="color:#ed9d13">&#34;HTML&#34;</span>]
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">130</span><span style="color:#999;font-style:italic">#</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">131</span><span style="color:#999;font-style:italic"># ----------------------------</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">132</span><span style="color:#999;font-style:italic"># Theme specific configuration</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">133</span><span style="color:#999;font-style:italic"># ----------------------------</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">134</span><span style="color:#999;font-style:italic">#</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">135</span>[params]
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">136</span>  <span style="color:#999;font-style:italic"># uBlogger theme version</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">137</span>  version = <span style="color:#ed9d13">&#34;2.0.X&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">138</span>  <span style="color:#999;font-style:italic"># site default theme (&#34;light&#34;, &#34;dark&#34;, &#34;auto&#34;)</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">139</span>  defaultTheme = <span style="color:#ed9d13">&#34;auto&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">140</span>  <span style="color:#999;font-style:italic"># public git repo url only then enableGitInfo is true</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">141</span>  gitRepo = <span style="color:#ed9d13">&#34;https://github.com/abl3t0nnile/blog&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">142</span>  <span style="color:#999;font-style:italic"># date format</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">143</span>  dateFormat = <span style="color:#ed9d13">&#34;2006-01-02&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">144</span>  <span style="color:#999;font-style:italic"># Header config</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">145</span>  [params.header]
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">146</span>    <span style="color:#999;font-style:italic"># desktop header mode (&#34;fixed&#34;, &#34;normal&#34;, &#34;auto&#34;)</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">147</span>    desktopMode = <span style="color:#ed9d13">&#34;fixed&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">148</span>    <span style="color:#999;font-style:italic"># mobile header mode (&#34;fixed&#34;, &#34;normal&#34;, &#34;auto&#34;)</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">149</span>    mobileMode = <span style="color:#ed9d13">&#34;auto&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">150</span>    <span style="color:#999;font-style:italic"># Header title config</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">151</span>    [params.header.title]
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">152</span>      <span style="color:#999;font-style:italic"># URL of the LOGO</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">153</span>      logo = <span style="color:#ed9d13">&#34;&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">154</span>      <span style="color:#999;font-style:italic"># title name</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">155</span>      name = <span style="color:#ed9d13">&#34;a Coding Monkey&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">156</span>      <span style="color:#999;font-style:italic"># you can add extra information before the name </span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">157</span>      <span style="color:#999;font-style:italic"># (HTML format is supported), such as icons</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">158</span>      pre = <span style="color:#ed9d13">&#34;&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">159</span>      <span style="color:#999;font-style:italic"># you can add extra information after the name </span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">160</span>      <span style="color:#999;font-style:italic"># (HTML format is supported), such as icons</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">161</span>      post = <span style="color:#ed9d13">&#34;&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">162</span>  <span style="color:#999;font-style:italic"># Footer config</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">163</span>  [params.footer]
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">164</span>    enable = <span style="color:#6ab825;font-weight:bold">true</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">165</span>    <span style="color:#999;font-style:italic"># Custom content (HTML format is supported)</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">166</span>    custom = <span style="color:#ed9d13">&#39;&#39;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">167</span>    <span style="color:#999;font-style:italic"># whether to show Hugo and theme info</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">168</span>    hugo = <span style="color:#6ab825;font-weight:bold">true</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">169</span>    <span style="color:#999;font-style:italic"># whether to show copyright info</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">170</span>    copyright = <span style="color:#6ab825;font-weight:bold">true</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">171</span>    <span style="color:#999;font-style:italic"># whether to show the author</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">172</span>    author = <span style="color:#6ab825;font-weight:bold">true</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">173</span>    <span style="color:#999;font-style:italic"># site creation time</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">174</span>    since = <span style="color:#3677a9">2021</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">175</span>    <span style="color:#999;font-style:italic"># license info (HTML format is supported)</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">176</span>    license= <span style="color:#ed9d13">&#39;&lt;a rel=&#34;license external nofollow noopener noreffer&#34; 
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">177</span><span style="color:#ed9d13">              href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; 
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">178</span><span style="color:#ed9d13">              target=&#34;_blank&#34;&gt;CC BY-NC 4.0&lt;/a&gt;&#39;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">179</span>  <span style="color:#999;font-style:italic"># Home page config</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">180</span>  [params.home]
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">181</span>    <span style="color:#999;font-style:italic"># amount of RSS pages</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">182</span>    rss = <span style="color:#3677a9">10</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">183</span>    <span style="color:#999;font-style:italic"># Home page profile</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">184</span>    [params.home.profile]
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">185</span>      enable = <span style="color:#6ab825;font-weight:bold">true</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">186</span>      <span style="color:#999;font-style:italic"># Gravatar Email for preferred avatar in home page</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">187</span>      gravatarEmail = <span style="color:#ed9d13">&#34;&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">188</span>      <span style="color:#999;font-style:italic"># URL of avatar shown in home page</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">189</span>      avatarURL = <span style="color:#ed9d13">&#34;/img/avatar.png&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">190</span>      <span style="color:#999;font-style:italic"># title shown in home page (HTML format is supported)</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">191</span>      title = <span style="color:#ed9d13">&#34;a Coding Monkey&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">192</span>      <span style="color:#999;font-style:italic"># subtitle shown in home page (HTML format is supported)</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">193</span>      subtitle = <span style="color:#ed9d13">&#34;A personal blog about coding and learning to do so.&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">194</span>      <span style="color:#999;font-style:italic"># whether to show social links</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">195</span>      social = <span style="color:#6ab825;font-weight:bold">true</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">196</span>      <span style="color:#999;font-style:italic"># disclaimer (HTML format is supported)</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">197</span>      disclaimer = <span style="color:#ed9d13">&#34;Written by a monkey in front of a computer ...&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">198</span>    <span style="color:#999;font-style:italic"># Home page posts</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">199</span>    [params.home.posts]
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">200</span>      enable = <span style="color:#6ab825;font-weight:bold">true</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">201</span>      <span style="color:#999;font-style:italic"># special amount of posts in each home posts page</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">202</span>      paginate = <span style="color:#3677a9">4</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">203</span>    <span style="color:#999;font-style:italic"># Social config in home page</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">204</span>  [params.social]
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">205</span>    GitHub = <span style="color:#ed9d13">&#34;Abl3t0nnile&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">206</span>    Email = <span style="color:#ed9d13">&#34;minnemann.g@gmail.com&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">207</span>    RSS = <span style="color:#6ab825;font-weight:bold">false</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">208</span>  
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">209</span>  
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">210</span>  <span style="color:#999;font-style:italic"># Section (all posts) page config</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">211</span>  [params.section]
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">212</span>    <span style="color:#999;font-style:italic"># special amount of posts in each section page</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">213</span>    paginate = <span style="color:#3677a9">20</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">214</span>    <span style="color:#999;font-style:italic"># date format (month and day)</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">215</span>    dateFormat = <span style="color:#ed9d13">&#34;01-02&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">216</span>    <span style="color:#999;font-style:italic"># amount of RSS pages</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">217</span>    rss = <span style="color:#3677a9">10</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">218</span>  <span style="color:#999;font-style:italic"># List (category or tag) page config</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">219</span>  [params.list]
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">220</span>    <span style="color:#999;font-style:italic"># special amount of posts in each list page</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">221</span>    paginate = <span style="color:#3677a9">20</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">222</span>    <span style="color:#999;font-style:italic"># date format (month and day)</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">223</span>    dateFormat = <span style="color:#ed9d13">&#34;01-02&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">224</span>    <span style="color:#999;font-style:italic"># amount of RSS pages</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">225</span>    rss = <span style="color:#3677a9">10</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">226</span>  <span style="color:#999;font-style:italic"># Comment config</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">227</span>  [params.comment]
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">228</span>    enable = <span style="color:#6ab825;font-weight:bold">false</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">229</span>  <span style="color:#999;font-style:italic"># Page config</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">230</span>  [params.page]
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">231</span>    theme = <span style="color:#ed9d13">&#34;full&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">232</span>    <span style="color:#999;font-style:italic"># whether to hide a page from home page</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">233</span>    hiddenFromHomePage = <span style="color:#6ab825;font-weight:bold">false</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">234</span>    <span style="color:#999;font-style:italic"># whether to hide a page from search results</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">235</span>    hiddenFromSearch = <span style="color:#6ab825;font-weight:bold">false</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">236</span>    <span style="color:#999;font-style:italic"># whether to enable twemoji</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">237</span>    twemoji = <span style="color:#6ab825;font-weight:bold">false</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">238</span>    <span style="color:#999;font-style:italic"># whether to enable the ruby extended syntax</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">239</span>    ruby = <span style="color:#6ab825;font-weight:bold">true</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">240</span>    <span style="color:#999;font-style:italic"># whether to enable the fraction extended syntax</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">241</span>    fraction = <span style="color:#6ab825;font-weight:bold">true</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">242</span>    <span style="color:#999;font-style:italic"># whether to enable the fontawesome extended syntax</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">243</span>    fontawesome = <span style="color:#6ab825;font-weight:bold">true</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">244</span>    <span style="color:#999;font-style:italic"># whether to show link to Raw Markdown content of the content</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">245</span>    linkToMarkdown = <span style="color:#6ab825;font-weight:bold">true</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">246</span>    <span style="color:#999;font-style:italic"># whether to show the full text content in RSS</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">247</span>    rssFullText = <span style="color:#6ab825;font-weight:bold">false</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">248</span>    <span style="color:#999;font-style:italic"># Table of the contents config</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">249</span>    [params.page.toc]
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">250</span>      <span style="color:#999;font-style:italic"># whether to enable the table of the contents</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">251</span>      enable = <span style="color:#6ab825;font-weight:bold">true</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">252</span>      <span style="color:#999;font-style:italic"># whether to keep the static table of the contents in front of the post</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">253</span>      keepStatic = <span style="color:#6ab825;font-weight:bold">false</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">254</span>      <span style="color:#999;font-style:italic"># whether to make the table of the contents in the sidebar</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">255</span>      <span style="color:#999;font-style:italic"># automatically collapsed</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">256</span>      auto = <span style="color:#6ab825;font-weight:bold">true</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">257</span>    <span style="color:#999;font-style:italic"># Code config</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">258</span>    [params.page.code]
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">259</span>      <span style="color:#999;font-style:italic"># whether to show the copy button of the code block</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">260</span>      copy = <span style="color:#6ab825;font-weight:bold">true</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">261</span>      <span style="color:#999;font-style:italic"># the maximum number of lines of displayed code by default</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">262</span>      maxShownLines = <span style="color:#3677a9">10</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">263</span>    <span style="color:#999;font-style:italic"># Social share links in post page</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">264</span>    [params.page.share]
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">265</span>      enable = <span style="color:#6ab825;font-weight:bold">false</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">266</span>  <span style="color:#999;font-style:italic">#Search config</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">267</span>  [params.search]
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">268</span>    enable = <span style="color:#6ab825;font-weight:bold">true</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">269</span>    <span style="color:#999;font-style:italic"># type of search engine (&#34;lunr&#34;, &#34;algolia&#34;)</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">270</span>    type = <span style="color:#ed9d13">&#34;lunr&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">271</span>    <span style="color:#999;font-style:italic"># max index length of the chunked content</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">272</span>    contentLength = <span style="color:#3677a9">4000</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">273</span>    <span style="color:#999;font-style:italic"># placeholder of the search bar</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">274</span>    placeholder = <span style="color:#ed9d13">&#34;&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">275</span>    <span style="color:#999;font-style:italic"># uBlogger NEW | 0.2.1 max number of results length</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">276</span>    maxResultLength = <span style="color:#3677a9">10</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">277</span>    <span style="color:#999;font-style:italic"># uBlogger NEW | 0.2.3 snippet length of the result</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">278</span>    snippetLength = <span style="color:#3677a9">30</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">279</span>    <span style="color:#999;font-style:italic"># uBlogger NEW | 0.2.1 HTML tag name of the highlight part in results</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">280</span>    highlightTag = <span style="color:#ed9d13">&#34;em&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">281</span>    <span style="color:#999;font-style:italic"># uBlogger NEW | 0.2.4 whether to use the absolute URL based on the</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">282</span>    <span style="color:#999;font-style:italic"># baseURL in search index</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">283</span>    absoluteURL = <span style="color:#6ab825;font-weight:bold">false</span>
-</code></pre></div>
+    <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">  1</span><span style="color:#6ab825;font-weight:bold">baseURL</span>:<span style="color:#666"> </span>https://abl3t0nnile.github.io/<span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">  2</span><span style="color:#666"></span><span style="color:#6ab825;font-weight:bold">title</span>:<span style="color:#666"> </span>a Coding Monkey<span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">  3</span><span style="color:#666"></span><span style="color:#6ab825;font-weight:bold">author</span>:<span style="color:#666"> </span>Gregor Minnemann<span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">  4</span><span style="color:#666"></span><span style="color:#6ab825;font-weight:bold">keywords</span>:<span style="color:#666"> </span>[<span style="color:#ed9d13">&#34;personal&#34;</span>,<span style="color:#666"> </span><span style="color:#ed9d13">&#34;coding&#34;</span>,<span style="color:#666"> </span><span style="color:#ed9d13">&#34;computer science&#34;</span>,<span style="color:#666"> </span><span style="color:#ed9d13">&#34;swift&#34;</span>,<span style="color:#666"> </span><span style="color:#ed9d13">&#34;python&#34;</span>,<span style="color:#666"> </span><span style="color:#ed9d13">&#34;markdown&#34;</span>,<span style="color:#666"> </span><span style="color:#ed9d13">&#34;blog&#34;</span>,<span style="color:#666"> </span><span style="color:#ed9d13">&#34;abl3t0nnile&#34;</span>]<span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">  5</span><span style="color:#666"></span><span style="color:#6ab825;font-weight:bold">theme</span>:<span style="color:#666"> </span>book<span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">  6</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">  7</span><span style="color:#666"></span><span style="color:#999;font-style:italic"># Book configuration</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">  8</span><span style="color:#666"></span><span style="color:#6ab825;font-weight:bold">disablePathToLower</span>:<span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">true</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">  9</span><span style="color:#666"></span><span style="color:#6ab825;font-weight:bold">enableGitInfo</span>:<span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">true</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 10</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 11</span><span style="color:#666"></span><span style="color:#999;font-style:italic"># Needed for mermaid/katex shortcodes</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 12</span><span style="color:#666"></span><span style="color:#6ab825;font-weight:bold">markup</span>:<span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 13</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">goldmark</span>:<span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 14</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">renderer</span>:<span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 15</span><span style="color:#666">      </span><span style="color:#6ab825;font-weight:bold">unsafe</span>:<span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">true</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 16</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">tableOfContents</span>:<span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 17</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">startLevel</span>:<span style="color:#666"> </span><span style="color:#3677a9">1</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 18</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">highlight</span>:<span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 19</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">anchorLineNos</span>:<span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">false</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 20</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">codeFences</span>:<span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">true</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 21</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">guessSyntax</span>:<span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">false</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 22</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">hl_Lines</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;&#34;</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 23</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">lineAnchors</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;&#34;</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 24</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">lineNoStart</span>:<span style="color:#666"> </span><span style="color:#3677a9">1</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 25</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">lineNos</span>:<span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">true</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 26</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">lineNumbersInTable</span>:<span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">false</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 27</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">noClasses</span>:<span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">true</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 28</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">style</span>:<span style="color:#666"> </span>native<span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 29</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">tabWidth</span>:<span style="color:#666"> </span><span style="color:#3677a9">4</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 30</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 31</span><span style="color:#666"></span><span style="color:#999;font-style:italic"># Multi-lingual mode config</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 32</span><span style="color:#666"></span><span style="color:#999;font-style:italic"># There are different options to translate files</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 33</span><span style="color:#666"></span><span style="color:#999;font-style:italic"># See https://gohugo.io/content-management/multilingual/#translation-by-filename</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 34</span><span style="color:#666"></span><span style="color:#999;font-style:italic"># And https://gohugo.io/content-management/multilingual/#translation-by-content-directory</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 35</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 36</span><span style="color:#666"></span><span style="color:#999;font-style:italic">#defaultContentLanguage: en</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 37</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 38</span><span style="color:#666"></span><span style="color:#6ab825;font-weight:bold">languages</span>:<span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 39</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">en</span>:<span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 40</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">languageName</span>:<span style="color:#666"> </span>English<span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 41</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">contentDir</span>:<span style="color:#666"> </span>content<span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 42</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">weight</span>:<span style="color:#666"> </span><span style="color:#3677a9">1</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 43</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">de</span>:<span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 44</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">languageName</span>:<span style="color:#666"> </span>German<span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 45</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">contentDir</span>:<span style="color:#666"> </span>content.de<span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 46</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">weight</span>:<span style="color:#666"> </span><span style="color:#3677a9">2</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 47</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 48</span><span style="color:#666"></span><span style="color:#6ab825;font-weight:bold">menu</span>:<span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 49</span><span style="color:#666">  </span><span style="color:#999;font-style:italic"># before: []</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 50</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">after</span>:<span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 51</span><span style="color:#666">    </span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;Contact&#34;</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 52</span><span style="color:#666">      </span><span style="color:#6ab825;font-weight:bold">url</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;mailto:minnemann.g@gmail.com&#34;</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 53</span><span style="color:#666">      </span><span style="color:#6ab825;font-weight:bold">weight</span>:<span style="color:#666"> </span><span style="color:#3677a9">10</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 54</span><span style="color:#666">    </span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;Github&#34;</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 55</span><span style="color:#666">      </span><span style="color:#6ab825;font-weight:bold">url</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;https://github.com/Abl3t0nnile&#34;</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 56</span><span style="color:#666">      </span><span style="color:#6ab825;font-weight:bold">weight</span>:<span style="color:#666"> </span><span style="color:#3677a9">20</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 57</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 58</span><span style="color:#666"></span><span style="color:#6ab825;font-weight:bold">params</span>:<span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 59</span><span style="color:#666">  </span><span style="color:#999;font-style:italic"># (Optional, default light) Sets color theme: light, dark or auto.</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 60</span><span style="color:#666">  </span><span style="color:#999;font-style:italic"># Theme &#39;auto&#39; switches between dark and light modes based on browser/os preferences</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 61</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">BookTheme</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;auto&#34;</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 62</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 63</span><span style="color:#666">  </span><span style="color:#999;font-style:italic"># (Optional, default true) Controls table of contents visibility on right side of pages.</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 64</span><span style="color:#666">  </span><span style="color:#999;font-style:italic"># Start and end levels can be controlled with markup.tableOfContents setting.</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 65</span><span style="color:#666">  </span><span style="color:#999;font-style:italic"># You can also specify this parameter per page in front matter.</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 66</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">BookToC</span>:<span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">true</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 67</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 68</span><span style="color:#666">  </span><span style="color:#999;font-style:italic"># (Optional, default none) Set the path to a logo for the book. If the logo is</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 69</span><span style="color:#666">  </span><span style="color:#999;font-style:italic"># /static/logo.png then the path would be logo.png</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 70</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">BookLogo</span>:<span style="color:#666"> </span>/logo.png<span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 71</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 72</span><span style="color:#666">  </span><span style="color:#999;font-style:italic"># (Optional, default none) Set leaf bundle to render as side menu</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 73</span><span style="color:#666">  </span><span style="color:#999;font-style:italic"># When not specified file structure and weights will be used</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 74</span><span style="color:#666">  </span><span style="color:#999;font-style:italic"># BookMenuBundle: /menu</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 75</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 76</span><span style="color:#666">  </span><span style="color:#999;font-style:italic"># (Optional, default docs) Specify root page to render child pages as menu.</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 77</span><span style="color:#666">  </span><span style="color:#999;font-style:italic"># Page is resoled by .GetPage function: https://gohugo.io/functions/getpage/</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 78</span><span style="color:#666">  </span><span style="color:#999;font-style:italic"># For backward compatibility you can set &#39;*&#39; to render all sections to menu. Acts same as &#39;/&#39;</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 79</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">BookSection</span>:<span style="color:#666"> </span>docs<span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 80</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 81</span><span style="color:#666">  </span><span style="color:#999;font-style:italic"># Set source repository location.</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 82</span><span style="color:#666">  </span><span style="color:#999;font-style:italic"># Used for &#39;Last Modified&#39; and &#39;Edit this page&#39; links.</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 83</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">BookRepo</span>:<span style="color:#666"> </span>https://github.com/Abl3t0nnile/website<span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 84</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 85</span><span style="color:#666">  </span><span style="color:#999;font-style:italic"># Configure the date format used on the pages</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 86</span><span style="color:#666">  </span><span style="color:#999;font-style:italic"># - In git information</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 87</span><span style="color:#666">  </span><span style="color:#999;font-style:italic"># - In blog posts</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 88</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">BookDateFormat</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;January 2, 2006&#34;</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 89</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 90</span><span style="color:#666">  </span><span style="color:#999;font-style:italic"># (Optional, default true) Enables search function with flexsearch,</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 91</span><span style="color:#666">  </span><span style="color:#999;font-style:italic"># Index is built on fly, therefore it might slowdown your website.</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 92</span><span style="color:#666">  </span><span style="color:#999;font-style:italic"># Configuration for indexing can be adjusted in i18n folder per language.</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 93</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">BookSearch</span>:<span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">true</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 94</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 95</span><span style="color:#666">  </span><span style="color:#999;font-style:italic"># (Optional, default true) Enables comments template on pages</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 96</span><span style="color:#666">  </span><span style="color:#999;font-style:italic"># By default partals/docs/comments.html includes Disqus template</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 97</span><span style="color:#666">  </span><span style="color:#999;font-style:italic"># See https://gohugo.io/content-management/comments/#configure-disqus</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 98</span><span style="color:#666">  </span><span style="color:#999;font-style:italic"># Can be overwritten by same param in page frontmatter</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 99</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">BookComments</span>:<span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">false</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">100</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">101</span><span style="color:#666">  </span><span style="color:#999;font-style:italic"># /!\ This is an experimental feature, might be removed or changed at any time</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">102</span><span style="color:#666">  </span><span style="color:#999;font-style:italic"># (Optional, experimental, default false) Enables portable links and link checks in markdown pages.</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">103</span><span style="color:#666">  </span><span style="color:#999;font-style:italic"># Portable links meant to work with text editors and let you write markdown without  shortcode</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">104</span><span style="color:#666">  </span><span style="color:#999;font-style:italic"># Theme will print warning if page referenced in markdown does not exists.</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">105</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">BookPortableLinks</span>:<span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">true</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">106</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">107</span><span style="color:#666">  </span><span style="color:#999;font-style:italic"># /!\ This is an experimental feature, might be removed or changed at any time</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">108</span><span style="color:#666">  </span><span style="color:#999;font-style:italic"># (Optional, experimental, default false) Enables service worker that caches visited pages and resources for offline use.</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">109</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">BookServiceWorker</span>:<span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">true</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">110</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">111</span><span style="color:#666">  </span><span style="color:#999;font-style:italic"># /!\ This is an experimental feature, might be removed or changed at any time</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">112</span><span style="color:#666">  </span><span style="color:#999;font-style:italic"># (Optional, experimental, default false) Enables a drop-down menu for translations only if a translation is present.</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">113</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">BookTranslatedOnly</span>:<span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">false</span><span style="color:#666">
+</span></code></pre></div>
   </div>
 </details>
 
-<p>We can now take a first look on our new page. To test a page in Hugo, simply type <code>hugo server</code> into the command line, while in the project directory. Hugo now creates the website and runs it on a local host. The address will be shown in the command line. As long as you keep the server running, hugo will update the site on every change we make to the code. Now we can finally start with personalizing our page.</p>
+<p>Now, that our site is configured, we can now take a first look. To test a page in Hugo, simply type <code>hugo server</code> into the command line, while in the project directory. Hugo now creates the website and runs it on a local host. The address will be shown in the command line. As long as you keep the server running, hugo will update the site on every change we make to the code.</p>
 <p>Although it&rsquo;s empty our page is now complete. All we have to do, is create some content and push the changes to our production repo.</p>
 <hr>
 <h2 id="4-content-management">
@@ -788,11 +641,6 @@ https://github.com/alex-shpak/hugo-book
 <h2 id="5-publication">
   5 Publication
   <a class="anchor" href="#5-publication">#</a>
-</h2>
-<p>To be continued &hellip;</p>
-<h2 id="6-automation">
-  6 Automation
-  <a class="anchor" href="#6-automation">#</a>
 </h2>
 <p>To be continued &hellip;</p>
 </article>
@@ -891,7 +739,6 @@ https://github.com/alex-shpak/hugo-book
         </li>
         <li><a href="#4-content-management">4 Content management</a></li>
         <li><a href="#5-publication">5 Publication</a></li>
-        <li><a href="#6-automation">6 Automation</a></li>
       </ul>
     </li>
   </ul>
