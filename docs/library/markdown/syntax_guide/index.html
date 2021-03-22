@@ -6,24 +6,24 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Markdown Syntax Guide #  This article offers a sample of basic Markdown syntax that can be used in Hugo content files.
-This article is a shameful copy of the great Grav original page.
-Further details on the extended Markdown syntax of Hugo and Books - Theme see the corresponding articles.
+This article is a shortened adaption of the great Grav original page.
+For further details on the extended Markdown syntax of Hugo and Books - Theme see the corresponding articles.
  Let&rsquo;s face it: Writing content for the Web is tiresome. WYSIWYG editors help alleviate this task, but they generally result in horrible code, or worse yet, ugly web pages.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Markdown Syntax Guide" />
 <meta property="og:description" content="Markdown Syntax Guide #  This article offers a sample of basic Markdown syntax that can be used in Hugo content files.
-This article is a shameful copy of the great Grav original page.
-Further details on the extended Markdown syntax of Hugo and Books - Theme see the corresponding articles.
+This article is a shortened adaption of the great Grav original page.
+For further details on the extended Markdown syntax of Hugo and Books - Theme see the corresponding articles.
  Let&rsquo;s face it: Writing content for the Web is tiresome. WYSIWYG editors help alleviate this task, but they generally result in horrible code, or worse yet, ugly web pages." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://abl3t0nnile.github.io/docs/library/markdown/syntax_guide/" /><meta property="article:section" content="docs" />
 
-
+<meta property="article:modified_time" content="2021-03-21T22:37:59&#43;01:00" />
 
 <title>Markdown Syntax Guide | a Coding Monkey</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.a6e33eff9fca295dda99115dabc387fd12b0e1282a347b6e4de6e73b19c96d91.css" integrity="sha256-puM&#43;/5/KKV3amRFdq8OH/RKw4SgqNHtuTebnOxnJbZE=">
-<script defer src="/en.search.min.4352f7bf25192422c1b52c4b0653eeb2735c1e279bbc20aca83a33f6406cbe36.js" integrity="sha256-Q1L3vyUZJCLBtSxLBlPusnNcHiebvCCsqDoz9kBsvjY="></script>
+<script defer src="/en.search.min.72294837b3c94b5c5dfd0c9781810c48ea2392681d462f64d75df152f22150c6.js" integrity="sha256-cilIN7PJS1xd/QyXgYEMSOojkmgdRi9k113xUvIhUMY="></script>
 
 <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk="></script>
 <!--
@@ -176,7 +176,29 @@ https://github.com/alex-shpak/hugo-book
       
     
       
+        <li>
+          
+  
+  
+
+  
+    <a href="https://abl3t0nnile.github.io/docs/library/markdown/hugo_shortcodes/" class="">Hugo Markdown Shortcodes</a>
+  
+
+        </li>
+      
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://abl3t0nnile.github.io/docs/library/markdown/books_shortcodes/" class="">Books - Theme Shortcodes</a>
+  
+
+        </li>
       
     
   </ul>
@@ -324,9 +346,8 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#1-headings">1 Headings</a></li>
         <li><a href="#2-comments">2 Comments</a></li>
         <li><a href="#3-horizontal-rules">3 Horizontal Rules</a></li>
-        <li><a href="#4-body-copy">4 Body Copy</a></li>
-        <li><a href="#5-inline-html">5 Inline HTML</a></li>
-        <li><a href="#6-emphasis">6 Emphasis</a>
+        <li><a href="#4-inline-html">4 Inline HTML</a></li>
+        <li><a href="#5-emphasis">5 Emphasis</a>
           <ul>
             <li><a href="#bold">Bold</a></li>
             <li><a href="#italics">Italics</a></li>
@@ -334,15 +355,15 @@ https://github.com/alex-shpak/hugo-book
             <li><a href="#combination">Combination</a></li>
           </ul>
         </li>
-        <li><a href="#7-blockquotes">7 Blockquotes</a></li>
-        <li><a href="#8-lists">8 Lists</a>
+        <li><a href="#6-blockquotes">6 Blockquotes</a></li>
+        <li><a href="#7-lists">7 Lists</a>
           <ul>
             <li><a href="#unordered">Unordered</a></li>
             <li><a href="#ordered">Ordered</a></li>
             <li><a href="#task-lists">Task Lists</a></li>
           </ul>
         </li>
-        <li><a href="#9-code">9 Code</a>
+        <li><a href="#8-code">8 Code</a>
           <ul>
             <li><a href="#inline-code">Inline Code</a></li>
             <li><a href="#indented-code">Indented Code</a></li>
@@ -350,7 +371,16 @@ https://github.com/alex-shpak/hugo-book
             <li><a href="#syntax-highlighting">Syntax Highlighting</a></li>
           </ul>
         </li>
-        <li><a href="#10-tables">10 Tables</a></li>
+        <li><a href="#9-tables">9 Tables</a></li>
+        <li><a href="#links">10 Links</a>
+          <ul>
+            <li><a href="#basic-link">Basic Link</a></li>
+            <li><a href="#add-a-title">Add a Title</a></li>
+            <li><a href="#named-anchors">Named Anchors</a></li>
+          </ul>
+        </li>
+        <li><a href="#11-footnotes">11 Footnotes</a></li>
+        <li><a href="#12-images">12 Images</a></li>
       </ul>
     </li>
   </ul>
@@ -371,8 +401,8 @@ https://github.com/alex-shpak/hugo-book
 </h1>
 <p>This article offers a sample of basic Markdown syntax that can be used in Hugo content files.</p>
 <blockquote class="book-hint info">
-  <p>This article is a shameful copy of the great <a href="http://learn.getgrav.org/content/markdown">Grav original page</a>.</p>
-<p>Further details on the extended Markdown syntax of <a href="hugo_shortcodes.md">Hugo</a> and <a href="books_shortcodes.md">Books - Theme</a> see the corresponding articles.</p>
+  <p>This article is a shortened adaption of the great <a href="http://learn.getgrav.org/content/markdown">Grav original page</a>.</p>
+<p>For further details on the extended Markdown syntax of <a href="hugo_shortcodes.md">Hugo</a> and <a href="books_shortcodes.md">Books - Theme</a> see the corresponding articles.</p>
 
 </blockquote>
 
@@ -401,26 +431,21 @@ the single biggest source of inspiration for Markdown’s syntax is the format o
   1 Headings
   <a class="anchor" href="#1-headings">#</a>
 </h2>
-<p>Headings from <code>h2</code> through <code>h6</code> are constructed with a <code>#</code> for each level:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="color:#75715e">## h2 Heading
-</span><span style="color:#75715e">### h3 Heading
-</span><span style="color:#75715e">#### h4 Heading
-</span><span style="color:#75715e">##### h5 Heading
-</span><span style="color:#75715e">###### h6 Heading
-</span></code></pre></div><p>The HTML looks like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">h2</span>&gt;h2 Heading&lt;/<span style="color:#f92672">h2</span>&gt;
-&lt;<span style="color:#f92672">h3</span>&gt;h3 Heading&lt;/<span style="color:#f92672">h3</span>&gt;
-&lt;<span style="color:#f92672">h4</span>&gt;h4 Heading&lt;/<span style="color:#f92672">h4</span>&gt;
-&lt;<span style="color:#f92672">h5</span>&gt;h5 Heading&lt;/<span style="color:#f92672">h5</span>&gt;
-&lt;<span style="color:#f92672">h6</span>&gt;h6 Heading&lt;/<span style="color:#f92672">h6</span>&gt;
-</code></pre></div><h2 id="2-comments">
+<p>Headings from <code>h1</code> through <code>h6</code> are constructed with a <code>#</code> for each level:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span><span style="color:#fff;font-weight:bold"># h1 Heading
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2</span><span style="color:#fff;font-weight:bold"></span><span style="color:#fff;text-decoration:underline">## h2 Heading
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">3</span><span style="color:#fff;text-decoration:underline">### h3 Heading
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">4</span><span style="color:#fff;text-decoration:underline">#### h4 Heading
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">5</span><span style="color:#fff;text-decoration:underline">##### h5 Heading
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">6</span><span style="color:#fff;text-decoration:underline">###### h6 Heading
+</span></code></pre></div><h2 id="2-comments">
   2 Comments
   <a class="anchor" href="#2-comments">#</a>
 </h2>
 <p>Comments should be HTML compatible.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!--
-</span><span style="color:#75715e">This is a comment
-</span><span style="color:#75715e">--&gt;</span>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span><span style="color:#999;font-style:italic">&lt;!--
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2</span><span style="color:#999;font-style:italic">This is a comment
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">3</span><span style="color:#999;font-style:italic">--&gt;</span>
 </code></pre></div><p>Comment below should <strong>NOT</strong> be seen:</p>
 <!--
 This is a comment
@@ -440,35 +465,21 @@ In Markdown, you can create a <code>&lt;hr&gt;</code> with any of the following:
 <hr>
 <hr>
 <hr>
-<h2 id="4-body-copy">
-  4 Body Copy
-  <a class="anchor" href="#4-body-copy">#</a>
-</h2>
-<p>Body copy written as normal, plain text will be wrapped with <code>&lt;p&gt;&lt;/p&gt;</code> tags in the rendered HTML.</p>
-<p>So this body copy:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">Lorem ipsum dolor sit amet, graecis denique ei vel, at duo primis mandamus. Et legere ocurreret pri,
-animal tacimates complectitur ad cum. Cu eum inermis inimicus efficiendi. Labore officiis his ex,
-soluta officiis concludaturque ei qui, vide sensibus vim ad.
-</code></pre></div><p>The HTML looks like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span>&gt;Lorem ipsum dolor sit amet, graecis denique ei vel, at duo primis mandamus. Et legere ocurreret
-pri, animal tacimates complectitur ad cum. Cu eum inermis inimicus efficiendi. Labore officiis his
-ex, soluta officiis concludaturque ei qui, vide sensibus vim ad.&lt;/<span style="color:#f92672">p</span>&gt;
-</code></pre></div><p>A <strong>line break</strong> can be done with one blank line.</p>
-<h2 id="5-inline-html">
-  5 Inline HTML
-  <a class="anchor" href="#5-inline-html">#</a>
+<h2 id="4-inline-html">
+  4 Inline HTML
+  <a class="anchor" href="#4-inline-html">#</a>
 </h2>
 <p>If you need a certain HTML tag (with a class) you can simply use HTML:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">Paragraph in Markdown.
-
-&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;class&#34;</span>&gt;
-    This is &lt;<span style="color:#f92672">b</span>&gt;HTML&lt;/<span style="color:#f92672">b</span>&gt;
-&lt;/<span style="color:#f92672">div</span>&gt;
-
-Paragraph in Markdown.
-</code></pre></div><h2 id="6-emphasis">
-  6 Emphasis
-  <a class="anchor" href="#6-emphasis">#</a>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span>Paragraph in Markdown.
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">3</span>&lt;<span style="color:#6ab825;font-weight:bold">div</span> <span style="color:#bbb">class</span>=<span style="color:#ed9d13">&#34;class&#34;</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">4</span>    This is &lt;<span style="color:#6ab825;font-weight:bold">b</span>&gt;HTML&lt;/<span style="color:#6ab825;font-weight:bold">b</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">5</span>&lt;/<span style="color:#6ab825;font-weight:bold">div</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">6</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">7</span>Paragraph in Markdown.
+</code></pre></div><h2 id="5-emphasis">
+  5 Emphasis
+  <a class="anchor" href="#5-emphasis">#</a>
 </h2>
 <h3 id="bold">
   Bold
@@ -476,75 +487,57 @@ Paragraph in Markdown.
 </h3>
 <p>For emphasizing a snippet of text with a heavier font-weight.</p>
 <p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">**rendered as bold text**
-<span style="font-weight:bold">__rendered as bold text__</span>
-</code></pre></div><p>The HTML looks like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">strong</span>&gt;rendered as bold text&lt;/<span style="color:#f92672">strong</span>&gt;
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span>**rendered as bold text**
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2</span><span style="font-weight:bold">__rendered as bold text__</span>
 </code></pre></div><h3 id="italics">
   Italics
   <a class="anchor" href="#italics">#</a>
 </h3>
 <p>For emphasizing a snippet of text with italics.</p>
 <p>The following snippet of text is <em>rendered as italicized text</em>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">*rendered as italicized text*
-<span style="font-style:italic">_rendered as italicized text_</span>
-</code></pre></div><p>The HTML looks like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">em</span>&gt;rendered as italicized text&lt;/<span style="color:#f92672">em</span>&gt;
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span>*rendered as italicized text*
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2</span><span style="font-style:italic">_rendered as italicized text_</span>
 </code></pre></div><h3 id="strikethrough">
   Strikethrough
   <a class="anchor" href="#strikethrough">#</a>
 </h3>
 <p>In 
-  <a href="https://github.github.com/gfm/">[GFM]^(GitHub flavored Markdown)</a> you can do strikethroughs.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">~~Strike through this text.~~
+  <a href="https://github.github.com/gfm/">GitHub flavored Markdown</a>, which can be used on this site, you can do strikethroughs.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span>~~Strike through this text.~~
 </code></pre></div><p>The rendered output looks like this:</p>
 <p><del>Strike through this text.</del></p>
-<p>The HTML looks like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">del</span>&gt;Strike through this text.&lt;/<span style="color:#f92672">del</span>&gt;
-</code></pre></div><h3 id="combination">
+<h3 id="combination">
   Combination
   <a class="anchor" href="#combination">#</a>
 </h3>
 <p>Bold, italics, and strikethrough can be used in combination.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">***bold and italics***
-<span style="color:#f92672">~~**strikethrough and bold**~~</span>
-<span style="color:#f92672">~~*strikethrough and italics*~~</span>
-<span style="color:#f92672">~~***bold, italics and strikethrough***~~</span>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span>***bold and italics***
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2</span><span style="color:#d22323">~~**strikethrough and bold**~~</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">3</span><span style="color:#d22323">~~*strikethrough and italics*~~</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">4</span><span style="color:#d22323">~~***bold, italics and strikethrough***~~</span>
 </code></pre></div><p>The rendered output looks like this:</p>
 <p><em><strong>bold and italics</strong></em></p>
 <p><del><strong>strikethrough and bold</strong></del></p>
 <p><del><em>strikethrough and italics</em></del></p>
 <p><del><em><strong>bold, italics and strikethrough</strong></em></del></p>
-<p>The HTML looks like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">em</span>&gt;&lt;<span style="color:#f92672">strong</span>&gt;bold and italics&lt;/<span style="color:#f92672">strong</span>&gt;&lt;/<span style="color:#f92672">em</span>&gt;
-&lt;<span style="color:#f92672">del</span>&gt;&lt;<span style="color:#f92672">strong</span>&gt;strikethrough and bold&lt;/<span style="color:#f92672">strong</span>&gt;&lt;/<span style="color:#f92672">del</span>&gt;
-&lt;<span style="color:#f92672">del</span>&gt;&lt;<span style="color:#f92672">em</span>&gt;strikethrough and italics&lt;/<span style="color:#f92672">em</span>&gt;&lt;/<span style="color:#f92672">del</span>&gt;
-&lt;<span style="color:#f92672">del</span>&gt;&lt;<span style="color:#f92672">em</span>&gt;&lt;<span style="color:#f92672">strong</span>&gt;bold, italics and strikethrough&lt;/<span style="color:#f92672">strong</span>&gt;&lt;/<span style="color:#f92672">em</span>&gt;&lt;/<span style="color:#f92672">del</span>&gt;
-</code></pre></div><h2 id="7-blockquotes">
-  7 Blockquotes
-  <a class="anchor" href="#7-blockquotes">#</a>
+<h2 id="6-blockquotes">
+  6 Blockquotes
+  <a class="anchor" href="#6-blockquotes">#</a>
 </h2>
 <p>For quoting blocks of content from another source within your document.</p>
 <p>Add <code>&gt;</code> before any text you want to quote:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="color:#66d9ef">&gt; </span><span style="font-style:italic">**Fusion Drive** combines a hard drive with a flash storage (solid-state drive) and 
-</span><span style="font-style:italic"></span>presents it as a single logical volume with the space of both drives combined.
-</code></pre></div><p>The rendered output looks like this:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span><span style="color:#6ab825;font-weight:bold">&gt; </span><span style="font-style:italic">**Fusion Drive** combines a hard drive with a flash storage (solid-state drive) 
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2</span><span style="font-style:italic"></span><span style="color:#6ab825;font-weight:bold">&gt; </span><span style="font-style:italic">and presents it as a single logical volume with the space of both drives combined.
+</span></code></pre></div><p>The rendered output looks like this:</p>
 <blockquote>
-<p><strong>Fusion Drive</strong> combines a hard drive with a flash storage (solid-state drive) and presents
-it as a single logical volume with the space of both drives combined.</p>
+<p><strong>Fusion Drive</strong> combines a hard drive with a flash storage (solid-state drive)
+and presents it as a single logical volume with the space of both drives combined.</p>
 </blockquote>
-<p>The HTML looks like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">blockquote</span>&gt;
-  &lt;<span style="color:#f92672">p</span>&gt;
-    &lt;<span style="color:#f92672">strong</span>&gt;Fusion Drive&lt;/<span style="color:#f92672">strong</span>&gt; combines a hard drive with a flash storage (solid-state drive)
-    and presents it as a single logical volume with the space of both drives combined.
-  &lt;/<span style="color:#f92672">p</span>&gt;
-&lt;/<span style="color:#f92672">blockquote</span>&gt;
-</code></pre></div><p>Blockquotes can also be nested:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="color:#66d9ef">&gt; </span><span style="font-style:italic">Donec massa lacus, ultricies a ullamcorper in, fermentum sed augue.
-</span><span style="font-style:italic"></span>Nunc augue augue, aliquam non hendrerit ac, commodo vel nisi.
-&gt;&gt; Sed adipiscing elit vitae augue consectetur a gravida nunc vehicula. Donec auctor
-odio non est accumsan facilisis. Aliquam id turpis in dolor tincidunt mollis ac eu diam.
+<p>Blockquotes can also be nested:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span><span style="color:#6ab825;font-weight:bold">&gt; </span><span style="font-style:italic">Donec massa lacus, ultricies a ullamcorper in, fermentum sed augue.
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2</span><span style="font-style:italic"></span>Nunc augue augue, aliquam non hendrerit ac, commodo vel nisi.
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">3</span>&gt;&gt; Sed adipiscing elit vitae augue consectetur a gravida nunc vehicula. Donec auctor
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">4</span>odio non est accumsan facilisis. Aliquam id turpis in dolor tincidunt mollis ac eu diam.
 </code></pre></div><p>The rendered output looks like this:</p>
 <blockquote>
 <p>Donec massa lacus, ultricies a ullamcorper in, fermentum sed augue.
@@ -554,9 +547,9 @@ Nunc augue augue, aliquam non hendrerit ac, commodo vel nisi.</p>
 odio non est accumsan facilisis. Aliquam id turpis in dolor tincidunt mollis ac eu diam.</p>
 </blockquote>
 </blockquote>
-<h2 id="8-lists">
-  8 Lists
-  <a class="anchor" href="#8-lists">#</a>
+<h2 id="7-lists">
+  7 Lists
+  <a class="anchor" href="#7-lists">#</a>
 </h2>
 <h3 id="unordered">
   Unordered
@@ -564,22 +557,22 @@ odio non est accumsan facilisis. Aliquam id turpis in dolor tincidunt mollis ac 
 </h3>
 <p>A list of items in which the order of the items does not explicitly matter.</p>
 <p>You may use any of the following symbols to denote bullets for each list item:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="color:#66d9ef">*</span> valid bullet
-<span style="color:#66d9ef">-</span> valid bullet
-+ valid bullet
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span><span style="color:#6ab825;font-weight:bold">*</span> valid bullet
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2</span><span style="color:#6ab825;font-weight:bold">-</span> valid bullet
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">3</span>+ valid bullet
 </code></pre></div><p>For example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="color:#66d9ef">*</span> Lorem ipsum dolor sit amet
-<span style="color:#66d9ef">*</span> Consectetur adipiscing elit
-<span style="color:#66d9ef">*</span> Integer molestie lorem at massa
-<span style="color:#66d9ef">*</span> Facilisis in pretium nisl aliquet
-<span style="color:#66d9ef">*</span> Nulla volutpat aliquam velit
-  <span style="color:#66d9ef">*</span> Phasellus iaculis neque
-  <span style="color:#66d9ef">*</span> Purus sodales ultricies
-  <span style="color:#66d9ef">*</span> Vestibulum laoreet porttitor sem
-  <span style="color:#66d9ef">*</span> Ac tristique libero volutpat at
-<span style="color:#66d9ef">*</span> Faucibus porta lacus fringilla vel
-<span style="color:#66d9ef">*</span> Aenean sit amet erat nunc
-<span style="color:#66d9ef">*</span> Eget porttitor lorem
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 1</span><span style="color:#6ab825;font-weight:bold">*</span> Lorem ipsum dolor sit amet
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 2</span><span style="color:#6ab825;font-weight:bold">*</span> Consectetur adipiscing elit
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 3</span><span style="color:#6ab825;font-weight:bold">*</span> Integer molestie lorem at massa
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 4</span><span style="color:#6ab825;font-weight:bold">*</span> Facilisis in pretium nisl aliquet
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 5</span><span style="color:#6ab825;font-weight:bold">*</span> Nulla volutpat aliquam velit
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 6</span>  <span style="color:#6ab825;font-weight:bold">*</span> Phasellus iaculis neque
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 7</span>  <span style="color:#6ab825;font-weight:bold">*</span> Purus sodales ultricies
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 8</span>  <span style="color:#6ab825;font-weight:bold">*</span> Vestibulum laoreet porttitor sem
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 9</span>  <span style="color:#6ab825;font-weight:bold">*</span> Ac tristique libero volutpat at
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">10</span><span style="color:#6ab825;font-weight:bold">*</span> Faucibus porta lacus fringilla vel
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">11</span><span style="color:#6ab825;font-weight:bold">*</span> Aenean sit amet erat nunc
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">12</span><span style="color:#6ab825;font-weight:bold">*</span> Eget porttitor lorem
 </code></pre></div><p>The rendered output looks like this:</p>
 <ul>
 <li>Lorem ipsum dolor sit amet</li>
@@ -599,36 +592,19 @@ odio non est accumsan facilisis. Aliquam id turpis in dolor tincidunt mollis ac 
 <li>Eget porttitor lorem</li>
 </ul>
 <p>The HTML looks like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">ul</span>&gt;
-  &lt;<span style="color:#f92672">li</span>&gt;Lorem ipsum dolor sit amet&lt;/<span style="color:#f92672">li</span>&gt;
-  &lt;<span style="color:#f92672">li</span>&gt;Consectetur adipiscing elit&lt;/<span style="color:#f92672">li</span>&gt;
-  &lt;<span style="color:#f92672">li</span>&gt;Integer molestie lorem at massa&lt;/<span style="color:#f92672">li</span>&gt;
-  &lt;<span style="color:#f92672">li</span>&gt;Facilisis in pretium nisl aliquet&lt;/<span style="color:#f92672">li</span>&gt;
-  &lt;<span style="color:#f92672">li</span>&gt;Nulla volutpat aliquam velit
-    &lt;<span style="color:#f92672">ul</span>&gt;
-      &lt;<span style="color:#f92672">li</span>&gt;Phasellus iaculis neque&lt;/<span style="color:#f92672">li</span>&gt;
-      &lt;<span style="color:#f92672">li</span>&gt;Purus sodales ultricies&lt;/<span style="color:#f92672">li</span>&gt;
-      &lt;<span style="color:#f92672">li</span>&gt;Vestibulum laoreet porttitor sem&lt;/<span style="color:#f92672">li</span>&gt;
-      &lt;<span style="color:#f92672">li</span>&gt;Ac tristique libero volutpat at&lt;/<span style="color:#f92672">li</span>&gt;
-    &lt;/<span style="color:#f92672">ul</span>&gt;
-  &lt;/<span style="color:#f92672">li</span>&gt;
-  &lt;<span style="color:#f92672">li</span>&gt;Faucibus porta lacus fringilla vel&lt;/<span style="color:#f92672">li</span>&gt;
-  &lt;<span style="color:#f92672">li</span>&gt;Aenean sit amet erat nunc&lt;/<span style="color:#f92672">li</span>&gt;
-  &lt;<span style="color:#f92672">li</span>&gt;Eget porttitor lorem&lt;/<span style="color:#f92672">li</span>&gt;
-&lt;/<span style="color:#f92672">ul</span>&gt;
-</code></pre></div><h3 id="ordered">
+<h3 id="ordered">
   Ordered
   <a class="anchor" href="#ordered">#</a>
 </h3>
 <p>A list of items in which the order of items does explicitly matter.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="color:#66d9ef">1.</span> Lorem ipsum dolor sit amet
-<span style="color:#66d9ef">2.</span> Consectetur adipiscing elit
-<span style="color:#66d9ef">3.</span> Integer molestie lorem at massa
-<span style="color:#66d9ef">4.</span> Facilisis in pretium nisl aliquet
-<span style="color:#66d9ef">5.</span> Nulla volutpat aliquam velit
-<span style="color:#66d9ef">6.</span> Faucibus porta lacus fringilla vel
-<span style="color:#66d9ef">7.</span> Aenean sit amet erat nunc
-<span style="color:#66d9ef">8.</span> Eget porttitor lorem
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span><span style="color:#6ab825;font-weight:bold">1.</span> Lorem ipsum dolor sit amet
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2</span><span style="color:#6ab825;font-weight:bold">2.</span> Consectetur adipiscing elit
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">3</span><span style="color:#6ab825;font-weight:bold">3.</span> Integer molestie lorem at massa
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">4</span><span style="color:#6ab825;font-weight:bold">4.</span> Facilisis in pretium nisl aliquet
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">5</span><span style="color:#6ab825;font-weight:bold">5.</span> Nulla volutpat aliquam velit
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">6</span><span style="color:#6ab825;font-weight:bold">6.</span> Faucibus porta lacus fringilla vel
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">7</span><span style="color:#6ab825;font-weight:bold">7.</span> Aenean sit amet erat nunc
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">8</span><span style="color:#6ab825;font-weight:bold">8.</span> Eget porttitor lorem
 </code></pre></div><p>The rendered output looks like this:</p>
 <ol>
 <li>Lorem ipsum dolor sit amet</li>
@@ -640,27 +616,17 @@ odio non est accumsan facilisis. Aliquam id turpis in dolor tincidunt mollis ac 
 <li>Aenean sit amet erat nunc</li>
 <li>Eget porttitor lorem</li>
 </ol>
-<p>The HTML looks like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">ol</span>&gt;
-  &lt;<span style="color:#f92672">li</span>&gt;Lorem ipsum dolor sit amet&lt;/<span style="color:#f92672">li</span>&gt;
-  &lt;<span style="color:#f92672">li</span>&gt;Consectetur adipiscing elit&lt;/<span style="color:#f92672">li</span>&gt;
-  &lt;<span style="color:#f92672">li</span>&gt;Integer molestie lorem at massa&lt;/<span style="color:#f92672">li</span>&gt;
-  &lt;<span style="color:#f92672">li</span>&gt;Facilisis in pretium nisl aliquet&lt;/<span style="color:#f92672">li</span>&gt;
-  &lt;<span style="color:#f92672">li</span>&gt;Nulla volutpat aliquam velit&lt;/<span style="color:#f92672">li</span>&gt;
-  &lt;<span style="color:#f92672">li</span>&gt;Faucibus porta lacus fringilla vel&lt;/<span style="color:#f92672">li</span>&gt;
-  &lt;<span style="color:#f92672">li</span>&gt;Aenean sit amet erat nunc&lt;/<span style="color:#f92672">li</span>&gt;
-  &lt;<span style="color:#f92672">li</span>&gt;Eget porttitor lorem&lt;/<span style="color:#f92672">li</span>&gt;
-&lt;/<span style="color:#f92672">ol</span>&gt;
-</code></pre></div><blockquote class="book-hint info">
-  <p>If you just use <code>1.</code> for each number, Markdown will automatically number each item. For example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="color:#66d9ef">1.</span> Lorem ipsum dolor sit amet
-<span style="color:#66d9ef">2.</span> Consectetur adipiscing elit
-<span style="color:#66d9ef">3.</span> Integer molestie lorem at massa
-<span style="color:#66d9ef">4.</span> Facilisis in pretium nisl aliquet
-<span style="color:#66d9ef">5.</span> Nulla volutpat aliquam velit
-<span style="color:#66d9ef">6.</span> Faucibus porta lacus fringilla vel
-<span style="color:#66d9ef">7.</span> Aenean sit amet erat nunc
-<span style="color:#66d9ef">8.</span> Eget porttitor lorem
+<blockquote class="book-hint info">
+  <p>If you just use <code>1.</code> for each number, Markdown will automatically number
+each item. For example:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span><span style="color:#6ab825;font-weight:bold">1.</span> Lorem ipsum dolor sit amet
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2</span><span style="color:#6ab825;font-weight:bold">1.</span> Consectetur adipiscing elit
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">3</span><span style="color:#6ab825;font-weight:bold">1.</span> Integer molestie lorem at massa
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">4</span><span style="color:#6ab825;font-weight:bold">1.</span> Facilisis in pretium nisl aliquet
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">5</span><span style="color:#6ab825;font-weight:bold">1.</span> Nulla volutpat aliquam velit
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">6</span><span style="color:#6ab825;font-weight:bold">1.</span> Faucibus porta lacus fringilla vel
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">7</span><span style="color:#6ab825;font-weight:bold">1.</span> Aenean sit amet erat nunc
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">8</span><span style="color:#6ab825;font-weight:bold">1.</span> Eget porttitor lorem
 </code></pre></div><p>The rendered output looks like this:</p>
 <ol>
 <li>Lorem ipsum dolor sit amet</li>
@@ -680,129 +646,111 @@ odio non est accumsan facilisis. Aliquam id turpis in dolor tincidunt mollis ac 
   <a class="anchor" href="#task-lists">#</a>
 </h3>
 <p>Task lists allow you to create a list of items with checkboxes. To create a task list, add dashes (<code>-</code>) and brackets with a space (<code>[ ]</code>) before task list items. To select a checkbox, add an x in between the brackets (<code>[x]</code>).</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="color:#66d9ef">- [x]</span> Write the press release
-<span style="color:#66d9ef">- [ ]</span> Update the website
-<span style="color:#66d9ef">- [ ]</span> Contact the media
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span><span style="color:#6ab825;font-weight:bold">- [x]</span> Write the press release
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2</span><span style="color:#6ab825;font-weight:bold">- [ ]</span> Update the website
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">3</span><span style="color:#6ab825;font-weight:bold">- [ ]</span> Contact the media
 </code></pre></div><p>The rendered output looks like this:</p>
 <ul>
 <li><input checked="" disabled="" type="checkbox"> Write the press release</li>
 <li><input disabled="" type="checkbox"> Update the website</li>
 <li><input disabled="" type="checkbox"> Contact the media</li>
 </ul>
-<h2 id="9-code">
-  9 Code
-  <a class="anchor" href="#9-code">#</a>
+<h2 id="8-code">
+  8 Code
+  <a class="anchor" href="#8-code">#</a>
 </h2>
 <h3 id="inline-code">
   Inline Code
   <a class="anchor" href="#inline-code">#</a>
 </h3>
 <p>Wrap inline snippets of code with <code>`</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">In this example, <span style="color:#e6db74">`&lt;section&gt;&lt;/section&gt;`</span> should be wrapped as <span style="font-weight:bold">**code**</span>.
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span>In this example, <span style="color:#ed9d13">`&lt;section&gt;&lt;/section&gt;`</span> should be wrapped as <span style="font-weight:bold">**code**</span>.
 </code></pre></div><p>The rendered output looks like this:</p>
 <p>In this example, <code>&lt;section&gt;&lt;/section&gt;</code> should be wrapped as <strong>code</strong>.</p>
-<p>The HTML looks like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span>&gt;
-  In this example, &lt;<span style="color:#f92672">code</span>&gt;&amp;lt;section&amp;gt;&amp;lt;/section&amp;gt;&lt;/<span style="color:#f92672">code</span>&gt; should be wrapped with
-  &lt;<span style="color:#f92672">strong</span>&gt;code&lt;/<span style="color:#f92672">strong</span>&gt;.
-&lt;/<span style="color:#f92672">p</span>&gt;
-</code></pre></div><h3 id="indented-code">
+<h3 id="indented-code">
   Indented Code
   <a class="anchor" href="#indented-code">#</a>
 </h3>
 <p>Or indent several lines of code by at least four spaces, as in:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">    // Some comments
-    line 1 of code
-    line 2 of code
-    line 3 of code
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span>    // Some comments
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2</span>    line 1 of code
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">3</span>    line 2 of code
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">4</span>    line 3 of code
 </code></pre></div><p>The rendered output looks like this:</p>
 <pre><code>// Some comments
 line 1 of code
 line 2 of code
 line 3 of code
 </code></pre>
-<p>The HTML looks like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">pre</span>&gt;
-  &lt;<span style="color:#f92672">code</span>&gt;
-    // Some comments
-    line 1 of code
-    line 2 of code
-    line 3 of code
-  &lt;/<span style="color:#f92672">code</span>&gt;
-&lt;/<span style="color:#f92672">pre</span>&gt;
-</code></pre></div><h3 id="block-fenced-code">
+<h3 id="block-fenced-code">
   Block Fenced Code
   <a class="anchor" href="#block-fenced-code">#</a>
 </h3>
 <p>Use &ldquo;fences&rdquo; <code>```</code> to block in multiple lines of code with a language attribute.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="color:#e6db74">```markdown
-</span><span style="color:#e6db74"></span>Sample text here...
-<span style="color:#e6db74">```</span></code></pre></div>
-<p>The HTML looks like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">pre</span> <span style="color:#a6e22e">language-html</span>&gt;
-  &lt;<span style="color:#f92672">code</span>&gt;Sample text here...&lt;/<span style="color:#f92672">code</span>&gt;
-&lt;/<span style="color:#f92672">pre</span>&gt;
-</code></pre></div><h3 id="syntax-highlighting">
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span><span style="color:#ed9d13">```markdown
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2</span><span style="color:#ed9d13"></span>Sample text here...
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">3</span><span style="color:#ed9d13">```</span></code></pre></div>
+<h3 id="syntax-highlighting">
   Syntax Highlighting
   <a class="anchor" href="#syntax-highlighting">#</a>
 </h3>
 <p>[GFM]^(GitHub Flavored Markdown) also supports syntax highlighting.</p>
-<p>To activate it, simply add the file extension of the language you want to use directly after the first code &ldquo;fence&rdquo;,
-<code>```js</code>, and syntax highlighting will automatically be applied in the rendered HTML.</p>
+<p>To activate it, simply add the file extension of the language you want to use directly after the first code &ldquo;fence&rdquo;, <code>```js</code>, and syntax highlighting will automatically be applied in the rendered HTML.</p>
 <p>For example, to apply syntax highlighting to JavaScript code:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="color:#e6db74">```js
-</span><span style="color:#e6db74"></span><span style="color:#a6e22e">grunt</span>.<span style="color:#a6e22e">initConfig</span>({
-  <span style="color:#a6e22e">assemble</span><span style="color:#f92672">:</span> {
-    <span style="color:#a6e22e">options</span><span style="color:#f92672">:</span> {
-      <span style="color:#a6e22e">assets</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;docs/assets&#39;</span>,
-      <span style="color:#a6e22e">data</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;src/data/*.{json,yml}&#39;</span>,
-      <span style="color:#a6e22e">helpers</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;src/custom-helpers.js&#39;</span>,
-      <span style="color:#a6e22e">partials</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;src/partials/**/*.{hbs,md}&#39;</span>]
-    },
-    <span style="color:#a6e22e">pages</span><span style="color:#f92672">:</span> {
-      <span style="color:#a6e22e">options</span><span style="color:#f92672">:</span> {
-        <span style="color:#a6e22e">layout</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;default.hbs&#39;</span>
-      },
-      <span style="color:#a6e22e">files</span><span style="color:#f92672">:</span> {
-        <span style="color:#e6db74">&#39;./&#39;</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;src/templates/pages/index.hbs&#39;</span>]
-      }
-    }
-  }
-};
-<span style="color:#e6db74">```</span></code></pre></div>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 1</span><span style="color:#ed9d13">```js
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 2</span><span style="color:#ed9d13"></span>grunt.initConfig({
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 3</span>  assemble: {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 4</span>    options: {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 5</span>      assets: <span style="color:#ed9d13">&#39;docs/assets&#39;</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 6</span>      data: <span style="color:#ed9d13">&#39;src/data/*.{json,yml}&#39;</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 7</span>      helpers: <span style="color:#ed9d13">&#39;src/custom-helpers.js&#39;</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 8</span>      partials: [<span style="color:#ed9d13">&#39;src/partials/**/*.{hbs,md}&#39;</span>]
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 9</span>    },
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">10</span>    pages: {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">11</span>      options: {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">12</span>        layout: <span style="color:#ed9d13">&#39;default.hbs&#39;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">13</span>      },
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">14</span>      files: {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">15</span>        <span style="color:#ed9d13">&#39;./&#39;</span>: [<span style="color:#ed9d13">&#39;src/templates/pages/index.hbs&#39;</span>]
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">16</span>      }
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">17</span>    }
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">18</span>  }
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">19</span>};
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">20</span><span style="color:#ed9d13">```</span></code></pre></div>
 <p>The rendered output looks like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">grunt</span>.<span style="color:#a6e22e">initConfig</span>({
-  <span style="color:#a6e22e">assemble</span><span style="color:#f92672">:</span> {
-    <span style="color:#a6e22e">options</span><span style="color:#f92672">:</span> {
-      <span style="color:#a6e22e">assets</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;docs/assets&#39;</span>,
-      <span style="color:#a6e22e">data</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;src/data/*.{json,yml}&#39;</span>,
-      <span style="color:#a6e22e">helpers</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;src/custom-helpers.js&#39;</span>,
-      <span style="color:#a6e22e">partials</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;src/partials/**/*.{hbs,md}&#39;</span>]
-    },
-    <span style="color:#a6e22e">pages</span><span style="color:#f92672">:</span> {
-      <span style="color:#a6e22e">options</span><span style="color:#f92672">:</span> {
-        <span style="color:#a6e22e">layout</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;default.hbs&#39;</span>
-      },
-      <span style="color:#a6e22e">files</span><span style="color:#f92672">:</span> {
-        <span style="color:#e6db74">&#39;./&#39;</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;src/templates/pages/index.hbs&#39;</span>]
-      }
-    }
-  }
-};
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 1</span>grunt.initConfig({
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 2</span>  assemble: {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 3</span>    options: {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 4</span>      assets: <span style="color:#ed9d13">&#39;docs/assets&#39;</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 5</span>      data: <span style="color:#ed9d13">&#39;src/data/*.{json,yml}&#39;</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 6</span>      helpers: <span style="color:#ed9d13">&#39;src/custom-helpers.js&#39;</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 7</span>      partials: [<span style="color:#ed9d13">&#39;src/partials/**/*.{hbs,md}&#39;</span>]
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 8</span>    },
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 9</span>    pages: {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">10</span>      options: {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">11</span>        layout: <span style="color:#ed9d13">&#39;default.hbs&#39;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">12</span>      },
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">13</span>      files: {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">14</span>        <span style="color:#ed9d13">&#39;./&#39;</span>: [<span style="color:#ed9d13">&#39;src/templates/pages/index.hbs&#39;</span>]
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">15</span>      }
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">16</span>    }
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">17</span>  }
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">18</span>};
 </code></pre></div><blockquote class="book-hint info">
-  <a href="https://gohugo.io/content-management/syntax-highlighting/">Syntax highlighting page</a> in <strong>Hugo</strong> Docs introduces more about syntax highlighting, including highlight shortcode.
+  <a href="https://gohugo.io/content-management/syntax-highlighting/">Syntax highlighting page</a>
+in <strong>Hugo</strong> Docs introduces more about syntax highlighting, including highlight shortcode.
 </blockquote>
 
-<h2 id="10-tables">
-  10 Tables
-  <a class="anchor" href="#10-tables">#</a>
+<h2 id="9-tables">
+  9 Tables
+  <a class="anchor" href="#9-tables">#</a>
 </h2>
 <p>Tables are created by adding pipes as dividers between each cell, and by adding a line of dashes (also separated by bars) beneath the header. Note that the pipes do not need to be vertically aligned.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">| Option | Description |
-| ------ | ----------- |
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default. |
-| ext    | extension to be used for dest files. |
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span>| Option | Description |
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2</span>| ------ | ----------- |
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">3</span>| data   | path to data files to supply the data that will be passed into templates. |
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">4</span>| engine | engine to be used for processing templates. Handlebars is the default. |
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">5</span>| ext    | extension to be used for dest files. |
 </code></pre></div><p>The rendered output looks like this:</p>
 <table>
 <thead>
@@ -826,39 +774,16 @@ line 3 of code
 </tr>
 </tbody>
 </table>
-<p>The HTML looks like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">table</span>&gt;
-  &lt;<span style="color:#f92672">thead</span>&gt;
-    &lt;<span style="color:#f92672">tr</span>&gt;
-      &lt;<span style="color:#f92672">th</span>&gt;Option&lt;/<span style="color:#f92672">th</span>&gt;
-      &lt;<span style="color:#f92672">th</span>&gt;Description&lt;/<span style="color:#f92672">th</span>&gt;
-    &lt;/<span style="color:#f92672">tr</span>&gt;
-  &lt;/<span style="color:#f92672">thead</span>&gt;
-  &lt;<span style="color:#f92672">tbody</span>&gt;
-    &lt;<span style="color:#f92672">tr</span>&gt;
-      &lt;<span style="color:#f92672">td</span>&gt;data&lt;/<span style="color:#f92672">td</span>&gt;
-      &lt;<span style="color:#f92672">td</span>&gt;path to data files to supply the data that will be passed into templates.&lt;/<span style="color:#f92672">td</span>&gt;
-    &lt;/<span style="color:#f92672">tr</span>&gt;
-    &lt;<span style="color:#f92672">tr</span>&gt;
-      &lt;<span style="color:#f92672">td</span>&gt;engine&lt;/<span style="color:#f92672">td</span>&gt;
-      &lt;<span style="color:#f92672">td</span>&gt;engine to be used for processing templates. Handlebars is the default.&lt;/<span style="color:#f92672">td</span>&gt;
-    &lt;/<span style="color:#f92672">tr</span>&gt;
-    &lt;<span style="color:#f92672">tr</span>&gt;
-      &lt;<span style="color:#f92672">td</span>&gt;ext&lt;/<span style="color:#f92672">td</span>&gt;
-      &lt;<span style="color:#f92672">td</span>&gt;extension to be used for dest files.&lt;/<span style="color:#f92672">td</span>&gt;
-    &lt;/<span style="color:#f92672">tr</span>&gt;
-  &lt;/<span style="color:#f92672">tbody</span>&gt;
-&lt;/<span style="color:#f92672">table</span>&gt;
-</code></pre></div><details open>
+<details open>
   <summary>&#39;&#39;</summary>
   <div class="markdown-inner">
     <p>Adding a colon on the right side of the dashes below any heading will right align text for that column.</p>
 <p>Adding colons on both sides of the dashes below any heading will center align text for that column.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">| Option | Description |
-|:------:| -----------:|
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default. |
-| ext    | extension to be used for dest files. |
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span>| Option | Description |
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2</span>|:------:| -----------:|
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">3</span>| data   | path to data files to supply the data that will be passed into templates. |
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">4</span>| engine | engine to be used for processing templates. Handlebars is the default. |
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">5</span>| ext    | extension to be used for dest files. |
 </code></pre></div><p>The rendered output looks like this:</p>
 <table>
 <thead>
@@ -882,53 +807,83 @@ line 3 of code
 </tr>
 </tbody>
 </table>
-<details >
-  <summary></summary>
-  <div class="markdown-inner">
-    <h2 id="links">11 Links</h2>
-<h3 id="basic-link">Basic Link</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">&lt;<span style="color:#f92672">https:</span><span style="color:#960050;background-color:#1e0010">//</span><span style="color:#a6e22e">assemble</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">io</span>&gt;
-&lt;<span style="color:#f92672">contact</span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">revolunet</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">com</span>&gt;
-[<span style="color:#f92672">Assemble</span>](<span style="color:#a6e22e">https://assemble.io</span>)
+
+  </div>
+</details>
+
+<h2 id="links">
+  10 Links
+  <a class="anchor" href="#links">#</a>
+</h2>
+<h3 id="basic-link">
+  Basic Link
+  <a class="anchor" href="#basic-link">#</a>
+</h3>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span>&lt;<span style="color:#6ab825;font-weight:bold">https:</span><span style="color:#a61717;background-color:#e3d2d2">//</span><span style="color:#bbb">assemble</span><span style="color:#a61717;background-color:#e3d2d2">.</span><span style="color:#bbb">io</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2</span>&lt;<span style="color:#6ab825;font-weight:bold">contact</span><span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#bbb">revolunet</span><span style="color:#a61717;background-color:#e3d2d2">.</span><span style="color:#bbb">com</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">3</span>[<span style="color:#6ab825;font-weight:bold">Assemble</span>](<span style="color:#bbb">https://assemble.io</span>)
 </code></pre></div><p>The rendered output looks like this (hover over the link, there is no tooltip):</p>
 <p><a href="https://assemble.io">https://assemble.io</a></p>
 <p><a href="mailto:contact@revolunet.com">contact@revolunet.com</a></p>
-<p><a href="https://assemble.io">Assemble</a></p>
-<p>The HTML looks like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://assemble.io&#34;</span>&gt;https://assemble.io&lt;/<span style="color:#f92672">a</span>&gt;
-&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mailto:contact@revolunet.com&#34;</span>&gt;contact@revolunet.com&lt;/<span style="color:#f92672">a</span>&gt;
-&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://assemble.io&#34;</span>&gt;Assemble&lt;/<span style="color:#f92672">a</span>&gt;
-</code></pre></div><h3 id="add-a-title">Add a Title</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">[<span style="color:#f92672">Upstage</span>](<span style="color:#a6e22e">https://github.com/upstage/ &#34;Visit Upstage!&#34;</span>)
+<p>
+  <a href="https://assemble.io">Assemble</a></p>
+<h3 id="add-a-title">
+  Add a Title
+  <a class="anchor" href="#add-a-title">#</a>
+</h3>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span>[<span style="color:#6ab825;font-weight:bold">Upstage</span>](<span style="color:#bbb">https://github.com/upstage/ &#34;Visit Upstage!&#34;</span>)
 </code></pre></div><p>The rendered output looks like this (hover over the link, there should be a tooltip):</p>
-<p><a href="https://github.com/upstage/" title="Visit Upstage!">Upstage</a></p>
-<p>The HTML looks like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://github.com/upstage/&#34;</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Visit Upstage!&#34;</span>&gt;Upstage&lt;/<span style="color:#f92672">a</span>&gt;
-</code></pre></div><h3 id="named-anchors">Named Anchors</h3>
+<p>
+  <a href="https://github.com/upstage/" title="Visit Upstage!">Upstage</a></p>
+<h3 id="named-anchors">
+  Named Anchors
+  <a class="anchor" href="#named-anchors">#</a>
+</h3>
 <p>Named anchors enable you to jump to the specified anchor point on the same page. For example, each of these chapters:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="color:#75715e">## Table of Contents
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">*</span> [<span style="color:#f92672">Chapter 1</span>](<span style="color:#a6e22e">#chapter-1</span>)
-  <span style="color:#66d9ef">*</span> [<span style="color:#f92672">Chapter 2</span>](<span style="color:#a6e22e">#chapter-2</span>)
-  <span style="color:#66d9ef">*</span> [<span style="color:#f92672">Chapter 3</span>](<span style="color:#a6e22e">#chapter-3</span>)
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span><span style="color:#fff;text-decoration:underline">## Table of Contents
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2</span><span style="color:#fff;text-decoration:underline"></span>  <span style="color:#6ab825;font-weight:bold">*</span> [<span style="color:#6ab825;font-weight:bold">Chapter 1</span>](<span style="color:#bbb">#chapter-1</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">3</span>  <span style="color:#6ab825;font-weight:bold">*</span> [<span style="color:#6ab825;font-weight:bold">Chapter 2</span>](<span style="color:#bbb">#chapter-2</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">4</span>  <span style="color:#6ab825;font-weight:bold">*</span> [<span style="color:#6ab825;font-weight:bold">Chapter 3</span>](<span style="color:#bbb">#chapter-3</span>)
 </code></pre></div><p>will jump to these sections:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="color:#75715e">## Chapter 1 &lt;a id=&#34;chapter-1&#34;&gt;&lt;/a&gt;
-</span><span style="color:#75715e"></span>Content for chapter one.
-<p><span style="color:#75715e">## Chapter 2 &lt;a id=&quot;chapter-2&quot;&gt;&lt;/a&gt;
-</span><span style="color:#75715e"></span>Content for chapter one.</p>
-<p><span style="color:#75715e">## Chapter 3 &lt;a id=&quot;chapter-3&quot;&gt;&lt;/a&gt;
-</span><span style="color:#75715e"></span>Content for chapter one.
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span><span style="color:#fff;text-decoration:underline">## Chapter 1 &lt;a id=&#34;chapter-1&#34;&gt;&lt;/a&gt;
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2</span><span style="color:#fff;text-decoration:underline"></span>Content for chapter one.
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">3</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">4</span><span style="color:#fff;text-decoration:underline">## Chapter 2 &lt;a id=&#34;chapter-2&#34;&gt;&lt;/a&gt;
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">5</span><span style="color:#fff;text-decoration:underline"></span>Content for chapter one.
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">6</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">7</span><span style="color:#fff;text-decoration:underline">## Chapter 3 &lt;a id=&#34;chapter-3&#34;&gt;&lt;/a&gt;
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">8</span><span style="color:#fff;text-decoration:underline"></span>Content for chapter one.
 </code></pre></div><blockquote class="book-hint tip">
-The specific placement of the anchor tag seems to be arbitrary. They are placed inline here since it seems to be unobtrusive, and it works.</p>
+  The specific placement of the anchor tag seems to be arbitrary. They are placed inline here since
+it seems to be unobtrusive, and it works.
 </blockquote>
-<h2 id="12-footnotes">12 Footnotes</h2>
+
+<h2 id="11-footnotes">
+  11 Footnotes
+  <a class="anchor" href="#11-footnotes">#</a>
+</h2>
 <p>Footnotes allow you to add notes and references without cluttering the body of the document. When you create a footnote, a superscript number with a link appears where you added the footnote reference. Readers can click the link to jump to the content of the footnote at the bottom of the page.</p>
 <p>To create a footnote reference, add a caret and an identifier inside brackets (<code>[^1]</code>). Identifiers can be numbers or words, but they can’t contain spaces or tabs. Identifiers only correlate the footnote reference with the footnote itself — in the output, footnotes are numbered sequentially.</p>
 <p>Add the footnote using another caret and number inside brackets with a colon and text (<code>[^1]: My footnote.</code>). You don’t have to put footnotes at the end of the document. You can put them anywhere except inside other elements like lists, block quotes, and tables.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">This is a digital footnote[^1].
-This is a footnote with &#34;label&#34;[^label]
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span>This is a digital footnote[^1].
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2</span>This is a footnote with &#34;label&#34;[^label]
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">3</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">4</span>[^1]: This is a digital footnote
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">5</span>[^label]: This is a footnote with &#34;label&#34;
+</code></pre></div><p>This is a digital footnote<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
 <p>This is a footnote with &ldquo;label&rdquo;<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
-<h2 id="13-images">13 Images</h2>
-<p>Images will be embeded using Hugo extended Syntax, because it&rsquo;s much easier to style them this way.</p>
+<h2 id="12-images">
+  12 Images
+  <a class="anchor" href="#12-images">#</a>
+</h2>
+<p>Images have a similar syntax to links but include a preceding exclamation point.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span>![<span style="color:#6ab825;font-weight:bold">Banana</span>](<span style="color:#bbb">/img/banana.png</span>)
+</code></pre></div><p>
+  <img src="/img/banana.png" alt="Banana" /></p>
+<p>or:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span>![<span style="color:#6ab825;font-weight:bold">Alt text</span>](<span style="color:#bbb">/img/monkey.png &#34;The coding Monkey&#34;</span>)
+</code></pre></div><p>
+  <img src="/img/monkey.png" alt="Alt text" title="The coding Monkey"/></p>
 <section class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
@@ -940,12 +895,6 @@ This is a footnote with &#34;label&#34;[^label]
 </li>
 </ol>
 </section>
-  </div>
-</details>
-
-  </div>
-</details>
-
 </article>
  
       
@@ -996,6 +945,12 @@ This is a footnote with &#34;label&#34;[^label]
 
 
 
+  <div><a class="flex align-center" href="https://github.com/Abl3t0nnile/abl3t0nnile.github.io.git/commit/774d21d95bc2426ad6eba9e98d786e01dce9be37" title='Last modified by Abl3t0nnile | March 21, 2021' target="_blank" rel="noopener">
+      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>March 21, 2021</span>
+    </a>
+  </div>
+
 
 
 </div>
@@ -1023,9 +978,8 @@ This is a footnote with &#34;label&#34;[^label]
         <li><a href="#1-headings">1 Headings</a></li>
         <li><a href="#2-comments">2 Comments</a></li>
         <li><a href="#3-horizontal-rules">3 Horizontal Rules</a></li>
-        <li><a href="#4-body-copy">4 Body Copy</a></li>
-        <li><a href="#5-inline-html">5 Inline HTML</a></li>
-        <li><a href="#6-emphasis">6 Emphasis</a>
+        <li><a href="#4-inline-html">4 Inline HTML</a></li>
+        <li><a href="#5-emphasis">5 Emphasis</a>
           <ul>
             <li><a href="#bold">Bold</a></li>
             <li><a href="#italics">Italics</a></li>
@@ -1033,15 +987,15 @@ This is a footnote with &#34;label&#34;[^label]
             <li><a href="#combination">Combination</a></li>
           </ul>
         </li>
-        <li><a href="#7-blockquotes">7 Blockquotes</a></li>
-        <li><a href="#8-lists">8 Lists</a>
+        <li><a href="#6-blockquotes">6 Blockquotes</a></li>
+        <li><a href="#7-lists">7 Lists</a>
           <ul>
             <li><a href="#unordered">Unordered</a></li>
             <li><a href="#ordered">Ordered</a></li>
             <li><a href="#task-lists">Task Lists</a></li>
           </ul>
         </li>
-        <li><a href="#9-code">9 Code</a>
+        <li><a href="#8-code">8 Code</a>
           <ul>
             <li><a href="#inline-code">Inline Code</a></li>
             <li><a href="#indented-code">Indented Code</a></li>
@@ -1049,7 +1003,16 @@ This is a footnote with &#34;label&#34;[^label]
             <li><a href="#syntax-highlighting">Syntax Highlighting</a></li>
           </ul>
         </li>
-        <li><a href="#10-tables">10 Tables</a></li>
+        <li><a href="#9-tables">9 Tables</a></li>
+        <li><a href="#links">10 Links</a>
+          <ul>
+            <li><a href="#basic-link">Basic Link</a></li>
+            <li><a href="#add-a-title">Add a Title</a></li>
+            <li><a href="#named-anchors">Named Anchors</a></li>
+          </ul>
+        </li>
+        <li><a href="#11-footnotes">11 Footnotes</a></li>
+        <li><a href="#12-images">12 Images</a></li>
       </ul>
     </li>
   </ul>
