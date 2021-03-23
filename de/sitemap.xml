@@ -2,8 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://abl3t0nnile.github.io/de/tutorials/test/</loc>
-  </url><url>
     <loc>https://abl3t0nnile.github.io/de/about/</loc>
     <lastmod>2021-03-21T21:08:36+01:00</lastmod>
     <xhtml:link
@@ -53,7 +51,5 @@
                 hreflang="de"
                 href="https://abl3t0nnile.github.io/de/tags/"
                 />
-  </url><url>
-    <loc>https://abl3t0nnile.github.io/de/tutorials/</loc>
   </url>
 </urlset>

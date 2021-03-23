@@ -30,6 +30,17 @@ For further details on the extended Markdown syntax of Hugo and Books - Theme se
     </item>
     
     <item>
+      <title>Test</title>
+      <link>https://abl3t0nnile.github.io/docs/tutorials/test/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://abl3t0nnile.github.io/docs/tutorials/test/</guid>
+      <description>Tutorial zu irgendwas #  Hier steht etwas text &amp;hellip;
+ das hier ist eine auflistung    computer
+  </description>
+    </item>
+    
+    <item>
       <title>Automate GitHub Hosting with Shell Scripts</title>
       <link>https://abl3t0nnile.github.io/docs/tutorials/shell_auto_blog/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
