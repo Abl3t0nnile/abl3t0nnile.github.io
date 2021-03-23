@@ -23,7 +23,7 @@ The following topics are mandatory and won&rsquo;t be covered in this tutorial:
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.a6e33eff9fca295dda99115dabc387fd12b0e1282a347b6e4de6e73b19c96d91.css" integrity="sha256-puM&#43;/5/KKV3amRFdq8OH/RKw4SgqNHtuTebnOxnJbZE=">
-<script defer src="/en.search.min.00793c96aae7d6ef6a1a8d9835f148ff07109c2bba6fcd70122622dddd7ff56d.js" integrity="sha256-AHk8lqrn1u9qGo2YNfFI/wcQnCu6b81wEiYi3d1/9W0="></script>
+<script defer src="/en.search.min.b6652bf9b44f80e7ba1576a8d499c5559809e135a7e8cb9c8b486527c2e3118c.js" integrity="sha256-tmUr&#43;bRPgOe6FXao1JnFVZgJ4TWn6Muci0hlJ8LjEYw="></script>
 
 <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk="></script>
 <!--
@@ -357,7 +357,14 @@ https://github.com/alex-shpak/hugo-book
             <li><a href="#32-configuration">3.2 Configuration</a></li>
           </ul>
         </li>
-        <li><a href="#4-content-management">4 Content management</a></li>
+        <li><a href="#4-content-management">4 Content management</a>
+          <ul>
+            <li><a href="#41-front-matter">4.1 Front matter</a></li>
+            <li><a href="#42-file-structure">4.2 File structure</a></li>
+            <li><a href="#43-taxonomies">4.3 Taxonomies</a></li>
+            <li><a href="#44-adding-posts">4.4 Adding posts</a></li>
+          </ul>
+        </li>
         <li><a href="#5-publication">5 Publication</a></li>
       </ul>
     </li>
@@ -634,14 +641,72 @@ https://github.com/alex-shpak/hugo-book
   </div>
 </details>
 
-<p>Now, that our site is configured, we can now take a first look. To test a page in Hugo, simply type <code>hugo server</code> into the command line, while in the project directory. Hugo now creates the website and runs it on a local host. The address will be shown in the command line. As long as you keep the server running, hugo will update the site on every change we make to the code.</p>
+<p>Now, that our site is configured, we can now take a first look. To test a page in Hugo, simply type <code>hugo server</code> into the command line, while in the project directory. Hugo now creates the website and runs it on a local host. The address will be shown in the command line. As long as we keep the server running, hugo will update the site on every change we make to the code.</p>
 <p>Although it&rsquo;s empty our page is now complete. All we have to do, is create some content and push the changes to our production repo.</p>
-<hr>
 <h2 id="4-content-management">
   4 Content management
   <a class="anchor" href="#4-content-management">#</a>
 </h2>
-<p>To be continued &hellip;</p>
+<p>Content management and thus creation again depends heavily on the chosen theme. Most Hugo themes are build for one page designs or blogging purpose and don&rsquo;t need a special file system to organize content. Since <em>Hugo Books</em> is a theme aimed at building documentation pages for software projects, it offers a lot more options for content management. I will cover the specifics to this theme in a different article and limit this article to the common basics.</p>
+<h3 id="41-front-matter">
+  4.1 Front matter
+  <a class="anchor" href="#41-front-matter">#</a>
+</h3>
+<p>Front matter is a tool within Hugo, to associate metadata with a content file, directly from that files header. It is used to store and read important information on the document itself. The title, category, tags or date of publication are good examples for data you want to provide inside a documents front matter. As with most configuration in Hugo, front matter can be written in different formats.</p>
+<p>The following examples shows the syntax of front matter headers and are taken from the official Hugo documentation.</p>
+
+
+
+
+<div class="book-tabs"><input type="radio" class="toggle" name="tabs-Front matter syntax" id="tabs-Front matter syntax-0" checked="checked" />
+  <label for="tabs-Front matter syntax-0">.yaml</label>
+  <div class="book-tabs-content markdown-inner"><h4 id="yaml-syntax">YAML Syntax</h4>
+<p>This a basic example of a front matter written in .yaml.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 1</span><span style="color:#447fcf;text-decoration:underline">---</span><span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 2</span><span style="color:#666"></span><span style="color:#6ab825;font-weight:bold">categories</span>:<span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 3</span><span style="color:#666"></span>- Development<span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 4</span><span style="color:#666"></span><span style="color:#6ab825;font-weight:bold">project_url</span>:<span style="color:#666"> </span>https://github.com/gohugoio/hugo<span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 5</span><span style="color:#666"></span><span style="color:#6ab825;font-weight:bold">series</span>:<span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 6</span><span style="color:#666"></span>- Go Web Dev<span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 7</span><span style="color:#666"></span><span style="color:#6ab825;font-weight:bold">slug</span>:<span style="color:#666"> </span>hugo<span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 8</span><span style="color:#666"></span><span style="color:#6ab825;font-weight:bold">tags</span>:<span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 9</span><span style="color:#666"></span>- Development<span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">10</span><span style="color:#666"></span>- Go<span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">11</span><span style="color:#666"></span>- fast<span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">12</span><span style="color:#666"></span>- Blogging<span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">13</span><span style="color:#666"></span><span style="color:#6ab825;font-weight:bold">title: &#39;Hugo</span>:<span style="color:#666"> </span>A fast and flexible static site generator&#39;<span style="color:#666">
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">14</span><span style="color:#666"></span><span style="color:#447fcf;text-decoration:underline">---</span><span style="color:#666">
+</span></code></pre></div></div><input type="radio" class="toggle" name="tabs-Front matter syntax" id="tabs-Front matter syntax-1"  />
+  <label for="tabs-Front matter syntax-1">.toml</label>
+  <div class="book-tabs-content markdown-inner"><h4 id="toml-syntax">TOML Syntax</h4>
+<p>This is a basic example of front matter syntax written in .toml.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1</span><span style="color:#a61717;background-color:#e3d2d2">+++</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2</span>categories = [<span style="color:#ed9d13">&#34;Development&#34;</span>]
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">3</span>project_url = <span style="color:#ed9d13">&#34;https://github.com/gohugoio/hugo&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">4</span>series = [<span style="color:#ed9d13">&#34;Go Web Dev&#34;</span>]
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">5</span>slug = <span style="color:#ed9d13">&#34;hugo&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">6</span>tags = [<span style="color:#ed9d13">&#34;Development&#34;</span>, <span style="color:#ed9d13">&#34;Go&#34;</span>, <span style="color:#ed9d13">&#34;fast&#34;</span>, <span style="color:#ed9d13">&#34;Blogging&#34;</span>]
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">7</span>title = <span style="color:#ed9d13">&#34;Hugo: A fast and flexible static site generator&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">8</span><span style="color:#a61717;background-color:#e3d2d2">+++</span>
+</code></pre></div></div></div>
+
+<h3 id="42-file-structure">
+  4.2 File structure
+  <a class="anchor" href="#42-file-structure">#</a>
+</h3>
+<p>Everything you see on a page setup with hugo, lives in the <code>/content</code> folder inside the projects root directory. This contains then a collection of content files or sub folders, to further categorize the content.</p>
+<p>Most Hugo sites provide blogging capabilities. Each post in the blog lives inside the <code>/posts</code> folder inside the <code>/content</code> folder. Another common place to store content is the <code>/docs</code> folder, which also lives inside <code>/content</code>. Documents can either be named themselves or stored in a named folder. The latter options needs the files ALL be named <code>index.md</code>.</p>
+<h3 id="43-taxonomies">
+  4.3 Taxonomies
+  <a class="anchor" href="#43-taxonomies">#</a>
+</h3>
+<p>By default, Hugo uses so called taxonomies, to manage content. The official documentation says: <em>Taxonomies are classifications of logical relationships between content.</em> In the official examples they are used, to implement a Movie database, with standardized metadata, about actors, director, genre, etc. for each movie.</p>
+<p>Basically taxonomies can be seen as categories for your content, and most of the blogging templates will provide a TOC with links to all taxonomies used on the site. The two basic taxonomies, which work out of the box are <code>category</code> and <code>tag</code>. If we where to write an article for our blog, we would then give it a category e.g. <code>coding</code> and provide some tags e.g. <code>python</code>, <code>web-app</code> and <code>flask</code>. The taxonomies of any document are specified in its front matter.</p>
+<h3 id="44-adding-posts">
+  4.4 Adding posts
+  <a class="anchor" href="#44-adding-posts">#</a>
+</h3>
+<p>&hellip;</p>
 <h2 id="5-publication">
   5 Publication
   <a class="anchor" href="#5-publication">#</a>
@@ -741,7 +806,14 @@ https://github.com/alex-shpak/hugo-book
             <li><a href="#32-configuration">3.2 Configuration</a></li>
           </ul>
         </li>
-        <li><a href="#4-content-management">4 Content management</a></li>
+        <li><a href="#4-content-management">4 Content management</a>
+          <ul>
+            <li><a href="#41-front-matter">4.1 Front matter</a></li>
+            <li><a href="#42-file-structure">4.2 File structure</a></li>
+            <li><a href="#43-taxonomies">4.3 Taxonomies</a></li>
+            <li><a href="#44-adding-posts">4.4 Adding posts</a></li>
+          </ul>
+        </li>
         <li><a href="#5-publication">5 Publication</a></li>
       </ul>
     </li>
